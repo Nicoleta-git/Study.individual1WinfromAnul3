@@ -60,6 +60,7 @@
       <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -74,6 +75,9 @@
     <Compile Include="CustomBtn_NicoletaTitei.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CustomProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="CustomRoundedComboBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -82,6 +86,18 @@
     </Compile>
     <Compile Include="DashAdmin.Designer.cs">
       <DependentUpon>DashAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DashboardAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DashboardAdmin.Designer.cs">
+      <DependentUpon>DashboardAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Filtrare.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Filtrare.Designer.cs">
+      <DependentUpon>Filtrare.cs</DependentUpon>
     </Compile>
     <Compile Include="Loading.cs">
       <SubType>Form</SubType>
@@ -116,6 +132,12 @@
     </Compile>
     <EmbeddedResource Include="DashAdmin.resx">
       <DependentUpon>DashAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashboardAdmin.resx">
+      <DependentUpon>DashboardAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Filtrare.resx">
+      <DependentUpon>Filtrare.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Loading.resx">
       <DependentUpon>Loading.cs</DependentUpon>

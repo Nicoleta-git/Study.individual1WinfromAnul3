@@ -48,7 +48,7 @@ namespace indiv1
         private void label3_Click(object sender, EventArgs e)
         {
             Register r = new Register();
-            r.ShowDialog();
+            r.Show();
             this.Hide();
         }
 
