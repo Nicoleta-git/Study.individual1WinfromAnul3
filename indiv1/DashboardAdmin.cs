@@ -15,6 +15,7 @@ namespace indiv1
         public DashboardAdmin()
         {
             InitializeComponent();
+            
         }
     }
 }

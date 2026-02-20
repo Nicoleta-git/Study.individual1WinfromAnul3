@@ -67,5 +67,17 @@ namespace indiv1
             li.Show();
             this.Hide();
         }
+
+        private void kryptonButton2_Click(object sender, EventArgs e)
+        {
+            DashboardAdmin dashAdmin = new DashboardAdmin();
+
+            containerPagina.Controls.Clear();
+
+            containerPagina.Controls.Add(dashAdmin);
+
+            dashAdmin.Dock = DockStyle.Fill;
+
+        }
     }
 }
