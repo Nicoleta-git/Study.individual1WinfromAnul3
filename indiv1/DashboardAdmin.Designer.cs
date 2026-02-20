@@ -28,6 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -43,20 +49,23 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.roundedPanel1 = new RoundedPanel();
-            this.customBtn_NicoletaTitei1 = new NicoletaCustomBtn.CustomBtn_NicoletaTitei();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             this.roundedPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel6
@@ -201,7 +210,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(9, 98);
+            this.label8.Location = new System.Drawing.Point(19, 98);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(124, 23);
             this.label8.TabIndex = 3;
@@ -224,7 +233,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 20F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.label9.Location = new System.Drawing.Point(12, 52);
+            this.label9.Location = new System.Drawing.Point(22, 52);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(105, 46);
             this.label9.TabIndex = 1;
@@ -236,49 +245,79 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(9, 17);
+            this.label10.Location = new System.Drawing.Point(19, 17);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(139, 23);
             this.label10.TabIndex = 0;
             this.label10.Text = "Numar utilizatori";
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.panel2);
+            this.flowLayoutPanel1.Controls.Add(this.panel6);
+            this.flowLayoutPanel1.Controls.Add(this.panel1);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 70);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(932, 169);
+            this.flowLayoutPanel1.TabIndex = 8;
+            this.flowLayoutPanel1.WrapContents = false;
+            // 
+            // chart1
+            // 
+            chartArea3.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chart1.Legends.Add(legend3);
+            this.chart1.Location = new System.Drawing.Point(355, 304);
+            this.chart1.Name = "chart1";
+            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chart1.Series.Add(series3);
+            this.chart1.Size = new System.Drawing.Size(557, 325);
+            this.chart1.TabIndex = 9;
+            this.chart1.Text = "chart1";
+            // 
+            // chart2
+            // 
+            this.chart2.BackColor = System.Drawing.Color.Black;
+            this.chart2.BorderlineColor = System.Drawing.Color.Black;
+            chartArea4.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chart2.Legends.Add(legend4);
+            this.chart2.Location = new System.Drawing.Point(23, 304);
+            this.chart2.Name = "chart2";
+            this.chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.chart2.Series.Add(series4);
+            this.chart2.Size = new System.Drawing.Size(301, 316);
+            this.chart2.TabIndex = 10;
+            this.chart2.Text = "chart2";
+            this.chart2.Click += new System.EventHandler(this.chart2_Click);
+            // 
             // roundedPanel1
             // 
             this.roundedPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(25)))));
             this.roundedPanel1.BorderRadius = 30;
-            this.roundedPanel1.Controls.Add(this.customBtn_NicoletaTitei1);
             this.roundedPanel1.Controls.Add(this.pictureBox1);
             this.roundedPanel1.Controls.Add(this.label1);
             this.roundedPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.roundedPanel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(74)))));
             this.roundedPanel1.Location = new System.Drawing.Point(0, 0);
             this.roundedPanel1.Name = "roundedPanel1";
-            this.roundedPanel1.Size = new System.Drawing.Size(932, 75);
+            this.roundedPanel1.Size = new System.Drawing.Size(932, 45);
             this.roundedPanel1.TabIndex = 5;
-            // 
-            // customBtn_NicoletaTitei1
-            // 
-            this.customBtn_NicoletaTitei1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(74)))));
-            this.customBtn_NicoletaTitei1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(74)))));
-            this.customBtn_NicoletaTitei1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(74)))));
-            this.customBtn_NicoletaTitei1.BorderRadius = 40;
-            this.customBtn_NicoletaTitei1.BorderSize = 0;
-            this.customBtn_NicoletaTitei1.FlatAppearance.BorderSize = 0;
-            this.customBtn_NicoletaTitei1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customBtn_NicoletaTitei1.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.customBtn_NicoletaTitei1.ForeColor = System.Drawing.Color.White;
-            this.customBtn_NicoletaTitei1.Location = new System.Drawing.Point(13, 16);
-            this.customBtn_NicoletaTitei1.Name = "customBtn_NicoletaTitei1";
-            this.customBtn_NicoletaTitei1.Size = new System.Drawing.Size(172, 40);
-            this.customBtn_NicoletaTitei1.TabIndex = 7;
-            this.customBtn_NicoletaTitei1.Text = "Magazine";
-            this.customBtn_NicoletaTitei1.TextColor = System.Drawing.Color.White;
-            this.customBtn_NicoletaTitei1.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pictureBox1.Image = global::indiv1.Properties.Resources.loginPerson;
-            this.pictureBox1.Location = new System.Drawing.Point(872, 7);
+            this.pictureBox1.Location = new System.Drawing.Point(860, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(69, 49);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -287,37 +326,29 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(797, 20);
+            this.label1.Location = new System.Drawing.Point(772, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 28);
+            this.label1.Size = new System.Drawing.Size(82, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "admin";
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.panel2);
-            this.flowLayoutPanel1.Controls.Add(this.panel6);
-            this.flowLayoutPanel1.Controls.Add(this.panel1);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 75);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(932, 169);
-            this.flowLayoutPanel1.TabIndex = 8;
-            this.flowLayoutPanel1.WrapContents = false;
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // DashboardAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
+            this.Controls.Add(this.chart2);
+            this.Controls.Add(this.chart1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.roundedPanel1);
             this.Name = "DashboardAdmin";
             this.Size = new System.Drawing.Size(932, 683);
+            this.Load += new System.EventHandler(this.DashboardAdmin_Load);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -327,10 +358,11 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.roundedPanel1.ResumeLayout(false);
-            this.roundedPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
+            this.roundedPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -343,7 +375,6 @@
         private RoundedPanel roundedPanel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private NicoletaCustomBtn.CustomBtn_NicoletaTitei customBtn_NicoletaTitei1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label5;
@@ -356,5 +387,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
     }
 }

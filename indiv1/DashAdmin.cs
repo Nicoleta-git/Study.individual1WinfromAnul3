@@ -13,6 +13,8 @@ namespace indiv1
 {
     public partial class DashAdmin : KryptonForm
     {
+        CatalogUserForm cus;
+        DashboardAdmin dashAdmin;
         public DashAdmin()
         {
             InitializeComponent();
@@ -25,7 +27,16 @@ namespace indiv1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            dashAdmin = new DashboardAdmin();
+            cus = new CatalogUserForm();
+
+            dashAdmin.Dock = DockStyle.Fill;
+            cus.Dock = DockStyle.Fill;
+
+            containerPagina.Controls.Add(dashAdmin);
+            containerPagina.Controls.Add(cus);
+
+            dashAdmin.BringToFront();  
         }
 
         private void menuPanel1_Paint(object sender, PaintEventArgs e)
@@ -71,22 +82,19 @@ namespace indiv1
         private void kryptonButton2_Click(object sender, EventArgs e)
         {
             DashboardAdmin dashAdmin = new DashboardAdmin();
+            containerPagina.Controls.Add(dashAdmin);
+            dashAdmin.Dock = DockStyle.Fill;
 
-            containerPagina.Controls.Clear();
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DashboardAdmin dashAdmin = new DashboardAdmin();
-            containerPagina.Controls.Add(dashAdmin);
-
-            dashAdmin.Dock = DockStyle.Fill;
+            dashAdmin.BringToFront();
         }
 
-        private void kryptonButton8_Click(object sender, EventArgs e)
+        private void kryptonButton3_Click(object sender, EventArgs e)
         {
-            ChartProcent_Devices cpd = new ChartProcent_Devices();
-            cpd.Show();
-            this.Close();
+            cus.BringToFront();
         }
     }
 }

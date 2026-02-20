@@ -17,7 +17,7 @@ namespace indiv1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DashAdmin());
+            Application.Run(new Form2());
         }
     }
 }

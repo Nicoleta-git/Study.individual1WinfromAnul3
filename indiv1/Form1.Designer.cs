@@ -1,6 +1,6 @@
 ﻿namespace indiv1
 {
-    partial class DashAdmin
+    partial class Form1
     {
         /// <summary>
         /// Required designer variable.
@@ -29,73 +29,45 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashAdmin));
-            this.kryptonPalette2 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
-            this.containerPagina = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.roundedPanel5 = new RoundedPanel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.kryptonButton8 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonButton7 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton6 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton5 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton4 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonButton3 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.logo_darwin = new System.Windows.Forms.PictureBox();
+            this.containerPagina = new System.Windows.Forms.Panel();
+            this.dashboardAdmin1 = new indiv1.DashboardAdmin();
+            this.catalogUserForm1 = new indiv1.CatalogUserForm();
+            this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.panel1.SuspendLayout();
             this.roundedPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo_darwin)).BeginInit();
+            this.containerPagina.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // kryptonPalette2
-            // 
-            this.kryptonPalette2.ButtonStyles.ButtonCommon.OverrideFocus.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.kryptonPalette2.ButtonStyles.ButtonCommon.OverrideFocus.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.kryptonPalette2.ButtonStyles.ButtonForm.OverrideFocus.Back.Color1 = System.Drawing.Color.Purple;
-            this.kryptonPalette2.ButtonStyles.ButtonForm.OverrideFocus.Back.Color2 = System.Drawing.Color.Black;
-            this.kryptonPalette2.ButtonStyles.ButtonForm.OverrideFocus.Back.ColorAngle = 45F;
-            this.kryptonPalette2.ButtonStyles.ButtonForm.OverrideFocus.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Dashed;
-            this.kryptonPalette2.FormStyles.FormCommon.StateCommon.Back.Color1 = System.Drawing.Color.Black;
-            this.kryptonPalette2.FormStyles.FormCommon.StateCommon.Back.Color2 = System.Drawing.Color.Black;
-            this.kryptonPalette2.FormStyles.FormCommon.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonPalette2.FormStyles.FormCommon.StateCommon.Border.Rounding = 30;
-            this.kryptonPalette2.HeaderStyles.HeaderCommon.StateCommon.Back.Color1 = System.Drawing.Color.Purple;
-            this.kryptonPalette2.HeaderStyles.HeaderCommon.StateCommon.Back.Color2 = System.Drawing.Color.Black;
-            this.kryptonPalette2.HeaderStyles.HeaderCommon.StateCommon.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Dashed;
-            this.kryptonPalette2.HeaderStyles.HeaderCommon.StateCommon.ButtonEdgeInset = 10;
-            // 
-            // containerPagina
-            // 
-            this.containerPagina.Dock = System.Windows.Forms.DockStyle.Right;
-            this.containerPagina.Location = new System.Drawing.Point(289, 10);
-            this.containerPagina.Margin = new System.Windows.Forms.Padding(10);
-            this.containerPagina.Name = "containerPagina";
-            this.containerPagina.Size = new System.Drawing.Size(1032, 683);
-            this.containerPagina.TabIndex = 7;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.roundedPanel5);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(10, 10);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(256, 683);
-            this.panel1.TabIndex = 8;
+            this.panel1.Size = new System.Drawing.Size(256, 703);
+            this.panel1.TabIndex = 10;
             // 
             // roundedPanel5
             // 
             this.roundedPanel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(25)))));
             this.roundedPanel5.BorderRadius = 30;
+            this.roundedPanel5.Controls.Add(this.button2);
+            this.roundedPanel5.Controls.Add(this.button1);
             this.roundedPanel5.Controls.Add(this.kryptonButton8);
-            this.roundedPanel5.Controls.Add(this.kryptonButton7);
             this.roundedPanel5.Controls.Add(this.kryptonButton6);
             this.roundedPanel5.Controls.Add(this.kryptonButton5);
             this.roundedPanel5.Controls.Add(this.kryptonButton4);
-            this.roundedPanel5.Controls.Add(this.kryptonButton3);
-            this.roundedPanel5.Controls.Add(this.kryptonButton2);
             this.roundedPanel5.Controls.Add(this.kryptonButton1);
             this.roundedPanel5.Controls.Add(this.logo_darwin);
             this.roundedPanel5.Location = new System.Drawing.Point(10, 10);
@@ -104,6 +76,32 @@
             this.roundedPanel5.Padding = new System.Windows.Forms.Padding(5);
             this.roundedPanel5.Size = new System.Drawing.Size(227, 663);
             this.roundedPanel5.TabIndex = 6;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(25)))));
+            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button2.Location = new System.Drawing.Point(23, 151);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(186, 47);
+            this.button2.TabIndex = 17;
+            this.button2.Text = "Produse";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(25)))));
+            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Location = new System.Drawing.Point(23, 89);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(186, 47);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Dashboard";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // kryptonButton8
             // 
@@ -124,29 +122,10 @@
             this.kryptonButton8.TabIndex = 15;
             this.kryptonButton8.Values.Text = "Settings";
             // 
-            // kryptonButton7
-            // 
-            this.kryptonButton7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.kryptonButton7.Location = new System.Drawing.Point(23, 159);
-            this.kryptonButton7.Name = "kryptonButton7";
-            this.kryptonButton7.Size = new System.Drawing.Size(173, 33);
-            this.kryptonButton7.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(25)))));
-            this.kryptonButton7.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(25)))));
-            this.kryptonButton7.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(25)))));
-            this.kryptonButton7.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(25)))));
-            this.kryptonButton7.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton7.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.kryptonButton7.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.kryptonButton7.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.kryptonButton7.TabIndex = 14;
-            this.kryptonButton7.Values.Text = "Filtrare";
-            // 
             // kryptonButton6
             // 
             this.kryptonButton6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.kryptonButton6.Location = new System.Drawing.Point(18, 273);
+            this.kryptonButton6.Location = new System.Drawing.Point(18, 468);
             this.kryptonButton6.Name = "kryptonButton6";
             this.kryptonButton6.OverrideFocus.Back.Color1 = System.Drawing.Color.Red;
             this.kryptonButton6.OverrideFocus.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
@@ -167,7 +146,7 @@
             // kryptonButton5
             // 
             this.kryptonButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.kryptonButton5.Location = new System.Drawing.Point(18, 234);
+            this.kryptonButton5.Location = new System.Drawing.Point(18, 429);
             this.kryptonButton5.Name = "kryptonButton5";
             this.kryptonButton5.Size = new System.Drawing.Size(173, 33);
             this.kryptonButton5.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(25)))));
@@ -186,7 +165,7 @@
             // kryptonButton4
             // 
             this.kryptonButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.kryptonButton4.Location = new System.Drawing.Point(18, 195);
+            this.kryptonButton4.Location = new System.Drawing.Point(18, 390);
             this.kryptonButton4.Name = "kryptonButton4";
             this.kryptonButton4.Size = new System.Drawing.Size(173, 33);
             this.kryptonButton4.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(25)))));
@@ -202,46 +181,6 @@
             this.kryptonButton4.TabIndex = 11;
             this.kryptonButton4.Values.Text = "Favorite";
             // 
-            // kryptonButton3
-            // 
-            this.kryptonButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.kryptonButton3.Location = new System.Drawing.Point(23, 124);
-            this.kryptonButton3.Name = "kryptonButton3";
-            this.kryptonButton3.Size = new System.Drawing.Size(173, 33);
-            this.kryptonButton3.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(25)))));
-            this.kryptonButton3.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(25)))));
-            this.kryptonButton3.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(25)))));
-            this.kryptonButton3.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(25)))));
-            this.kryptonButton3.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton3.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.kryptonButton3.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.kryptonButton3.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.kryptonButton3.TabIndex = 10;
-            this.kryptonButton3.Values.Text = "Produse";
-            this.kryptonButton3.Click += new System.EventHandler(this.kryptonButton3_Click);
-            // 
-            // kryptonButton2
-            // 
-            this.kryptonButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.kryptonButton2.Location = new System.Drawing.Point(14, 85);
-            this.kryptonButton2.Name = "kryptonButton2";
-            this.kryptonButton2.Size = new System.Drawing.Size(173, 33);
-            this.kryptonButton2.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(25)))));
-            this.kryptonButton2.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(25)))));
-            this.kryptonButton2.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(25)))));
-            this.kryptonButton2.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(25)))));
-            this.kryptonButton2.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton2.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.kryptonButton2.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.kryptonButton2.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.kryptonButton2.TabIndex = 9;
-            this.kryptonButton2.Values.Text = "Dashboard";
-            this.kryptonButton2.Click += new System.EventHandler(this.kryptonButton2_Click);
-            // 
             // kryptonButton1
             // 
             this.kryptonButton1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -249,8 +188,6 @@
             this.kryptonButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.kryptonButton1.Location = new System.Drawing.Point(19, 573);
             this.kryptonButton1.Name = "kryptonButton1";
-            this.kryptonButton1.Palette = this.kryptonPalette2;
-            this.kryptonButton1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.kryptonButton1.Size = new System.Drawing.Size(190, 54);
             this.kryptonButton1.StateCommon.Back.Color1 = System.Drawing.Color.Black;
             this.kryptonButton1.StateCommon.Back.Color2 = System.Drawing.Color.Purple;
@@ -291,58 +228,101 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.kryptonButton1.TabIndex = 7;
             this.kryptonButton1.Values.Text = "Log out";
-            this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
             // logo_darwin
             // 
             this.logo_darwin.BackColor = System.Drawing.Color.Transparent;
             this.logo_darwin.Image = global::indiv1.Properties.Resources.logo2;
-            this.logo_darwin.Location = new System.Drawing.Point(23, 24);
+            this.logo_darwin.Location = new System.Drawing.Point(36, 24);
             this.logo_darwin.Name = "logo_darwin";
             this.logo_darwin.Size = new System.Drawing.Size(155, 47);
             this.logo_darwin.TabIndex = 4;
             this.logo_darwin.TabStop = false;
             // 
-            // DashAdmin
+            // containerPagina
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.containerPagina.Controls.Add(this.dashboardAdmin1);
+            this.containerPagina.Controls.Add(this.catalogUserForm1);
+            this.containerPagina.Dock = System.Windows.Forms.DockStyle.Right;
+            this.containerPagina.Location = new System.Drawing.Point(161, 0);
+            this.containerPagina.Margin = new System.Windows.Forms.Padding(10);
+            this.containerPagina.Name = "containerPagina";
+            this.containerPagina.Size = new System.Drawing.Size(1032, 703);
+            this.containerPagina.TabIndex = 9;
+            // 
+            // dashboardAdmin1
+            // 
+            this.dashboardAdmin1.BackColor = System.Drawing.Color.Black;
+            this.dashboardAdmin1.Location = new System.Drawing.Point(101, 3);
+            this.dashboardAdmin1.Name = "dashboardAdmin1";
+            this.dashboardAdmin1.Size = new System.Drawing.Size(932, 681);
+            this.dashboardAdmin1.TabIndex = 1;
+            this.dashboardAdmin1.Visible = false;
+            // 
+            // catalogUserForm1
+            // 
+            this.catalogUserForm1.BackColor = System.Drawing.Color.Black;
+            this.catalogUserForm1.Location = new System.Drawing.Point(101, 10);
+            this.catalogUserForm1.Name = "catalogUserForm1";
+            this.catalogUserForm1.Size = new System.Drawing.Size(919, 680);
+            this.catalogUserForm1.TabIndex = 0;
+            this.catalogUserForm1.Visible = false;
+            // 
+            // kryptonPalette1
+            // 
+            this.kryptonPalette1.FormStyles.FormCommon.StateCommon.Back.Color1 = System.Drawing.Color.Black;
+            this.kryptonPalette1.FormStyles.FormCommon.StateCommon.Back.Color2 = System.Drawing.Color.Black;
+            this.kryptonPalette1.FormStyles.FormCommon.StateCommon.Border.Color1 = System.Drawing.Color.Black;
+            this.kryptonPalette1.FormStyles.FormCommon.StateCommon.Border.Color2 = System.Drawing.Color.Black;
+            this.kryptonPalette1.FormStyles.FormCommon.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonPalette1.FormStyles.FormCommon.StateCommon.Border.Rounding = 30;
+            this.kryptonPalette1.HeaderStyles.HeaderCommon.StateCommon.Back.Color1 = System.Drawing.Color.Purple;
+            this.kryptonPalette1.HeaderStyles.HeaderCommon.StateCommon.Back.Color2 = System.Drawing.Color.Black;
+            this.kryptonPalette1.HeaderStyles.HeaderCommon.StateCommon.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Dashed;
+            this.kryptonPalette1.HeaderStyles.HeaderCommon.StateCommon.Border.Color1 = System.Drawing.Color.Black;
+            this.kryptonPalette1.HeaderStyles.HeaderCommon.StateCommon.Border.Color2 = System.Drawing.Color.Black;
+            this.kryptonPalette1.HeaderStyles.HeaderCommon.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1331, 703);
+            this.ClientSize = new System.Drawing.Size(1193, 703);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.containerPagina);
-            this.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(74)))));
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
-            this.Name = "DashAdmin";
-            this.Padding = new System.Windows.Forms.Padding(10);
-            this.Palette = this.kryptonPalette2;
+            this.Name = "Form1";
+            this.Palette = this.kryptonPalette1;
             this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DashAdmin_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.roundedPanel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.logo_darwin)).EndInit();
+            this.containerPagina.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox logo_darwin;
+
+        private System.Windows.Forms.Panel panel1;
         private RoundedPanel roundedPanel5;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton3;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton2;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton8;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton6;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton5;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton4;
-        private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPalette2;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton7;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
+        private System.Windows.Forms.PictureBox logo_darwin;
         private System.Windows.Forms.Panel containerPagina;
-        private System.Windows.Forms.Panel panel1;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton8;
+        private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPalette1;
+        private DashboardAdmin dashboardAdmin1;
+        private CatalogUserForm catalogUserForm1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
-
