@@ -74,10 +74,19 @@ namespace indiv1
 
             containerPagina.Controls.Clear();
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DashboardAdmin dashAdmin = new DashboardAdmin();
             containerPagina.Controls.Add(dashAdmin);
 
             dashAdmin.Dock = DockStyle.Fill;
+        }
 
+        private void kryptonButton8_Click(object sender, EventArgs e)
+        {
+            ChartProcent_Devices cpd = new ChartProcent_Devices();
+            cpd.Show();
+            this.Close();
         }
     }
 }
