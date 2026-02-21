@@ -89,8 +89,8 @@ Un aspect esențial al sistemului este securitatea, realizată printr-o separare
 <img width="1158" height="779" alt="image" src="https://github.com/user-attachments/assets/21cbc019-652e-4be0-ba42-3917428ffb50" />
 
 ### UserInterface.cs
+<img width="1178" height="792" alt="{BA3BEF53-284D-4BA1-A1E8-B4A71FEA22DF}" src="https://github.com/user-attachments/assets/d566af87-829f-401f-8ccf-7969f8ed4b0e" />
 <img width="1162" height="777" alt="image" src="https://github.com/user-attachments/assets/b8241620-0439-4b7a-9198-e162fcfc988c" />
-<img width="1168" height="781" alt="image" src="https://github.com/user-attachments/assets/eb183e4e-0ebe-46b7-a339-ed68bb7331af" />
 <img width="1158" height="773" alt="image" src="https://github.com/user-attachments/assets/b64082a4-9652-46b0-b88f-fdc0ce26a3e0" />
 
 ## Comonente utlizate
@@ -282,8 +282,8 @@ Instalarea componentelor și depanarea conflictelor de design au consumat o cant
 | **Marcoman** | Tutorial Video | [Vizualizare Video](https://youtu.be/F2eEO1lxvbg?si=kBjDuO4sMOsAaP77) |
 | **Coding Ideas** | Tutorial Video | [Vizualizare Video](https://youtu.be/Ns0pBlbBZmE?si=kaS5E04r4CDMZ19t) |
 | **Code Cracks** | Tutorial Video | [Vizualizare Video](https://youtu.be/IF2HHacgjAU?si=Ex7yHkdcVrnKQd4M) |
-| **Microsoft Learn** | Documentație API | [Control.OnPaint](https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.control.onpaint) |
-| **Microsoft Learn** | Documentație API | [System.Drawing.Pen](https://learn.microsoft.com/en-us/dotnet/api/system.drawing.pen) |
+| **Microsoft Learn** | Documentație  | [Control.OnPaint](https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.control.onpaint) |
+| **Microsoft Learn** | Documentație  | [System.Drawing.Pen](https://learn.microsoft.com/en-us/dotnet/api/system.drawing.pen) |
 | **Microsoft Learn** | Ghid Tehnic | [UserControl Overview](https://learn.microsoft.com/en-us/dotnet/desktop/winforms/controls-design/usercontrol-overview) |
 | **StackOverflow** | Forum Tehnic | [WinForms Smooth Animations](https://stackoverflow.com/questions/62701593/winforms-smooth-animations) |
 | **StackOverflow** | Forum Tehnic | [Circular Panels in C#](https://stackoverflow.com/questions/3226136/turn-a-panel-into-a-circle-in-c-sharp-visual-studio-2010) |
