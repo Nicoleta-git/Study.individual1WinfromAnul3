@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace indiv1
 {
-    public partial class DashBoard : UserControl
+    public partial class Casti : UserControl
     {
-        public DashBoard()
+        public Casti()
         {
             InitializeComponent();
         }

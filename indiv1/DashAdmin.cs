@@ -121,14 +121,18 @@ namespace indiv1
 
         private void kryptonButton9_Click(object sender, EventArgs e)
         {
-            angajati1.Visible = true;
             angajati1.BringToFront();
+            containerPagina.Focus();
+        }
 
-            catalogUserForm1.Visible = false;
-            dashboardAdmin1.Visible = false;
-            clientiManagement1.Visible = false;
-            comenzi1.Visible = false ;
-            setari1.Visible = false;
+        private void kryptonButton10_Click(object sender, EventArgs e)
+        {
+            anunturi1.BringToFront();
+            containerPagina.Focus();
+        }
+
+        private void kryptonButton11_Click(object sender, EventArgs e)
+        {
             containerPagina.Focus();
         }
     }

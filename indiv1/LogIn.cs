@@ -39,7 +39,13 @@ namespace indiv1
                 da.Show();
                 this.Hide();
             }
-            else {
+            else if (username == "user" && password == "1234") { 
+                UserInterface ui = new UserInterface();
+                ui.Show();
+                this.Hide();
+            }
+            else
+            {
                 lblEroare.ForeColor = Color.Red;
                 lblEroare.Text = "Username sau parolă incorecte!";
             }

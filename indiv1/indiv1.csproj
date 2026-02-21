@@ -104,6 +104,18 @@
     <Compile Include="Angajati.Designer.cs">
       <DependentUpon>Angajati.cs</DependentUpon>
     </Compile>
+    <Compile Include="Anunturi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Anunturi.Designer.cs">
+      <DependentUpon>Anunturi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casti.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Casti.Designer.cs">
+      <DependentUpon>Casti.cs</DependentUpon>
+    </Compile>
     <Compile Include="CatalogUserForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -128,17 +140,17 @@
     <Compile Include="CustomRoundedComboBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="DashBoard.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="DashBoard.Designer.cs">
-      <DependentUpon>DashBoard.cs</DependentUpon>
-    </Compile>
     <Compile Include="DashboardAdmin.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="DashboardAdmin.Designer.cs">
       <DependentUpon>DashboardAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DashUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DashUser.Designer.cs">
+      <DependentUpon>DashUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Filtrare.cs">
       <SubType>UserControl</SubType>
@@ -157,6 +169,18 @@
     </Compile>
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="istoric.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="istoric.Designer.cs">
+      <DependentUpon>istoric.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Laptopuri.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Laptopuri.Designer.cs">
+      <DependentUpon>Laptopuri.cs</DependentUpon>
     </Compile>
     <Compile Include="Loading.cs">
       <SubType>Form</SubType>
@@ -201,8 +225,26 @@
     <Compile Include="Setari.Designer.cs">
       <DependentUpon>Setari.cs</DependentUpon>
     </Compile>
+    <Compile Include="Telefoane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Telefoane.Designer.cs">
+      <DependentUpon>Telefoane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface.Designer.cs">
+      <DependentUpon>UserInterface.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Angajati.resx">
       <DependentUpon>Angajati.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Anunturi.resx">
+      <DependentUpon>Anunturi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casti.resx">
+      <DependentUpon>Casti.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CatalogUserForm.resx">
       <DependentUpon>CatalogUserForm.cs</DependentUpon>
@@ -213,11 +255,11 @@
     <EmbeddedResource Include="Comenzi.resx">
       <DependentUpon>Comenzi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DashBoard.resx">
-      <DependentUpon>DashBoard.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="DashboardAdmin.resx">
       <DependentUpon>DashboardAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashUser.resx">
+      <DependentUpon>DashUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Filtrare.resx">
       <DependentUpon>Filtrare.cs</DependentUpon>
@@ -227,6 +269,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="istoric.resx">
+      <DependentUpon>istoric.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laptopuri.resx">
+      <DependentUpon>Laptopuri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Loading.resx">
       <DependentUpon>Loading.cs</DependentUpon>
@@ -247,6 +295,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Setari.resx">
       <DependentUpon>Setari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telefoane.resx">
+      <DependentUpon>Telefoane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface.resx">
+      <DependentUpon>UserInterface.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

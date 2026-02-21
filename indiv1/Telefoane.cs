@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace indiv1
 {
-    public partial class Produs : UserControl
+    public partial class Telefoane : UserControl
     {
-        public Produs()
+        public Telefoane()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
