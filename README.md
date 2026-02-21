@@ -35,7 +35,29 @@
 </div>
 <br><br><br><br>
 
-## Introducere 
+## Cuprins
+1. [Introducere](#introducere)
+2. [Prezentare Generală (Interfață)](#introducere-prezentare-generala)
+   * [Loading.cs](#loadingcs)
+   * [LogIn.cs](#logincs)
+   * [Register.cs](#registercs)
+   * [AdminDashbord.cs](#admindashbordcs)
+   * [UserInterface.cs](#userinterfacecs)
+3. [Componente Utilizate](#comonente-utlizate)
+   * [Componente Vizuale și Layout](#componente-vizuale-și-layout-krypton-toolkit)
+   * [Elemente de Control Interactive](#elemente-de-control-interactive)
+   * [Vizualizarea Datelor (Charts)](#vizualizarea-datelor-charts)
+   * [Managementul Produselor](#4-managementul-produselor-cataloguserform)
+4. [Logica Codului](#logica-cod)
+   * [Implementarea Grafică (OnPaint)](#implementarea-grafică-randarea-marginilor-rotunjite)
+   * [Autentificare și Navigare](#logica-de-autentificare-și-navigare)
+   * [UserControls și Animații](#navigare-prin-usercontrols-și-animații)
+5. [Concluzii](#concluzii)
+6. [Bibliografie](#bibliografie--resurse-utilizate)
+
+---
+
+## Introducere
 
 Prezenta lucrare de studiu individual vizează dezvoltarea unei aplicații desktop avansate pentru gestionarea proceselor de vânzare online în cadrul companiei **Darwin**. Aplicația este specializată în comercializarea dispozitivelor electronice (laptopuri, telefoane, căști), având o structură logică bazată pe categorisirea produselor în funcție de specificațiile software și hardware.
 
@@ -118,7 +140,131 @@ Prezenta lucrare de studiu individual vizează dezvoltarea unei aplicații deskt
 
 ---
 
+## Logica cod
 
+###  Implementarea Grafică: Randarea Marginilor Rotunjite
+
+Pentru a obține un design modern în cadrul aplicației **Darwin**, am utilizat tehnica de desenare personalizată prin suprascrierea metodei `OnPaint`. Aceasta permite controlul total asupra geometriei elementelor de interfață.
+
+#### Secvența de Cod:
+
+```csharp
+protected override void OnPaint(PaintEventArgs e)
+{
+    base.OnPaint(e);
+
+    // Activăm Anti-Aliasing pentru margini netede (fără efect de scară)
+    e.Graphics.SmoothingMode = SmoothingMode.AntiAlias; 
+
+    int inset = 1; // Ajustare pentru precizia conturului
+    int r = BorderRadius; // Variabilă pentru raza de curbură
+
+    using (GraphicsPath path = new GraphicsPath())
+    {
+        path.StartFigure();
+        // Definirea celor 4 colțuri prin segmente de arc (90°)
+        path.AddArc(inset, inset, r, r, 180, 90);                         // Sus-Stânga
+        path.AddArc(Width - r - inset, inset, r, r, 270, 90);              // Sus-Dreapta
+        path.AddArc(Width - r - inset, Height - r - inset, r, r, 0, 90);   // Jos-Dreapta
+        path.AddArc(inset, Height - r - inset, r, r, 90, 90);             // Jos-Stânga
+        path.CloseFigure();
+
+        // Aplicăm forma rezultată asupra regiunii interactive a controlului
+        this.Region = new Region(path);
+    }
+}
+
+```
+
+#### Descriere:
+
+* **`SmoothingMode.AntiAlias`**: Elimină aspectul pixelat al marginilor, oferind un finisaj profesional.
+* **`GraphicsPath`**: Construiește un traseu matematic închis care definește noua formă a obiectului.
+* **`AddArc`**: Calculează curbura fiecărui colț pe baza razei stabilite (`BorderRadius`), transformând dreptunghiul standard într-o formă fluidă.
+* **`this.Region`**: Restrânge zona de afișare și aria de click la perimetrul definit de `path`, asigurând că butoanele răspund corect la interacțiune doar în interiorul formei rotunjite.
+
+---
+
+## LogIn.cs
+### Logica de Autentificare și Navigare
+
+**1. Verificarea credențialelor și redirecționarea pe roluri (Admin/User):**
+Aplicația validează datele de intrare și deschide interfața corespunzătoare folosind metodele `.Show()` și `.Hide()`.
+
+```csharp
+if (username == "admin" && password == "1234") {
+    DashAdmin da = new DashAdmin(); da.Show(); this.Hide();
+} else if (username == "user" && password == "1234") { 
+    UserInterface ui = new UserInterface(); ui.Show(); this.Hide();
+} else {
+    lblEroare.ForeColor = Color.Red; lblEroare.Text = "Username sau parolă incorecte!";
+}
+
+```
+
+**2. Navigarea către formularul de înregistrare:**
+Permite utilizatorului să comute rapid către interfața de creare cont prin ascunderea ferestrei curente.
+
+```csharp
+private void label3_Click(object sender, EventArgs e) {
+    Register r = new Register(); r.Show(); this.Hide();
+}
+
+```
+
+**3. Gestionarea vizibilității parolei:**
+Modifică proprietatea `UseSystemPasswordChar` pentru a afișa sau masca parola în timp real.
+
+```csharp
+private void checkBox1_CheckedChanged(object sender, EventArgs e) {
+    PassTxt.UseSystemPasswordChar = !checkBox1.Checked;
+}
+
+```
+
+---
+
+### Navigare prin UserControls și Animații
+
+Pentru o aplicație rapidă, am utilizat **UserControls** în loc de ferestre multiple, optimizând astfel consumul de memorie.
+
+#### 1. Schimbarea paginilor (Switching)
+
+Folosesc `.Visible` și `.BringToFront()` pentru a afișa instant conținutul dorit în containerul principal.
+
+```csharp
+catalogUserForm1.Visible = true;
+catalogUserForm1.BringToFront(); // Aduce pagina în față
+dashboardAdmin1.Visible = false; // Ascunde restul
+
+```
+
+**Rol:** Evită deschiderea de procese noi și păstrează datele încărcate în fundal.
+
+#### 2. Meniul animat (Dropdown)
+
+Am creat o tranziție fluidă folosind un `Timer` care modifică înălțimea (`Height`) panoului lateral.
+
+```csharp
+if (!menuExpand) {
+    flowLayoutPanel1.Height += menuSpeed; // Extinde
+    if (flowLayoutPanel1.Height >= menuMaxHeight) menuTransition.Stop();
+} else {
+    flowLayoutPanel1.Height -= menuSpeed; // Retrage
+    if (flowLayoutPanel1.Height <= menuMinHeight) menuTransition.Stop();
+}
+
+```
+
+**Rol:** Economisește spațiu în interfață și oferă un aspect modern de "acordeon".
+
+#### 3. Securizarea sesiunii
+
+Butonul de **Log Out** include un `MessageBox` de confirmare pentru a preveni închiderea accidentală a aplicației Darwin.
+
+---
+
+---
 
 ## Concluzii
 
