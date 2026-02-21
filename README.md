@@ -59,20 +59,15 @@
 
 ## Introducere
 
-Prezenta lucrare de studiu individual vizează dezvoltarea unei aplicații desktop avansate pentru gestionarea proceselor de vânzare online în cadrul companiei **Darwin**. Aplicația este specializată în comercializarea dispozitivelor electronice (laptopuri, telefoane, căști), având o structură logică bazată pe categorisirea produselor în funcție de specificațiile software și hardware.
+Această lucrare de studiu individual se concentrează pe dezvoltarea unei aplicații desktop dedicate gestiunii proceselor de vânzare pentru compania Darwin. Proiectul a fost gândit special pentru comercializarea dispozitivelor electronice, precum telefoane, laptopuri sau căști, având la bază o structură logică ce permite categorisirea produselor în funcție de specificațiile lor hardware și software.
 
-### Detalii Tehnice și Funcționalități:
+Din punct de vedere tehnic, am pus un accent deosebit pe crearea unei interfețe grafice moderne, motiv pentru care am ales să folosesc suita de componente Krypton Toolkit. Aceasta mi-a permis să depășesc limitările vizuale standard ale Windows Forms și să implementez elemente mai avansate, cum ar fi paletele de culori personalizate, butoane cu design stilizat și tranziții mai fluide între meniuri, oferind astfel o experiență de utilizare mult mai calitativă. Aplicația are la bază o arhitectură solidă conectată la o bază de date, ceea ce garantează că toate informațiile despre stocuri, conturile utilizatorilor și istoricul comenzilor sunt salvate corect și pot fi accesate oricând.
 
-* **Interfață Grafică Modernă (Krypton Toolkit):** Pentru a oferi o experiență de utilizare premium, aplicația utilizează suita de componente interactive **Krypton**. Aceasta permite implementarea unor elemente grafice avansate (palete de culori personalizate, butoane stilizate și meniuri de tranziție fluide) care depășesc limitările standard ale Windows Forms.
-* **Arhitectură bazată pe Date:** Sistemul este conectat integral la o **bază de date**, asigurând persistența informațiilor despre stocuri, istoricul comenzilor și conturile utilizatorilor.
-* **Sistem de Securitate și Roluri:** Aplicația implementează o separare strictă a accesului pentru a menține securitatea datelor:
-    * **Interfața Utilizator:** Permite navigarea prin catalogul de produse, vizualizarea detaliilor tehnice și gestionarea istoricului personal.
-    * **Interfața Admin:** Oferă control complet asupra aplicației, permițând administratorului să adauge/șteargă produse, să modifice prețurile și să gestioneze baza de date a clienților.
+Un aspect esențial al sistemului este securitatea, realizată printr-o separare clară a rolurilor de acces. Utilizatorii obișnuiți pot naviga prin catalogul de produse și își pot gestiona istoricul personal, în timp ce interfața de administrator oferă un control total. Din panoul de admin, pot fi adăugate sau șterse produse, se pot modifica prețurile în timp real și se poate gestiona întreaga bază de date a clienților.
 
-### Obiectivele Proiectului:
-1.  **Optimizarea experienței utilizatorului** prin componente vizuale interactive.
-2.  **Eficientizarea gestiunii stocurilor** pentru compania Darwin prin modulele de administrare.
-3.  **Garantarea integrității datelor** prin utilizarea unei baze de date securizate și a unui sistem de autentificare minimalist.
+În final, obiectivele principale pe care le-am urmărit prin acest proiect au fost optimizarea experienței de navigare prin elemente vizuale interactive, eficientizarea modului în care Darwin își gestionează inventarul și, nu în ultimul rând, asigurarea integrității datelor printr-un sistem de autentificare simplu, dar sigur.
+
+---
 
 ## Introducere Prezentare generala
 ### Loading.cs
