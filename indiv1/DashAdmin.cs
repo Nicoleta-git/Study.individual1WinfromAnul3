@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 
@@ -13,88 +6,130 @@ namespace indiv1
 {
     public partial class DashAdmin : KryptonForm
     {
-        CatalogUserForm cus;
-        DashboardAdmin dashAdmin;
         public DashAdmin()
         {
             InitializeComponent();
+            dashboardAdmin1.Visible = true;
+            dashboardAdmin1.BringToFront();
         }
 
-        private void roundedPanel1_Paint(object sender, PaintEventArgs e)
-        {
+        bool menuExpand = false;
 
-        }
+        int menuMaxHeight = 120;  
+        int menuMinHeight = 0; 
+        int menuSpeed = 10;
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            dashAdmin = new DashboardAdmin();
-            cus = new CatalogUserForm();
-
-            dashAdmin.Dock = DockStyle.Fill;
-            cus.Dock = DockStyle.Fill;
-
-            containerPagina.Controls.Add(dashAdmin);
-            containerPagina.Controls.Add(cus);
-
-            dashAdmin.BringToFront();  
+            flowLayoutPanel1.Height = menuMinHeight;
         }
 
-        private void menuPanel1_Paint(object sender, PaintEventArgs e)
+        private void kryptonButton5_Click(object sender, EventArgs e)
         {
-
+            menuTransition.Start();
+            containerPagina.Focus();
         }
 
-        // evenimentul de inchidere a aplicatiei
-        private void pictureBox3_Click(object sender, EventArgs e)
+        private void menuTransition_Tick(object sender, EventArgs e)
         {
-            Application.Exit();
-        }
-
-        // marirea si micsoararea aplicatiei
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            if (this.WindowState == FormWindowState.Maximized)
+            if (menuExpand == false)
             {
-                this.WindowState = FormWindowState.Normal;
+
+                flowLayoutPanel1.Height += menuSpeed;
+
+                if (flowLayoutPanel1.Height >= menuMaxHeight)
+                {
+                    menuTransition.Stop();
+                    menuExpand = true;
+                }
             }
-            else {
-                this.WindowState = FormWindowState.Maximized;
+            else
+            {
+                flowLayoutPanel1.Height -= menuSpeed;
+
+                if (flowLayoutPanel1.Height <= menuMinHeight)
+                {
+                    menuTransition.Stop();
+                    menuExpand = false;
+                }
             }
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void kryptonButton4_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
-        }
+            catalogUserForm1.Visible = false;
+            dashboardAdmin1.Visible = true;
+            dashboardAdmin1.BringToFront();
+            containerPagina.Focus();
 
-        private void DashAdmin_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void kryptonButton1_Click(object sender, EventArgs e)
-        {
-            LogIn li =  new LogIn();
-            li.Show();
-            this.Hide();
         }
 
         private void kryptonButton2_Click(object sender, EventArgs e)
         {
-            DashboardAdmin dashAdmin = new DashboardAdmin();
-            containerPagina.Controls.Add(dashAdmin);
-            dashAdmin.Dock = DockStyle.Fill;
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            dashAdmin.BringToFront();
+            catalogUserForm1.Visible = true;
+            catalogUserForm1.BringToFront();
+            dashboardAdmin1.Visible = false;
+            containerPagina.Focus();
         }
 
         private void kryptonButton3_Click(object sender, EventArgs e)
         {
-            cus.BringToFront();
+            clientiManagement1.Visible = true;
+            clientiManagement1.BringToFront();
+
+            catalogUserForm1.Visible = false;
+            dashboardAdmin1.Visible = false;
+            containerPagina.Focus();
+
+        }
+
+        private void kryptonButton1_Click(object sender, EventArgs e)
+        {
+            containerPagina.Focus();
+            DialogResult result = MessageBox.Show("Esti sigur ca vrei sa iesi?", "Progresul se va salva", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                this.Hide();
+                LogIn li = new LogIn();
+                li.Show();
+            }
+
+        }
+
+        private void kryptonButton8_Click(object sender, EventArgs e)
+        {
+            setari1.Visible = true;
+            setari1.BringToFront();
+
+            catalogUserForm1.Visible = false;
+            dashboardAdmin1.Visible = false;
+            clientiManagement1.Visible = false;
+            containerPagina.Focus();
+        }
+
+        private void kryptonButton7_Click(object sender, EventArgs e)
+        {
+            comenzi1.Visible = true;
+            comenzi1.BringToFront();
+
+            catalogUserForm1.Visible = false;
+            dashboardAdmin1.Visible = false;
+            clientiManagement1.Visible = false;
+            setari1.Visible = false;
+            containerPagina.Focus();
+        }
+
+        private void kryptonButton9_Click(object sender, EventArgs e)
+        {
+            angajati1.Visible = true;
+            angajati1.BringToFront();
+
+            catalogUserForm1.Visible = false;
+            dashboardAdmin1.Visible = false;
+            clientiManagement1.Visible = false;
+            comenzi1.Visible = false ;
+            setari1.Visible = false;
+            containerPagina.Focus();
         }
     }
 }

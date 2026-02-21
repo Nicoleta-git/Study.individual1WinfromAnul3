@@ -98,26 +98,35 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Angajati.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Angajati.Designer.cs">
+      <DependentUpon>Angajati.cs</DependentUpon>
+    </Compile>
     <Compile Include="CatalogUserForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="CatalogUserForm.Designer.cs">
       <DependentUpon>CatalogUserForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustomBtn_NicoletaTitei.cs">
-      <SubType>Component</SubType>
+    <Compile Include="ClientiManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ClientiManagement.Designer.cs">
+      <DependentUpon>ClientiManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comenzi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Comenzi.Designer.cs">
+      <DependentUpon>Comenzi.cs</DependentUpon>
     </Compile>
     <Compile Include="CustomProgressBar.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="CustomRoundedComboBox.cs">
       <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="DashAdmin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DashAdmin.Designer.cs">
-      <DependentUpon>DashAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="DashBoard.cs">
       <SubType>UserControl</SubType>
@@ -137,11 +146,11 @@
     <Compile Include="Filtrare.Designer.cs">
       <DependentUpon>Filtrare.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="DashAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="DashAdmin.Designer.cs">
+      <DependentUpon>DashAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
@@ -186,11 +195,23 @@
     <Compile Include="RoundedPanel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Setari.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Setari.Designer.cs">
+      <DependentUpon>Setari.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Angajati.resx">
+      <DependentUpon>Angajati.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CatalogUserForm.resx">
       <DependentUpon>CatalogUserForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DashAdmin.resx">
-      <DependentUpon>DashAdmin.cs</DependentUpon>
+    <EmbeddedResource Include="ClientiManagement.resx">
+      <DependentUpon>ClientiManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comenzi.resx">
+      <DependentUpon>Comenzi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DashBoard.resx">
       <DependentUpon>DashBoard.cs</DependentUpon>
@@ -201,8 +222,8 @@
     <EmbeddedResource Include="Filtrare.resx">
       <DependentUpon>Filtrare.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="DashAdmin.resx">
+      <DependentUpon>DashAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
@@ -223,6 +244,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setari.resx">
+      <DependentUpon>Setari.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

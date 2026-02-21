@@ -31,14 +31,14 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.containerPagina = new System.Windows.Forms.Panel();
             this.roundedPanel5 = new RoundedPanel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.logo_darwin = new System.Windows.Forms.PictureBox();
             this.dashboardAdmin2 = new indiv1.DashboardAdmin();
             this.catalogUserForm1 = new indiv1.CatalogUserForm();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.containerPagina.SuspendLayout();
             this.roundedPanel5.SuspendLayout();
@@ -79,6 +79,30 @@
             this.roundedPanel5.Padding = new System.Windows.Forms.Padding(5);
             this.roundedPanel5.Size = new System.Drawing.Size(237, 638);
             this.roundedPanel5.TabIndex = 6;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(25)))));
+            this.button5.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.button5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button5.Location = new System.Drawing.Point(23, 507);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(186, 47);
+            this.button5.TabIndex = 20;
+            this.button5.Text = "Setari";
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(25)))));
+            this.button4.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button4.Location = new System.Drawing.Point(23, 280);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(186, 47);
+            this.button4.TabIndex = 19;
+            this.button4.Text = "Rapoarte";
+            this.button4.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
@@ -123,6 +147,7 @@
             this.logo_darwin.Location = new System.Drawing.Point(36, 30);
             this.logo_darwin.Name = "logo_darwin";
             this.logo_darwin.Size = new System.Drawing.Size(156, 41);
+            this.logo_darwin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.logo_darwin.TabIndex = 4;
             this.logo_darwin.TabStop = false;
             // 
@@ -142,30 +167,6 @@
             this.catalogUserForm1.Size = new System.Drawing.Size(919, 635);
             this.catalogUserForm1.TabIndex = 0;
             this.catalogUserForm1.Visible = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(25)))));
-            this.button4.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button4.Location = new System.Drawing.Point(23, 280);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(186, 47);
-            this.button4.TabIndex = 19;
-            this.button4.Text = "Rapoarte";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(25)))));
-            this.button5.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.button5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button5.Location = new System.Drawing.Point(23, 507);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(186, 47);
-            this.button5.TabIndex = 20;
-            this.button5.Text = "Setari";
-            this.button5.UseVisualStyleBackColor = false;
             // 
             // Form2
             // 

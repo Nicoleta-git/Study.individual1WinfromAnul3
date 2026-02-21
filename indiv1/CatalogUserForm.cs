@@ -16,5 +16,16 @@ namespace indiv1
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd=new OpenFileDialog();
+
+            ofd.Title = "Selecteaza o imagine";
+            ofd.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp;*.gif";
+
+            if (ofd.ShowDialog() == DialogResult.OK)
+                pictureBox1.Image = Image.FromFile(ofd.FileName);
+        }
     }
 }
