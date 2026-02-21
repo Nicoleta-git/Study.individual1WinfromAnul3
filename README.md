@@ -259,8 +259,6 @@ Butonul de **Log Out** include un `MessageBox` de confirmare pentru a preveni î
 
 ---
 
----
-
 ## Concluzii
 
 Finalizarea acestui proiect a reprezentat o experiență de învățare intensă, marcată de provocări care au depășit cu mult simpla scriere a codului. Cea mai dificilă etapă nu a fost doar implementarea tehnică, ci faza de concepție a întregii lucrări. A fost necesar un efort intelectual considerabil pentru a structura viziunea aplicației „Darwin”, astfel încât să integreze armonios fluxul de vânzare pentru dispozitive electronice cu un sistem de securitate riguros între Admin și Utilizator.
