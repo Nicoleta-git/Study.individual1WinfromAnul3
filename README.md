@@ -76,6 +76,49 @@ Prezenta lucrare de studiu individual vizează dezvoltarea unei aplicații deskt
 <img width="1168" height="781" alt="image" src="https://github.com/user-attachments/assets/eb183e4e-0ebe-46b7-a339-ed68bb7331af" />
 <img width="1158" height="773" alt="image" src="https://github.com/user-attachments/assets/b64082a4-9652-46b0-b88f-fdc0ce26a3e0" />
 
+## Comonente utlizate
+<img width="1181" height="795" alt="image" src="https://github.com/user-attachments/assets/55ba0a09-71de-4cac-a37f-f7f320b9fc6b" />
+
+
+### **Componente Vizuale și Layout (Krypton Toolkit)**
+
+* **KryptonForm:** Fereastra principală a aplicației care permite personalizarea marginilor și a barei de titlu pentru un aspect modern.
+* **KryptonPalette:** Componenta invizibilă care definește tema de culori (negru, mov, gri) aplicată unitar pe toate elementele de control.
+* **FlowLayoutPanel (sidebar):** Panoul din partea stângă utilizat pentru alinierea verticală automată a butoanelor de navigare.
+* **KryptonPanel (panouri statistice):** Containerele individuale din partea superioară care afișează indicatori precum "Număr utilizatori" sau "Venit total".
+* **KryptonGroup / Panel (containere chart):** Zonele delimitate pentru organizarea graficelor.
+
+### **Elemente de Control Interactive**
+
+* **KryptonButton (meniu):** Butoanele din sidebar (Dashboard, Anunțuri, Rapoarte, etc.) care includ iconițe și text, având stări vizuale diferite la trecerea mouse-ului (hover).
+* **KryptonButton (Log Out):** Butonul cu colțuri rotunjite (radius mare) și gradient mov situat în partea de jos a meniului.
+* **KryptonLabel:** Utilizat pentru titlurile secțiunilor (Pannel, Userform) și pentru afișarea cifrelor statistice mari (ex: 11090, 100k).
+* **PictureBox:** Utilizat pentru afișarea logo-ului "Darwin" și a iconițelor reprezentative pentru utilizatori, grafice și grupuri.
+
+### **Vizualizarea Datelor (Charts)**
+
+* **Pie Chart (Grafic circular):** Utilizat pentru distribuția sistemelor de operare (Mac, Windows, Linux).
+* **Bar Chart (Grafic cu bare):** Graficul orizontal din partea dreaptă care monitorizează evoluția vânzărilor ("Sales") pe luni (Ianuarie - Aprilie).
+* **Legend:** Elementul care explică culorile utilizate în grafice.
+
+### **Organizarea Logică a Interfeței**
+
+* **Header:** Bara superioară unde apare titlul formularului.
+* **Sidebar Navigation:** Meniul lateral care separă funcțiile de bază de cele de management (Produse, Clienți, Angajați).
+* **Dashboard Body:** Zona centrală unde sunt grupate panourile informative și graficele de analiză a datelor.
+
+<img width="1181" height="795" alt="image (1)" src="https://github.com/user-attachments/assets/477e3c1c-e256-4a96-8056-e57ebb0516d8" />
+
+### 4. Managementul Produselor (CatalogUserForm)
+
+* **DataGridView:** Elementul central marcat în imagine, responsabil pentru afișarea datelor brute din baza de date SQL/LocalDB. Permite sortarea și selectarea rapidă a dispozitivelor.
+* **KryptonTextBox:** Câmpurile de editare (`Id produs`, `Nume produs`, `Stock`, etc.) care au marginile personalizate (Mov) pentru a menține estetica **Krypton Palette**.
+* **PictureBox (Product Preview):** Zona din dreapta destinată previzualizării imaginii dispozitivului selectat sau pentru importul de noi imagini în baza de date.
+* **KryptonButton (CRUD):** Butoanele `Save`, `Update`, `Delete` și `Clear`, grupate orizontal pentru o gestionare eficientă a inventarului.
+
+---
+
+
 
 ## Concluzii
 
@@ -87,7 +130,7 @@ Instalarea componentelor și depanarea conflictelor de design au consumat o cant
 
 În concluzie, această lucrare a fost un test de rezistență și creativitate. Timpul investit reflectă dorința de a nu accepta soluții mediocre, ci de a crea un produs software complet, care să demonstreze atât competențe de gestionare a bazelor de date, cât și o stăpânire avansată a designului de interfață în C#. Deși parcursul a fost foarte greu și plin de obstacole, satisfacția de a vedea un sistem complex funcționând stabil justifică fiecare zi de efort.
 
-## Biografii
+
 ## Bibliografie / Resurse Utilizate
 
 | Sursa / Canal | Tip Resursă | Link / Referință |
