@@ -77,12 +77,32 @@ Prezenta lucrare de studiu individual vizează dezvoltarea unei aplicații deskt
 <img width="1158" height="773" alt="image" src="https://github.com/user-attachments/assets/b64082a4-9652-46b0-b88f-fdc0ce26a3e0" />
 
 
+## Concluzii
 
+Finalizarea acestui proiect a reprezentat o experiență de învățare intensă, marcată de provocări care au depășit cu mult simpla scriere a codului. Cea mai dificilă etapă nu a fost doar implementarea tehnică, ci faza de concepție a întregii lucrări. A fost necesar un efort intelectual considerabil pentru a structura viziunea aplicației „Darwin”, astfel încât să integreze armonios fluxul de vânzare pentru dispozitive electronice cu un sistem de securitate riguros între Admin și Utilizator.
 
+Procesul de design a fost unul extrem de anevoios, în special din cauza utilizării bibliotecii Krypton Toolkit. Ceea ce la început părea o alegere estetică, s-a dovedit a fi o luptă continuă cu configurarea paletelor de culori și a proprietăților vizuale. Realizarea panoului personalizat de navigare a fost, probabil, cel mai critic punct al dezvoltării; a necesitat ore întregi de muncă migăloasă, transformate în zile de încercări și erori pentru a obține o interfață care să nu fie doar funcțională, ci și fluidă și modernă. 
 
+Instalarea componentelor și depanarea conflictelor de design au consumat o cantitate uriașă de timp, forțându-mă să caut soluții complexe pentru probleme care păreau inițial nerezolvabile. Fiecare detaliu al interfeței grafice a fost gândit și răzgândit de zeci de ori pentru a asigura o experiență de utilizare coerentă.
 
+În concluzie, această lucrare a fost un test de rezistență și creativitate. Timpul investit reflectă dorința de a nu accepta soluții mediocre, ci de a crea un produs software complet, care să demonstreze atât competențe de gestionare a bazelor de date, cât și o stăpânire avansată a designului de interfață în C#. Deși parcursul a fost foarte greu și plin de obstacole, satisfacția de a vedea un sistem complex funcționând stabil justifică fiecare zi de efort.
 
+## Biografii
+## Bibliografie / Resurse Utilizate
 
+| Sursa / Canal | Tip Resursă | Link / Referință |
+| :--- | :--- | :--- |
+| **Darwin** | Documentație Produse | [darwin.md](https://darwin.md/) |
+| **C# Artan Academy** | Tutorial Video | [Vizualizare Video](https://youtu.be/vxc5GopCOMQ?si=wh8ARV_2dQF_gGLC) |
+| **PCODEP** | Tutorial Video | [Partea 1](https://youtu.be/ul8zQeqid7I?si=KlUeBuySws3xMfM7) / [Partea 2](https://youtu.be/mWKSXocPDOU?si=EwPqV4EhTj30ecMh) |
+| **Marcoman** | Tutorial Video | [Vizualizare Video](https://youtu.be/F2eEO1lxvbg?si=kBjDuO4sMOsAaP77) |
+| **Coding Ideas** | Tutorial Video | [Vizualizare Video](https://youtu.be/Ns0pBlbBZmE?si=kaS5E04r4CDMZ19t) |
+| **Code Cracks** | Tutorial Video | [Vizualizare Video](https://youtu.be/IF2HHacgjAU?si=Ex7yHkdcVrnKQd4M) |
+| **Microsoft Learn** | Documentație API | [Control.OnPaint](https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.control.onpaint) |
+| **Microsoft Learn** | Documentație API | [System.Drawing.Pen](https://learn.microsoft.com/en-us/dotnet/api/system.drawing.pen) |
+| **Microsoft Learn** | Ghid Tehnic | [UserControl Overview](https://learn.microsoft.com/en-us/dotnet/desktop/winforms/controls-design/usercontrol-overview) |
+| **StackOverflow** | Forum Tehnic | [WinForms Smooth Animations](https://stackoverflow.com/questions/62701593/winforms-smooth-animations) |
+| **StackOverflow** | Forum Tehnic | [Circular Panels in C#](https://stackoverflow.com/questions/3226136/turn-a-panel-into-a-circle-in-c-sharp-visual-studio-2010) |
 
 
 
