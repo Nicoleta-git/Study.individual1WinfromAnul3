@@ -270,7 +270,7 @@ Instalarea componentelor și depanarea conflictelor de design au consumat o cant
 În concluzie, această lucrare a fost un test de rezistență și creativitate. Timpul investit reflectă dorința de a nu accepta soluții mediocre, ci de a crea un produs software complet, care să demonstreze atât competențe de gestionare a bazelor de date, cât și o stăpânire avansată a designului de interfață în C#. Deși parcursul a fost foarte greu și plin de obstacole, satisfacția de a vedea un sistem complex funcționând stabil justifică fiecare zi de efort.
 
 
-## Bibliografie / Resurse Utilizate
+## Webografii / Resurse Utilizate
 
 | Sursa / Canal | Tip Resursă | Link / Referință |
 | :--- | :--- | :--- |
@@ -284,7 +284,8 @@ Instalarea componentelor și depanarea conflictelor de design au consumat o cant
 | **Microsoft Learn** | Documentație  | [System.Drawing.Pen](https://learn.microsoft.com/en-us/dotnet/api/system.drawing.pen) |
 | **Microsoft Learn** | Ghid Tehnic | [UserControl Overview](https://learn.microsoft.com/en-us/dotnet/desktop/winforms/controls-design/usercontrol-overview) |
 | **StackOverflow** | Forum Tehnic | [WinForms Smooth Animations](https://stackoverflow.com/questions/62701593/winforms-smooth-animations) |
-| **StackOverflow** | Forum Tehnic | [Circular Panels in C#](https://stackoverflow.com/questions/3226136/turn-a-panel-into-a-circle-in-c-sharp-visual-studio-2010) |
+| **StackOverflow** | Forum Tehnic | [Circular Panels in C#](https://stackoverflow.com/questions/3226136/turn-a-panel-into-a-circle-in-c-sharp-visual-studio-2010)|
+| **Krypton Toolkit** | Design | [Github repo](https://github.com/ComponentFactory/Krypton.git)|
 
 
 
