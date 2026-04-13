@@ -259,6 +259,84 @@ Butonul de **Log Out** include un `MessageBox` de confirmare pentru a preveni î
 
 ---
 
+# Partea 2 – Lucru individual
+
+## Baza de date: Darwin
+![BD Darwin](https://github.com/user-attachments/assets/cec83264-1a25-4619-a4a1-260941b04909)
+
+---
+
+## Proceduri
+![Proceduri](https://github.com/user-attachments/assets/01edb7ae-29e4-4cd4-89c9-7e855ca8da61)
+
+## Vederi
+![Vederi](https://github.com/user-attachments/assets/79019af1-51b5-4201-aed8-0d8a6c7ba16f)
+
+---
+
+## Logare Admin
+![Logare Admin](https://github.com/user-attachments/assets/456416b5-c1ea-47d3-b209-86d84b2b33f7)
+
+## Dashboard (conectat la baza de date)
+![Dashboard](https://github.com/user-attachments/assets/66d400a0-d2bd-4694-9910-7054aab8f21c)
+
+## Anunțuri
+![Anunturi](https://github.com/user-attachments/assets/f8178c9c-06d8-45dd-be90-4d6473cf5cf9)
+
+---
+
+## Rapoarte
+
+### Raportul 1
+![Raport 1](https://github.com/user-attachments/assets/3030e4bf-17f6-4089-a75f-467df02bd6c3)
+
+### Raportul 2
+![Raport 2](https://github.com/user-attachments/assets/ecaeccba-a354-40a8-87c3-095e036b9939)
+
+![Raport 2 - detalii](https://github.com/user-attachments/assets/1adf444a-e6e5-4ff6-afe5-df4c09a81e22)
+
+---
+
+## Setările contului (conectate la BD)
+![Setari cont](https://github.com/user-attachments/assets/851737eb-1082-4c3d-8dfe-6f6a2f61d5e4)
+
+---
+
+## Operații CRUD
+
+### Client
+![Client](https://github.com/user-attachments/assets/278a3feb-31c0-407b-8fdd-7977b251841a)
+
+### Comenzi
+![Comenzi](https://github.com/user-attachments/assets/1c608606-35ab-4d5a-9f91-b07442f63791)
+
+### Produse
+![Produse](https://github.com/user-attachments/assets/f68606ff-d0ea-4eb6-ba4c-cbd936fb2306)
+
+### Angajați
+![Angajati](https://github.com/user-attachments/assets/b932f76b-a5b6-4416-84d9-6e98f4c0d3cf)
+
+---
+
+## Logare utilizator
+![Logare utilizator](https://github.com/user-attachments/assets/7c340b70-5aa7-4cd2-998f-198cf090f02b)
+
+## Dashboard utilizator (independent de sesiune)
+![Dashboard utilizator](https://github.com/user-attachments/assets/54098874-db27-42bb-99f3-ede267f4bc57)
+
+## Istoric
+![Istoric](https://github.com/user-attachments/assets/2e85eaf2-c76a-44f6-abe0-2e420e50a179)
+
+## Catalog
+![Catalog 1](https://github.com/user-attachments/assets/8ca47cb7-4a80-4076-988d-4ae49b65f21d)
+
+![Catalog 2](https://github.com/user-attachments/assets/0369b6cd-5e67-4fcf-8810-abb0fa363b2e)
+
+![Catalog 3](https://github.com/user-attachments/assets/d608b63b-1056-4087-ba2a-a9baf91307ab)
+
+
+
+
 ## Concluzii
 
 Finalizarea acestui proiect a reprezentat o experiență de învățare intensă, marcată de provocări care au depășit cu mult simpla scriere a codului. Cea mai dificilă etapă nu a fost doar implementarea tehnică, ci faza de concepție a întregii lucrări. A fost necesar un efort intelectual considerabil pentru a structura viziunea aplicației „Darwin”, astfel încât să integreze armonios fluxul de vânzare pentru dispozitive electronice cu un sistem de securitate riguros între Admin și Utilizator.
