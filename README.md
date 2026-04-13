@@ -7,7 +7,7 @@
 
 <br><br><br><br>
 
-## Lucrare de studiu individual Nr. 1
+## Lucrare de studiu individual Nr. 1,2
 **Disciplina:** Programarea vizuală 
 
 **Tema:** Aplicație vizuală cu utilizarea controllerelor de bază
