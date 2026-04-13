@@ -69,7 +69,7 @@ Un aspect esențial al sistemului este securitatea, realizată printr-o separare
 
 ---
 
-## Introducere Prezentare generala
+# Introducere Prezentare generala
 ### Loading.cs
 <img width="836" height="548" alt="{5CEBEFF5-B2DB-4394-AC1A-B0E51A5F8E57}" src="https://github.com/user-attachments/assets/bba91d0c-d989-4d39-a4b0-e01de226285e" />
 
@@ -95,6 +95,12 @@ Un aspect esențial al sistemului este securitatea, realizată printr-o separare
 
 ## Comonente utlizate
 <img width="1181" height="795" alt="image" src="https://github.com/user-attachments/assets/55ba0a09-71de-4cac-a37f-f7f320b9fc6b" />
+
+
+
+
+
+
 
 
 ### **Componente Vizuale și Layout (Krypton Toolkit)**
@@ -335,6 +341,342 @@ Butonul de **Log Out** include un `MessageBox` de confirmare pentru a preveni î
 ![Catalog 3](https://github.com/user-attachments/assets/d608b63b-1056-4087-ba2a-a9baf91307ab)
 
 
+# Explicare logica codului
+
+Clasa pentru a cunoste cine este logat si ce interfata sa fie prezentata  
+Independenta de rol avem Admin si utilizatorul obisnuit(client,angajat)  
+Fiecare utilizator are interfata personalizata independenta de produsele cumparate si altele  
+
+```csharp
+public static class SesiuneUtilizator
+{
+    public static int ID_Utilizator { get; set; }
+    public static int ID_Rol { get; set; } 
+    public static string Username { get; set; }
+}
+```
+
+# CatalogUserForm explicat prin cod (cu comentarii)
+
+```csharp
+// string de conexiune catre baza de date SQL Server
+// contine serverul, baza de date si metoda de autentificare
+string connectionString = @"Data Source=NICOLETA\SQLEXPRESS;Initial Catalog=DarwinDB;Integrated Security=True;TrustServerCertificate=True";
+````
+
+---
+
+```csharp
+// constructorul clasei
+// se apeleaza automat la crearea controlului
+public CatalogUserForm()
+{
+    InitializeComponent(); // initializeaza componentele UI
+    DisplayProducts();     // afiseaza produsele la start
+}
+```
+
+---
+
+```csharp
+// metoda care incarca toate produsele din baza de date
+public void DisplayProducts()
+{
+    try
+    {
+        using (SqlConnection conn = new SqlConnection(connectionString))
+        {
+            conn.Open(); // deschide conexiunea
+
+            string query = "SELECT * FROM Produse"; // ia toate produsele
+
+            SqlDataAdapter da = new SqlDataAdapter(query, conn);
+            DataTable dt = new DataTable();
+
+            da.Fill(dt); // umple tabelul cu date din BD
+
+            if (dataGridView1 != null)
+                dataGridView1.DataSource = dt; // afiseaza in tabel
+        }
+    }
+    catch (Exception ex)
+    {
+        MessageBox.Show("Eroare la incarcare: " + ex.Message);
+    }
+}
+```
+
+---
+
+```csharp
+// cautare produse in timp real dupa nume
+private void cautaTxt_TextChanged_1(object sender, EventArgs e)
+{
+    try
+    {
+        using (SqlConnection conn = new SqlConnection(connectionString))
+        {
+            conn.Open();
+
+            // LIKE permite cautare partiala
+            string query = "SELECT * FROM Produse WHERE NumeProdus LIKE @search";
+
+            SqlDataAdapter da = new SqlDataAdapter(query, conn);
+
+            // adauga parametrul cu % pentru cautare
+            da.SelectCommand.Parameters.AddWithValue("@search", "%" + cautaTxt.Text + "%");
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            dataGridView1.DataSource = dt; // actualizeaza tabelul
+        }
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine(ex.Message);
+    }
+}
+```
+
+---
+
+```csharp
+// selectare imagine din calculator
+private void importBtn_Click(object sender, EventArgs e)
+{
+    OpenFileDialog ofd = new OpenFileDialog();
+
+    ofd.Title = "Selecteaza o imagine";
+    ofd.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp;*.gif";
+
+    // daca userul a ales o imagine
+    if (ofd.ShowDialog() == DialogResult.OK)
+        ImgProdus.Image = Image.FromFile(ofd.FileName); // afiseaza imaginea
+}
+```
+
+---
+
+```csharp
+// salvare produs nou in baza de date
+private void saveBtn_Click(object sender, EventArgs e)
+{
+    label1.Focus(); // scoate focusul din textbox
+
+    try
+    {
+        using (SqlConnection conn = new SqlConnection(connectionString))
+        {
+            conn.Open();
+
+            // insert cu parametri (mai sigur decat concatenare)
+            string query = @"INSERT INTO Produse 
+            (NumeProdus, Categorie, Producator, Pret, Stoc, Specificatii_Software, Specificatii_Hardware, ImagineProdus, DataAdaugare) 
+            VALUES (@nume, @cat, @prod, @pret, @stoc, @soft, @hard, @img, GETDATE())";
+
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                // preia datele din textbox-uri
+                cmd.Parameters.AddWithValue("@nume", numeProdusTxt.Text);
+                cmd.Parameters.AddWithValue("@cat", categorieProdusTxt.Text);
+                cmd.Parameters.AddWithValue("@prod", producatorTxt.Text);
+                cmd.Parameters.AddWithValue("@pret", decimal.Parse(pretTxt.Text));
+                cmd.Parameters.AddWithValue("@stoc", int.Parse(StocTxt.Text));
+                cmd.Parameters.AddWithValue("@soft", softwareTxt.Text);
+                cmd.Parameters.AddWithValue("@hard", HardwareTxt.Text);
+
+                // converteste imaginea in byte[] pentru BD
+                cmd.Parameters.AddWithValue("@img", ImageToByteArray(ImgProdus.Image));
+
+                cmd.ExecuteNonQuery(); // executa insert
+
+                MessageBox.Show("Produs salvat cu succes!");
+
+                DisplayProducts();      // refresh tabel
+                clearBtn_Click(null,null); // golire campuri
+            }
+        }
+    }
+    catch (Exception ex)
+    {
+        MessageBox.Show("Eroare la salvare: " + ex.Message);
+    }
+}
+```
+
+---
+
+```csharp
+// update produs existent
+private void updateBtn_Click(object sender, EventArgs e)
+{
+    label1.Focus();
+
+    try
+    {
+        using (SqlConnection conn = new SqlConnection(connectionString))
+        {
+            conn.Open();
+
+            // update dupa ID
+            string query = @"UPDATE Produse SET 
+            NumeProdus=@nume, Categorie=@cat, Producator=@prod, 
+            Pret=@pret, Stoc=@stoc, Specificatii_Software=@soft, 
+            Specificatii_Hardware=@hard, ImagineProdus=@img 
+            WHERE ID_Produs=@id";
+
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.Parameters.AddWithValue("@id", idProdusTxt.Text);
+
+                // valori noi
+                cmd.Parameters.AddWithValue("@nume", numeProdusTxt.Text);
+                cmd.Parameters.AddWithValue("@cat", categorieProdusTxt.Text);
+                cmd.Parameters.AddWithValue("@prod", producatorTxt.Text);
+                cmd.Parameters.AddWithValue("@pret", decimal.Parse(pretTxt.Text));
+                cmd.Parameters.AddWithValue("@stoc", int.Parse(StocTxt.Text));
+                cmd.Parameters.AddWithValue("@soft", softwareTxt.Text);
+                cmd.Parameters.AddWithValue("@hard", HardwareTxt.Text);
+                cmd.Parameters.AddWithValue("@img", ImageToByteArray(ImgProdus.Image));
+
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Produs actualizat!");
+                DisplayProducts();
+            }
+        }
+    }
+    catch (Exception ex)
+    {
+        MessageBox.Show("Eroare la update: " + ex.Message);
+    }
+}
+```
+
+---
+
+```csharp
+// stergere produs
+private void deleteBtn_Click(object sender, EventArgs e)
+{
+    label1.Focus();
+
+    // verifica daca exista ID selectat
+    if (string.IsNullOrEmpty(idProdusTxt.Text))
+    {
+        MessageBox.Show("Selecteaza un produs!");
+        return;
+    }
+
+    // confirmare
+    DialogResult result = MessageBox.Show("Sigur stergi acest produs?", "Confirmare", MessageBoxButtons.YesNo);
+    if (result == DialogResult.No) return;
+
+    try
+    {
+        using (SqlConnection conn = new SqlConnection(connectionString))
+        {
+            conn.Open();
+
+            string query = "DELETE FROM Produse WHERE ID_Produs=@id";
+
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.Parameters.AddWithValue("@id", idProdusTxt.Text);
+                cmd.ExecuteNonQuery();
+
+                DisplayProducts(); // refresh
+                clearBtn_Click(null,null);
+            }
+        }
+    }
+    catch (Exception ex)
+    {
+        MessageBox.Show("Eroare: " + ex.Message);
+    }
+}
+```
+
+---
+
+```csharp
+// golire campuri
+private void clearBtn_Click(object sender, EventArgs e)
+{
+    label1.Focus();
+
+    idProdusTxt.Clear();
+    numeProdusTxt.Clear();
+    categorieProdusTxt.Clear();
+    producatorTxt.Clear();
+    pretTxt.Clear();
+    StocTxt.Clear();
+    softwareTxt.Clear();
+    HardwareTxt.Clear();
+
+    ImgProdus.Image = null; // sterge imaginea
+}
+```
+
+---
+
+```csharp
+// cand se da click pe un rand din tabel
+private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+{
+    if (e.RowIndex >= 0)
+    {
+        DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+
+        // incarca datele in textbox-uri
+        idProdusTxt.Text = row.Cells["ID_Produs"].Value.ToString();
+        numeProdusTxt.Text = row.Cells["NumeProdus"].Value.ToString();
+        categorieProdusTxt.Text = row.Cells["Categorie"].Value.ToString();
+        producatorTxt.Text = row.Cells["Producator"].Value.ToString();
+        pretTxt.Text = row.Cells["Pret"].Value.ToString();
+        StocTxt.Text = row.Cells["Stoc"].Value.ToString();
+        softwareTxt.Text = row.Cells["Specificatii_Software"].Value.ToString();
+        HardwareTxt.Text = row.Cells["Specificatii_Hardware"].Value.ToString();
+
+        // conversie imagine din BD
+        if (row.Cells["ImagineProdus"].Value != DBNull.Value)
+        {
+            byte[] imgData = (byte[])row.Cells["ImagineProdus"].Value;
+
+            using (MemoryStream ms = new MemoryStream(imgData))
+            {
+                ImgProdus.Image = Image.FromStream(ms);
+            }
+        }
+        else
+        {
+            ImgProdus.Image = null;
+        }
+    }
+}
+```
+
+---
+
+```csharp
+// functie care transforma Image in byte[]
+// necesara pentru salvare in baza de date
+private byte[] ImageToByteArray(Image image)
+{
+    if (image == null) return null;
+
+    using (MemoryStream ms = new MemoryStream())
+    {
+        Bitmap bmp = new Bitmap(image);
+
+        // salveaza imaginea in format PNG in memorie
+        bmp.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+
+        return ms.ToArray(); // returneaza byte[]
+    }
+}
+```
 
 
 ## Concluzii
