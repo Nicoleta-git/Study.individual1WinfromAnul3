@@ -36,25 +36,60 @@
 <br><br><br><br>
 
 ## Cuprins
+
 1. [Introducere](#introducere)
+
 2. [Prezentare Generală (Interfață)](#introducere-prezentare-generala)
    * [Loading.cs](#loadingcs)
    * [LogIn.cs](#logincs)
    * [Register.cs](#registercs)
    * [AdminDashbord.cs](#admindashbordcs)
    * [UserInterface.cs](#userinterfacecs)
+
 3. [Componente Utilizate](#comonente-utlizate)
-   * [Componente Vizuale și Layout](#componente-vizuale-și-layout-krypton-toolkit)
+   * [Componente Vizuale și Layout](#componente-vizuale-si-layout-krypton-toolkit)
    * [Elemente de Control Interactive](#elemente-de-control-interactive)
    * [Vizualizarea Datelor (Charts)](#vizualizarea-datelor-charts)
    * [Managementul Produselor](#4-managementul-produselor-cataloguserform)
-4. [Logica Codului](#logica-cod)
-   * [Implementarea Grafică (OnPaint)](#implementarea-grafică-randarea-marginilor-rotunjite)
-   * [Autentificare și Navigare](#logica-de-autentificare-și-navigare)
-   * [UserControls și Animații](#navigare-prin-usercontrols-și-animații)
-5. [Concluzii](#concluzii)
-6. [Bibliografie](#bibliografie--resurse-utilizate)
 
+4. [Logica Codului](#logica-cod)
+   * [Implementarea Grafică (OnPaint)](#implementarea-grafica-randarea-marginilor-rotunjite)
+   * [Autentificare și Navigare](#logica-de-autentificare-si-navigare)
+   * [UserControls și Animații](#navigare-prin-usercontrols-si-animatii)
+
+5. [Baza de date și Funcționalități](#baza-de-date-darwin)
+   * [Baza de date: Darwin](#baza-de-date-darwin)
+   * [Proceduri](#proceduri)
+   * [Vederi](#vederi)
+   * [Logare Admin](#logare-admin)
+   * [Dashboard](#dashboard-conectat-la-baza-de-date)
+   * [Anunțuri](#anunturi)
+   * [Rapoarte](#rapoarte)
+     - [Raportul 1](#raportul-1)
+     - [Raportul 2](#raportul-2)
+     - [Raportul 3](#raportul-3)
+   * [Setările contului](#setarile-contului-conectate-la-bd)
+
+6. [Operații CRUD](#operatii-crud)
+   * [Client](#client)
+   * [Comenzi](#comenzi)
+   * [Produse](#produse)
+   * [Angajați](#angajati)
+
+7. [Funcționalități Utilizator](#registrare-utilizator)
+   * [Registrare utilizator](#registrare-utilizator)
+   * [Logare utilizator](#logare-utilizator)
+   * [Dashboard utilizator](#dashboard-utilizator-independent-de-sesiune)
+   * [Istoric](#istoric)
+   * [Catalog](#catalog)
+
+8. [Explicare logica codului](#explicare-logica-codului)
+   * [CatalogUserForm explicat prin cod](#cataloguserform-explicat-prin-cod-cu-comentarii)
+   * [Încărcarea datelor în ReportViewer](#incarcarea-datelor-in-reportviewer-clienti)
+
+9. [Concluzii](#concluzii)
+
+10. [Bibliografie](#bibliografie--resurse-utilizate)
 ---
 
 ## Introducere
@@ -301,6 +336,9 @@ Butonul de **Log Out** include un `MessageBox` de confirmare pentru a preveni î
 
 ![Raport 2 - detalii](https://github.com/user-attachments/assets/1adf444a-e6e5-4ff6-afe5-df4c09a81e22)
 
+### Raportul 3
+<img width="1164" height="787" alt="{D3E05C7B-9F7E-4818-A2FE-9D93FC8E7999}" src="https://github.com/user-attachments/assets/3643e3aa-4fb8-4e7b-8fb7-d8fd6a7ecbb7" />
+
 ---
 
 ## Setările contului (conectate la BD)
@@ -324,6 +362,9 @@ Butonul de **Log Out** include un `MessageBox` de confirmare pentru a preveni î
 
 ---
 
+## Registrare utilizator
+<img width="851" height="750" alt="{0DB92E8B-AB48-4B76-953F-6794B87E5448}" src="https://github.com/user-attachments/assets/0e534a29-cbcb-40bd-bcd0-62a7d5bbef05" />
+
 ## Logare utilizator
 ![Logare utilizator](https://github.com/user-attachments/assets/7c340b70-5aa7-4cd2-998f-198cf090f02b)
 
@@ -334,11 +375,9 @@ Butonul de **Log Out** include un `MessageBox` de confirmare pentru a preveni î
 ![Istoric](https://github.com/user-attachments/assets/2e85eaf2-c76a-44f6-abe0-2e420e50a179)
 
 ## Catalog
-![Catalog 1](https://github.com/user-attachments/assets/8ca47cb7-4a80-4076-988d-4ae49b65f21d)
-
-![Catalog 2](https://github.com/user-attachments/assets/0369b6cd-5e67-4fcf-8810-abb0fa363b2e)
-
-![Catalog 3](https://github.com/user-attachments/assets/d608b63b-1056-4087-ba2a-a9baf91307ab)
+<img width="1169" height="787" alt="image" src="https://github.com/user-attachments/assets/2c31c0f2-dc9d-4c0c-b2dd-6422237855a5" />
+<img width="1162" height="783" alt="image" src="https://github.com/user-attachments/assets/518b2eab-2eb7-4863-a892-03971cce83cc" />
+<img width="1160" height="780" alt="image" src="https://github.com/user-attachments/assets/ebfa70cb-7f12-482e-aeb2-6d2be652f012" />
 
 
 # Explicare logica codului
@@ -677,7 +716,31 @@ private byte[] ImageToByteArray(Image image)
     }
 }
 ```
+### Încărcarea datelor în ReportViewer (Clienti)
 
+```csharp
+// Se incarca datele din tabelul "Clienti" din baza de date
+// în DataSet-ul local (darwinDBDataSet)
+this.clientiTableAdapter1.Fill(this.darwinDBDataSet.Clienti);
+
+// Se sterg orice surse de date existente din ReportViewer
+// (evită dublarea sau conflictele de date)
+this.reportViewer3.LocalReport.DataSources.Clear();
+
+// Se creează o noua sursa de date pentru raport
+// "DataSet1" trebuie sa corespundă EXACT cu numele din fișierul .rdlc
+// Se folosește DefaultView pentru a permite filtrare/sortare dacă e nevoie
+ReportDataSource rds = new ReportDataSource(
+    "DataSet1",
+    this.darwinDBDataSet.Clienti.DefaultView
+);
+
+// Se adauga noua sursă de date la ReportViewer
+this.reportViewer3.LocalReport.DataSources.Add(rds);
+
+// Se reîncarcă raportul pentru a afișa datele actualizate
+this.reportViewer3.RefreshReport();
+```
 
 ## Concluzii
 
@@ -687,25 +750,31 @@ Procesul de design a fost unul extrem de anevoios, în special din cauza utiliz�
 
 Instalarea componentelor și depanarea conflictelor de design au consumat o cantitate uriașă de timp, forțându-mă să caut soluții complexe pentru probleme care păreau inițial nerezolvabile. Fiecare detaliu al interfeței grafice a fost gândit și răzgândit de zeci de ori pentru a asigura o experiență de utilizare coerentă.
 
-În concluzie, această lucrare a fost un test de rezistență și creativitate. Timpul investit reflectă dorința de a nu accepta soluții mediocre, ci de a crea un produs software complet, care să demonstreze atât competențe de gestionare a bazelor de date, cât și o stăpânire avansată a designului de interfață în C#. Deși parcursul a fost foarte greu și plin de obstacole, satisfacția de a vedea un sistem complex funcționând stabil justifică fiecare zi de efort.
+În partea 2 am reușit să construiesc o aplicație completă, care funcționează în legătură directă cu baza de date Darwin. Am implementat toate operațiile importante (adăugare, modificare, ștergere și afișare), iar datele sunt actualizate în timp real în interfață.
+
+Am înțeles mai bine cum se face conexiunea la baza de date, cum se folosesc comenzile SQL în C# și cum se transmit datele între aplicație și SQL Server. De asemenea, am lucrat cu imagini, rapoarte și am realizat o separare clară între utilizator și admin, fiecare având funcționalități diferite.
+
+Dificultățile întâlnite în această parte au fost în principal legate de crearea mai multor dataseturi, ceea ce a generat diverse erori și probleme de sincronizare. De asemenea, a fost dificilă realizarea în paralel a procedurilor din baza de date și a codului C#, deoarece trebuiau corelate corect. Acest proces a fost destul de lent și obositor, necesitând multă atenție la detalii pentru a evita erorile.
+
+Prin urmare, această lucrare a fost un test de rezistență și creativitate. Timpul investit reflectă dorința de a nu accepta soluții mediocre, ci de a crea un produs software complet, care să demonstreze atât competențe de gestionare a bazelor de date, cât și o stăpânire avansată a designului de interfață în C#. Deși parcursul a fost foarte greu și plin de obstacole, satisfacția de a vedea un sistem complex funcționând stabil justifică fiecare zi de efort.
 
 
 ## Webografii / Resurse Utilizate
 
-| Sursa / Canal | Tip Resursă | Link / Referință |
-| :--- | :--- | :--- |
-| **Darwin** | Documentație Produse | [darwin.md](https://darwin.md/) |
-| **C# Artan Academy** | Tutorial Video | [Vizualizare Video](https://youtu.be/vxc5GopCOMQ?si=wh8ARV_2dQF_gGLC) |
-| **PCODEP** | Tutorial Video | [Partea 1](https://youtu.be/ul8zQeqid7I?si=KlUeBuySws3xMfM7) / [Partea 2](https://youtu.be/mWKSXocPDOU?si=EwPqV4EhTj30ecMh) |
-| **Marcoman** | Tutorial Video | [Vizualizare Video](https://youtu.be/F2eEO1lxvbg?si=kBjDuO4sMOsAaP77) |
-| **Coding Ideas** | Tutorial Video | [Vizualizare Video](https://youtu.be/Ns0pBlbBZmE?si=kaS5E04r4CDMZ19t) |
-| **Code Cracks** | Tutorial Video | [Vizualizare Video](https://youtu.be/IF2HHacgjAU?si=Ex7yHkdcVrnKQd4M) |
-| **Microsoft Learn** | Documentație  | [Control.OnPaint](https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.control.onpaint) |
-| **Microsoft Learn** | Documentație  | [System.Drawing.Pen](https://learn.microsoft.com/en-us/dotnet/api/system.drawing.pen) |
-| **Microsoft Learn** | Ghid Tehnic | [UserControl Overview](https://learn.microsoft.com/en-us/dotnet/desktop/winforms/controls-design/usercontrol-overview) |
-| **StackOverflow** | Forum Tehnic | [WinForms Smooth Animations](https://stackoverflow.com/questions/62701593/winforms-smooth-animations) |
-| **StackOverflow** | Forum Tehnic | [Circular Panels in C#](https://stackoverflow.com/questions/3226136/turn-a-panel-into-a-circle-in-c-sharp-visual-studio-2010)|
-| **Krypton Toolkit** | Design | [Github repo](https://github.com/ComponentFactory/Krypton.git)|
-
-
+| Sursa / Canal               | Tip Resursă          | Link / Referință                                                                                                              |
+| :-------------------------- | :------------------- | :---------------------------------------------------------------------------------------------------------------------------- |
+| **Darwin**                  | Documentație Produse | [darwin.md](https://darwin.md/)                                                                                               |
+| **C# Artan Academy**        | Tutorial Video       | [Vizualizare Video](https://youtu.be/vxc5GopCOMQ?si=wh8ARV_2dQF_gGLC)                                                         |
+| **PCODEP**                  | Tutorial Video       | [Partea 1](https://youtu.be/ul8zQeqid7I?si=KlUeBuySws3xMfM7) / [Partea 2](https://youtu.be/mWKSXocPDOU?si=EwPqV4EhTj30ecMh)   |
+| **Marcoman**                | Tutorial Video       | [Vizualizare Video](https://youtu.be/F2eEO1lxvbg?si=kBjDuO4sMOsAaP77)                                                         |
+| **Coding Ideas**            | Tutorial Video       | [Vizualizare Video](https://youtu.be/Ns0pBlbBZmE?si=kaS5E04r4CDMZ19t)                                                         |
+| **Code Cracks**             | Tutorial Video       | [Vizualizare Video](https://youtu.be/IF2HHacgjAU?si=Ex7yHkdcVrnKQd4M)                                                         |
+| **Microsoft Learn**         | Documentație         | [Control.OnPaint](https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.control.onpaint)                          |
+| **Microsoft Learn**         | Documentație         | [System.Drawing.Pen](https://learn.microsoft.com/en-us/dotnet/api/system.drawing.pen)                                         |
+| **Microsoft Learn**         | Ghid Tehnic          | [UserControl Overview](https://learn.microsoft.com/en-us/dotnet/desktop/winforms/controls-design/usercontrol-overview)        |
+| **StackOverflow**           | Forum Tehnic         | [WinForms Smooth Animations](https://stackoverflow.com/questions/62701593/winforms-smooth-animations)                         |
+| **StackOverflow**           | Forum Tehnic         | [Circular Panels in C#](https://stackoverflow.com/questions/3226136/turn-a-panel-into-a-circle-in-c-sharp-visual-studio-2010) |
+| **Krypton Toolkit**         | Design               | [Github repo](https://github.com/ComponentFactory/Krypton.git)                                                                |
+| **Sourav Mondal** | Tutorial Video       | [Vizualizare Video](https://youtu.be/SE9_ZzjsLqs?si=YuW0PBasNwJLKeVR)                                                         |
+| **Sourav Mondal** | Tutorial Video       | [Vizualizare Video](https://youtu.be/LFMtBKpv9Nc?si=ziXO4-ca_vyVz4Fk)                                                         |
 
