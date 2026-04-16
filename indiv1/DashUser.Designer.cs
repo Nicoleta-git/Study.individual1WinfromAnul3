@@ -33,16 +33,16 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.TotalShopCount = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.TotalSum = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.TotalProduse = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -78,7 +78,7 @@
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.pictureBox5);
-            this.panel2.Controls.Add(this.label9);
+            this.panel2.Controls.Add(this.TotalShopCount);
             this.panel2.Location = new System.Drawing.Point(10, 10);
             this.panel2.Margin = new System.Windows.Forms.Padding(10);
             this.panel2.Name = "panel2";
@@ -119,24 +119,24 @@
             this.pictureBox5.TabIndex = 2;
             this.pictureBox5.TabStop = false;
             // 
-            // label9
+            // TotalShopCount
             // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 20F, System.Drawing.FontStyle.Bold);
-            this.label9.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.label9.Location = new System.Drawing.Point(22, 40);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(48, 46);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "11";
+            this.TotalShopCount.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.TotalShopCount.AutoSize = true;
+            this.TotalShopCount.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold);
+            this.TotalShopCount.ForeColor = System.Drawing.Color.MediumSlateBlue;
+            this.TotalShopCount.Location = new System.Drawing.Point(3, 45);
+            this.TotalShopCount.Name = "TotalShopCount";
+            this.TotalShopCount.Size = new System.Drawing.Size(42, 41);
+            this.TotalShopCount.TabIndex = 1;
+            this.TotalShopCount.Text = "11";
             // 
             // panel6
             // 
             this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(0)))), ((int)(((byte)(36)))));
             this.panel6.Controls.Add(this.pictureBox6);
-            this.panel6.Controls.Add(this.label7);
+            this.panel6.Controls.Add(this.TotalSum);
             this.panel6.Controls.Add(this.label6);
             this.panel6.Location = new System.Drawing.Point(313, 10);
             this.panel6.Margin = new System.Windows.Forms.Padding(10);
@@ -155,17 +155,16 @@
             this.pictureBox6.TabIndex = 2;
             this.pictureBox6.TabStop = false;
             // 
-            // label7
+            // TotalSum
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 20F, System.Drawing.FontStyle.Bold);
-            this.label7.ForeColor = System.Drawing.Color.Plum;
-            this.label7.Location = new System.Drawing.Point(24, 52);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(99, 46);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "100k ";
+            this.TotalSum.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.TotalSum.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold);
+            this.TotalSum.ForeColor = System.Drawing.Color.Plum;
+            this.TotalSum.Location = new System.Drawing.Point(12, 52);
+            this.TotalSum.Name = "TotalSum";
+            this.TotalSum.Size = new System.Drawing.Size(131, 80);
+            this.TotalSum.TabIndex = 1;
+            this.TotalSum.Text = "100k ";
             // 
             // label6
             // 
@@ -186,7 +185,7 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.pictureBox7);
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.TotalProduse);
             this.panel1.Location = new System.Drawing.Point(616, 10);
             this.panel1.Margin = new System.Windows.Forms.Padding(10);
             this.panel1.Name = "panel1";
@@ -209,7 +208,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(3, 98);
+            this.label5.Location = new System.Drawing.Point(17, 106);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(136, 35);
             this.label5.TabIndex = 4;
@@ -226,17 +225,17 @@
             this.pictureBox7.TabIndex = 2;
             this.pictureBox7.TabStop = false;
             // 
-            // label2
+            // TotalProduse
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 20F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.MediumAquamarine;
-            this.label2.Location = new System.Drawing.Point(28, 52);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 46);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "8900";
+            this.TotalProduse.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.TotalProduse.AutoSize = true;
+            this.TotalProduse.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold);
+            this.TotalProduse.ForeColor = System.Drawing.Color.MediumAquamarine;
+            this.TotalProduse.Location = new System.Drawing.Point(14, 52);
+            this.TotalProduse.Name = "TotalProduse";
+            this.TotalProduse.Size = new System.Drawing.Size(86, 41);
+            this.TotalProduse.TabIndex = 1;
+            this.TotalProduse.Text = "8900";
             // 
             // pictureBox4
             // 
@@ -319,15 +318,15 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label TotalShopCount;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label TotalSum;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label TotalProduse;
         private System.Windows.Forms.Label label3;
     }
 }

@@ -51,11 +51,9 @@
             this.kryptonButton7 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.logo_darwin = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.ucCatalog1 = new indiv1.UcCatalog();
             this.istoric1 = new indiv1.istoric();
             this.setari1 = new indiv1.Setari();
-            this.telefoane1 = new indiv1.Telefoane();
-            this.casti1 = new indiv1.Casti();
-            this.laptopuri1 = new indiv1.Laptopuri();
             this.dashUser1 = new indiv1.DashUser();
             this.panel1.SuspendLayout();
             this.containerPagina.SuspendLayout();
@@ -94,11 +92,9 @@
             // 
             // containerPagina
             // 
+            this.containerPagina.Controls.Add(this.ucCatalog1);
             this.containerPagina.Controls.Add(this.istoric1);
             this.containerPagina.Controls.Add(this.setari1);
-            this.containerPagina.Controls.Add(this.telefoane1);
-            this.containerPagina.Controls.Add(this.casti1);
-            this.containerPagina.Controls.Add(this.laptopuri1);
             this.containerPagina.Controls.Add(this.dashUser1);
             this.containerPagina.Dock = System.Windows.Forms.DockStyle.Right;
             this.containerPagina.Location = new System.Drawing.Point(161, 0);
@@ -406,10 +402,18 @@
             this.pictureBox2.TabIndex = 20;
             this.pictureBox2.TabStop = false;
             // 
+            // ucCatalog1
+            // 
+            this.ucCatalog1.BackColor = System.Drawing.Color.Black;
+            this.ucCatalog1.Location = new System.Drawing.Point(110, 21);
+            this.ucCatalog1.Name = "ucCatalog1";
+            this.ucCatalog1.Size = new System.Drawing.Size(919, 660);
+            this.ucCatalog1.TabIndex = 6;
+            // 
             // istoric1
             // 
             this.istoric1.BackColor = System.Drawing.Color.Black;
-            this.istoric1.Location = new System.Drawing.Point(101, 12);
+            this.istoric1.Location = new System.Drawing.Point(119, 12);
             this.istoric1.Name = "istoric1";
             this.istoric1.Size = new System.Drawing.Size(910, 660);
             this.istoric1.TabIndex = 5;
@@ -417,39 +421,15 @@
             // setari1
             // 
             this.setari1.BackColor = System.Drawing.Color.Black;
-            this.setari1.Location = new System.Drawing.Point(101, 10);
+            this.setari1.Location = new System.Drawing.Point(112, 10);
             this.setari1.Name = "setari1";
             this.setari1.Size = new System.Drawing.Size(910, 649);
             this.setari1.TabIndex = 4;
             // 
-            // telefoane1
-            // 
-            this.telefoane1.BackColor = System.Drawing.Color.Black;
-            this.telefoane1.Location = new System.Drawing.Point(101, 10);
-            this.telefoane1.Name = "telefoane1";
-            this.telefoane1.Size = new System.Drawing.Size(919, 681);
-            this.telefoane1.TabIndex = 3;
-            // 
-            // casti1
-            // 
-            this.casti1.BackColor = System.Drawing.Color.Black;
-            this.casti1.Location = new System.Drawing.Point(101, 12);
-            this.casti1.Name = "casti1";
-            this.casti1.Size = new System.Drawing.Size(910, 680);
-            this.casti1.TabIndex = 2;
-            // 
-            // laptopuri1
-            // 
-            this.laptopuri1.BackColor = System.Drawing.Color.Black;
-            this.laptopuri1.Location = new System.Drawing.Point(101, 12);
-            this.laptopuri1.Name = "laptopuri1";
-            this.laptopuri1.Size = new System.Drawing.Size(928, 679);
-            this.laptopuri1.TabIndex = 1;
-            // 
             // dashUser1
             // 
             this.dashUser1.BackColor = System.Drawing.Color.Black;
-            this.dashUser1.Location = new System.Drawing.Point(113, 34);
+            this.dashUser1.Location = new System.Drawing.Point(112, 49);
             this.dashUser1.Name = "dashUser1";
             this.dashUser1.Size = new System.Drawing.Size(898, 594);
             this.dashUser1.TabIndex = 0;
@@ -468,6 +448,7 @@
             this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.UserInterface_FormClosing);
             this.Load += new System.EventHandler(this.UserInterface_Load);
             this.panel1.ResumeLayout(false);
             this.containerPagina.ResumeLayout(false);
@@ -509,11 +490,9 @@
         private DashUser dashUser1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton11;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private Telefoane telefoane1;
-        private Casti casti1;
-        private Laptopuri laptopuri1;
         private System.Windows.Forms.Timer menuTransition;
         private Setari setari1;
         private istoric istoric1;
+        private UcCatalog ucCatalog1;
     }
 }

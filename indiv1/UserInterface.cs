@@ -7,10 +7,18 @@ namespace indiv1
     public partial class UserInterface : KryptonForm
     {
         bool menuExpand = false;
+        int menuMaxHeight = 90;
+        int menuMinHeight = 0;
+        int menuSpeed = 10;
 
-        int menuMaxHeight = 90;  // inaltime maxima cand e deschis
-        int menuMinHeight = 0;    // inaltime minima cand e inchis
-        int menuSpeed = 10;       // viteza animatie
+        public KryptonPalette PalettePrincipala
+        {
+            get { return kryptonPalette1; }
+        }
+        public KryptonButton ButonPrincipal
+        {
+            get { return kryptonButton1; }
+        }
 
         public UserInterface()
         {
@@ -18,15 +26,35 @@ namespace indiv1
 
             dashUser1.Visible = true;
             dashUser1.BringToFront();
+            ucCatalog1.Visible = false;
+            istoric1.Visible = false;
         }
 
         private void UserInterface_Load(object sender, EventArgs e)
         {
-            // porneste inchis
             flowLayoutPanel1.Height = menuMinHeight;
-
             HideAllPages();
             dashUser1.Visible = true;
+            istoric1.Visible = false;
+        }
+
+        private void AfiseazaCatalog(string categorie)
+        {
+            HideAllPages();
+            ucCatalog1.ActualizeazaCategorie(categorie);
+            ucCatalog1.Visible = true;
+            ucCatalog1.BringToFront();
+            containerPagina.Focus();
+            istoric1.Visible = false;
+        }
+
+        private void HideAllPages()
+        {
+            dashUser1.Visible = false;
+            ucCatalog1.Visible = false;
+            istoric1.Visible = false;
+            setari1.Visible = false;
+            istoric1.Visible = false;
         }
 
         private void kryptonButton5_Click(object sender, EventArgs e)
@@ -40,7 +68,6 @@ namespace indiv1
             if (!menuExpand)
             {
                 flowLayoutPanel1.Height += menuSpeed;
-
                 if (flowLayoutPanel1.Height >= menuMaxHeight)
                 {
                     menuTransition.Stop();
@@ -50,7 +77,6 @@ namespace indiv1
             else
             {
                 flowLayoutPanel1.Height -= menuSpeed;
-
                 if (flowLayoutPanel1.Height <= menuMinHeight)
                 {
                     menuTransition.Stop();
@@ -59,46 +85,28 @@ namespace indiv1
             }
         }
 
-        private void HideAllPages()
-        {
-            dashUser1.Visible = false;
-            laptopuri1.Visible = false;
-            telefoane1.Visible = false;
-            casti1.Visible = false;
-            istoric1.Visible = false;
-            setari1.Visible = false;
-        }
-
         private void kryptonButton4_Click(object sender, EventArgs e)
         {
             HideAllPages();
             dashUser1.Visible = true;
             dashUser1.BringToFront();
             containerPagina.Focus();
+            istoric1.Visible = false;
         }
 
         private void kryptonButton2_Click(object sender, EventArgs e)
         {
-            HideAllPages();
-            laptopuri1.Visible = true;
-            laptopuri1.BringToFront();
-            containerPagina.Focus();
+            AfiseazaCatalog("Laptop");
         }
 
         private void kryptonButton3_Click(object sender, EventArgs e)
         {
-            HideAllPages();
-            telefoane1.Visible = true;
-            telefoane1.BringToFront();
-            containerPagina.Focus();
+            AfiseazaCatalog("Telefon");
         }
 
         private void kryptonButton7_Click(object sender, EventArgs e)
         {
-            HideAllPages();
-            casti1.Visible = true;
-            casti1.BringToFront();
-            containerPagina.Focus();
+            AfiseazaCatalog("Casti");
         }
 
         private void kryptonButton8_Click(object sender, EventArgs e)
@@ -107,8 +115,11 @@ namespace indiv1
             setari1.Visible = true;
             setari1.BringToFront();
             containerPagina.Focus();
+            istoric1.Visible = false;
         }
 
+
+        //istoric
         private void kryptonButton11_Click(object sender, EventArgs e)
         {
             HideAllPages();
@@ -127,6 +138,11 @@ namespace indiv1
                 LogIn li = new LogIn();
                 li.Show();
             }
+        }
+
+        private void UserInterface_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }

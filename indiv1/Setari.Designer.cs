@@ -30,37 +30,38 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.roundedPanel1 = new RoundedPanel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
-            this.kryptonTextBox2 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.rolTxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.submitBtn = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.label8 = new System.Windows.Forms.Label();
-            this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.parolaTxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.kryptonTextBox5 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.numeUtilizatorTxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.roundedPanel2 = new RoundedPanel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton3 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton4 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton5 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.roundedPanel2 = new RoundedPanel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.roundedPanel1 = new RoundedPanel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
-            this.flowLayoutPanel3.SuspendLayout();
-            this.roundedPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.roundedPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
+            this.roundedPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.flowLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -83,16 +84,61 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(843, 225);
             this.flowLayoutPanel1.TabIndex = 3;
             // 
+            // roundedPanel1
+            // 
+            this.roundedPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(25)))));
+            this.roundedPanel1.BorderRadius = 30;
+            this.roundedPanel1.Controls.Add(this.label4);
+            this.roundedPanel1.Controls.Add(this.label2);
+            this.roundedPanel1.Controls.Add(this.pictureBox1);
+            this.roundedPanel1.Location = new System.Drawing.Point(3, 3);
+            this.roundedPanel1.Name = "roundedPanel1";
+            this.roundedPanel1.Size = new System.Drawing.Size(831, 65);
+            this.roundedPanel1.TabIndex = 1;
+            this.roundedPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.roundedPanel1_Paint);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(768, 7);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(43, 45);
+            this.label4.TabIndex = 4;
+            this.label4.Text = ">";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(104, 15);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(70, 35);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Cont";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::indiv1.Properties.Resources.loginPerson;
+            this.pictureBox1.Location = new System.Drawing.Point(9, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(89, 65);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.kryptonTextBox2);
-            this.panel1.Controls.Add(this.kryptonButton1);
+            this.panel1.Controls.Add(this.rolTxt);
+            this.panel1.Controls.Add(this.submitBtn);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.kryptonTextBox1);
+            this.panel1.Controls.Add(this.parolaTxt);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.kryptonTextBox5);
+            this.panel1.Controls.Add(this.numeUtilizatorTxt);
             this.panel1.Location = new System.Drawing.Point(3, 74);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(831, 164);
@@ -109,41 +155,42 @@
             this.label9.TabIndex = 19;
             this.label9.Text = "Rol:";
             // 
-            // kryptonTextBox2
+            // rolTxt
             // 
-            this.kryptonTextBox2.Location = new System.Drawing.Point(418, 47);
-            this.kryptonTextBox2.Name = "kryptonTextBox2";
-            this.kryptonTextBox2.Size = new System.Drawing.Size(178, 32);
-            this.kryptonTextBox2.StateCommon.Back.Color1 = System.Drawing.Color.Black;
-            this.kryptonTextBox2.StateCommon.Border.Color1 = System.Drawing.Color.Purple;
-            this.kryptonTextBox2.StateCommon.Border.Color2 = System.Drawing.Color.Purple;
-            this.kryptonTextBox2.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.rolTxt.Location = new System.Drawing.Point(418, 47);
+            this.rolTxt.Name = "rolTxt";
+            this.rolTxt.Size = new System.Drawing.Size(178, 32);
+            this.rolTxt.StateCommon.Back.Color1 = System.Drawing.Color.Black;
+            this.rolTxt.StateCommon.Border.Color1 = System.Drawing.Color.Purple;
+            this.rolTxt.StateCommon.Border.Color2 = System.Drawing.Color.Purple;
+            this.rolTxt.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox2.StateCommon.Border.Rounding = 4;
-            this.kryptonTextBox2.StateCommon.Content.Color1 = System.Drawing.Color.White;
-            this.kryptonTextBox2.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.kryptonTextBox2.TabIndex = 20;
+            this.rolTxt.StateCommon.Border.Rounding = 4;
+            this.rolTxt.StateCommon.Content.Color1 = System.Drawing.Color.White;
+            this.rolTxt.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.rolTxt.TabIndex = 20;
             // 
-            // kryptonButton1
+            // submitBtn
             // 
-            this.kryptonButton1.Location = new System.Drawing.Point(685, 86);
-            this.kryptonButton1.Name = "kryptonButton1";
-            this.kryptonButton1.Size = new System.Drawing.Size(127, 32);
-            this.kryptonButton1.StateCommon.Back.Color1 = System.Drawing.Color.Black;
-            this.kryptonButton1.StateCommon.Back.Color2 = System.Drawing.Color.Purple;
-            this.kryptonButton1.StateCommon.Back.ColorAngle = 45F;
-            this.kryptonButton1.StateCommon.Border.Color1 = System.Drawing.Color.White;
-            this.kryptonButton1.StateCommon.Border.Color2 = System.Drawing.Color.White;
-            this.kryptonButton1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.submitBtn.Location = new System.Drawing.Point(685, 86);
+            this.submitBtn.Name = "submitBtn";
+            this.submitBtn.Size = new System.Drawing.Size(127, 32);
+            this.submitBtn.StateCommon.Back.Color1 = System.Drawing.Color.Black;
+            this.submitBtn.StateCommon.Back.Color2 = System.Drawing.Color.Purple;
+            this.submitBtn.StateCommon.Back.ColorAngle = 45F;
+            this.submitBtn.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.submitBtn.StateCommon.Border.Color2 = System.Drawing.Color.White;
+            this.submitBtn.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton1.StateCommon.Border.Rounding = 5;
-            this.kryptonButton1.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.kryptonButton1.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.kryptonButton1.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.kryptonButton1.TabIndex = 18;
-            this.kryptonButton1.Values.Text = "Submit";
+            this.submitBtn.StateCommon.Border.Rounding = 5;
+            this.submitBtn.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.submitBtn.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.submitBtn.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.submitBtn.TabIndex = 18;
+            this.submitBtn.Values.Text = "Submit";
+            this.submitBtn.Click += new System.EventHandler(this.submitBtn_Click);
             // 
             // label8
             // 
@@ -156,21 +203,21 @@
             this.label8.TabIndex = 16;
             this.label8.Text = "Parola:";
             // 
-            // kryptonTextBox1
+            // parolaTxt
             // 
-            this.kryptonTextBox1.Location = new System.Drawing.Point(160, 91);
-            this.kryptonTextBox1.Name = "kryptonTextBox1";
-            this.kryptonTextBox1.Size = new System.Drawing.Size(178, 32);
-            this.kryptonTextBox1.StateCommon.Back.Color1 = System.Drawing.Color.Black;
-            this.kryptonTextBox1.StateCommon.Border.Color1 = System.Drawing.Color.Purple;
-            this.kryptonTextBox1.StateCommon.Border.Color2 = System.Drawing.Color.Purple;
-            this.kryptonTextBox1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.parolaTxt.Location = new System.Drawing.Point(160, 91);
+            this.parolaTxt.Name = "parolaTxt";
+            this.parolaTxt.Size = new System.Drawing.Size(178, 32);
+            this.parolaTxt.StateCommon.Back.Color1 = System.Drawing.Color.Black;
+            this.parolaTxt.StateCommon.Border.Color1 = System.Drawing.Color.Purple;
+            this.parolaTxt.StateCommon.Border.Color2 = System.Drawing.Color.Purple;
+            this.parolaTxt.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox1.StateCommon.Border.Rounding = 4;
-            this.kryptonTextBox1.StateCommon.Content.Color1 = System.Drawing.Color.White;
-            this.kryptonTextBox1.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.kryptonTextBox1.TabIndex = 17;
+            this.parolaTxt.StateCommon.Border.Rounding = 4;
+            this.parolaTxt.StateCommon.Content.Color1 = System.Drawing.Color.White;
+            this.parolaTxt.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.parolaTxt.TabIndex = 17;
             // 
             // label7
             // 
@@ -194,21 +241,21 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "Nume utilizator:";
             // 
-            // kryptonTextBox5
+            // numeUtilizatorTxt
             // 
-            this.kryptonTextBox5.Location = new System.Drawing.Point(160, 47);
-            this.kryptonTextBox5.Name = "kryptonTextBox5";
-            this.kryptonTextBox5.Size = new System.Drawing.Size(178, 32);
-            this.kryptonTextBox5.StateCommon.Back.Color1 = System.Drawing.Color.Black;
-            this.kryptonTextBox5.StateCommon.Border.Color1 = System.Drawing.Color.Purple;
-            this.kryptonTextBox5.StateCommon.Border.Color2 = System.Drawing.Color.Purple;
-            this.kryptonTextBox5.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.numeUtilizatorTxt.Location = new System.Drawing.Point(160, 47);
+            this.numeUtilizatorTxt.Name = "numeUtilizatorTxt";
+            this.numeUtilizatorTxt.Size = new System.Drawing.Size(178, 32);
+            this.numeUtilizatorTxt.StateCommon.Back.Color1 = System.Drawing.Color.Black;
+            this.numeUtilizatorTxt.StateCommon.Border.Color1 = System.Drawing.Color.Purple;
+            this.numeUtilizatorTxt.StateCommon.Border.Color2 = System.Drawing.Color.Purple;
+            this.numeUtilizatorTxt.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox5.StateCommon.Border.Rounding = 4;
-            this.kryptonTextBox5.StateCommon.Content.Color1 = System.Drawing.Color.White;
-            this.kryptonTextBox5.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.kryptonTextBox5.TabIndex = 14;
+            this.numeUtilizatorTxt.StateCommon.Border.Rounding = 4;
+            this.numeUtilizatorTxt.StateCommon.Content.Color1 = System.Drawing.Color.White;
+            this.numeUtilizatorTxt.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.numeUtilizatorTxt.TabIndex = 14;
             // 
             // flowLayoutPanel2
             // 
@@ -218,6 +265,52 @@
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(843, 261);
             this.flowLayoutPanel2.TabIndex = 4;
+            // 
+            // roundedPanel2
+            // 
+            this.roundedPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(25)))));
+            this.roundedPanel2.BorderRadius = 30;
+            this.roundedPanel2.Controls.Add(this.label5);
+            this.roundedPanel2.Controls.Add(this.label3);
+            this.roundedPanel2.Controls.Add(this.pictureBox2);
+            this.roundedPanel2.Location = new System.Drawing.Point(5, 5);
+            this.roundedPanel2.Margin = new System.Windows.Forms.Padding(5);
+            this.roundedPanel2.Name = "roundedPanel2";
+            this.roundedPanel2.Size = new System.Drawing.Size(831, 67);
+            this.roundedPanel2.TabIndex = 2;
+            this.roundedPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.roundedPanel2_Paint);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(768, 11);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(43, 45);
+            this.label5.TabIndex = 5;
+            this.label5.Text = ">";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(95, 22);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(75, 35);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Teme";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::indiv1.Properties.Resources.pallet;
+            this.pictureBox2.Location = new System.Drawing.Point(8, -3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(81, 80);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
             // 
             // flowLayoutPanel3
             // 
@@ -270,6 +363,7 @@
             this.kryptonButton3.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.kryptonButton3.TabIndex = 22;
             this.kryptonButton3.Values.Text = "Sparkle 2010 - Silver";
+            this.kryptonButton3.Click += new System.EventHandler(this.kryptonButton3_Click);
             // 
             // kryptonButton4
             // 
@@ -290,6 +384,7 @@
             this.kryptonButton4.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.kryptonButton4.TabIndex = 23;
             this.kryptonButton4.Values.Text = "Sparkle - Orange";
+            this.kryptonButton4.Click += new System.EventHandler(this.kryptonButton4_Click);
             // 
             // kryptonButton5
             // 
@@ -310,103 +405,25 @@
             this.kryptonButton5.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.kryptonButton5.TabIndex = 24;
             this.kryptonButton5.Values.Text = "Sparkle - Purple";
+            this.kryptonButton5.Click += new System.EventHandler(this.kryptonButton5_Click);
             // 
-            // roundedPanel2
+            // label10
             // 
-            this.roundedPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(25)))));
-            this.roundedPanel2.BorderRadius = 30;
-            this.roundedPanel2.Controls.Add(this.label5);
-            this.roundedPanel2.Controls.Add(this.label3);
-            this.roundedPanel2.Controls.Add(this.pictureBox2);
-            this.roundedPanel2.Location = new System.Drawing.Point(5, 5);
-            this.roundedPanel2.Margin = new System.Windows.Forms.Padding(5);
-            this.roundedPanel2.Name = "roundedPanel2";
-            this.roundedPanel2.Size = new System.Drawing.Size(831, 67);
-            this.roundedPanel2.TabIndex = 2;
-            this.roundedPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.roundedPanel2_Paint);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(768, 11);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(43, 45);
-            this.label5.TabIndex = 5;
-            this.label5.Text = ">";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(95, 22);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 35);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Teme";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::indiv1.Properties.Resources.pallet;
-            this.pictureBox2.Location = new System.Drawing.Point(8, -3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(81, 80);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            // 
-            // roundedPanel1
-            // 
-            this.roundedPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(25)))));
-            this.roundedPanel1.BorderRadius = 30;
-            this.roundedPanel1.Controls.Add(this.label4);
-            this.roundedPanel1.Controls.Add(this.label2);
-            this.roundedPanel1.Controls.Add(this.pictureBox1);
-            this.roundedPanel1.Location = new System.Drawing.Point(3, 3);
-            this.roundedPanel1.Name = "roundedPanel1";
-            this.roundedPanel1.Size = new System.Drawing.Size(831, 65);
-            this.roundedPanel1.TabIndex = 1;
-            this.roundedPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.roundedPanel1_Paint);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(768, 7);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 45);
-            this.label4.TabIndex = 4;
-            this.label4.Text = ">";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(104, 15);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 35);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Cont";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::indiv1.Properties.Resources.loginPerson;
-            this.pictureBox1.Location = new System.Drawing.Point(9, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(89, 65);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(822, 14);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(69, 23);
+            this.label10.TabIndex = 5;
+            this.label10.Text = "(v1.0.4).";
             // 
             // Setari
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.label1);
@@ -414,16 +431,16 @@
             this.Size = new System.Drawing.Size(910, 629);
             this.Load += new System.EventHandler(this.Setari_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.flowLayoutPanel2.ResumeLayout(false);
-            this.flowLayoutPanel3.ResumeLayout(false);
-            this.roundedPanel2.ResumeLayout(false);
-            this.roundedPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.roundedPanel1.ResumeLayout(false);
             this.roundedPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.flowLayoutPanel2.ResumeLayout(false);
+            this.roundedPanel2.ResumeLayout(false);
+            this.roundedPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.flowLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -444,17 +461,18 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox5;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox numeUtilizatorTxt;
         private System.Windows.Forms.Label label8;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox parolaTxt;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label9;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox2;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox rolTxt;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton submitBtn;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton2;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton3;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton4;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton5;
+        private System.Windows.Forms.Label label10;
     }
 }

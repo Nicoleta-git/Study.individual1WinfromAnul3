@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -11,10 +12,10 @@ using ComponentFactory.Krypton.Toolkit;
 
 namespace indiv1
 {
+
     public partial class LogIn : KryptonForm
     {
-
-
+        string connection = @"Data Source=NICOLETA\SQLEXPRESS;Initial Catalog=DarwinDB;Integrated Security=True;TrustServerCertificate=True";
 
         public LogIn()
         {
@@ -27,29 +28,71 @@ namespace indiv1
 
         }
 
+
         private void kryptonButton2_Click(object sender, EventArgs e)
         {
-            string username = userTxt.Text;
-            string password = PassTxt.Text;
+            string username = userTxt.Text.Trim();
+            string password = PassTxt.Text.Trim();
 
+            userTxt.Focus();
 
-            if (username == "admin" && password == "1234")
+            try
             {
-                DashAdmin da = new DashAdmin();
-                da.Show();
-                this.Hide();
+                using (SqlConnection connect = new SqlConnection(connection))
+                {
+                    connect.Open();
+
+                    string query = @"SELECT ID_Utilizator, ID_Rol 
+                             FROM Utilizatori 
+                             WHERE Username = @username 
+                             AND Parola = @password";
+
+                    using (SqlCommand cmd = new SqlCommand(query, connect))
+                    {
+                        cmd.Parameters.AddWithValue("@username", username);
+                        cmd.Parameters.AddWithValue("@password", password);
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read()) 
+                            {
+
+                                SesiuneUtilizator.ID_Utilizator = Convert.ToInt32(reader["ID_Utilizator"]);
+                                SesiuneUtilizator.ID_Rol = Convert.ToInt32(reader["ID_Rol"]);
+                                SesiuneUtilizator.Username = username;
+
+                                lblEroare.ForeColor = Color.Green;
+                                lblEroare.Text = "Autentificare reusita!";
+
+                                if (SesiuneUtilizator.ID_Rol == 2) 
+                                {
+                                    UserInterface ui = new UserInterface();
+                                    ui.Show();
+                                }
+                                else if (SesiuneUtilizator.ID_Rol == 1) 
+                                {
+                                    DashAdmin admin = new DashAdmin();
+                                    admin.Show();
+                                }
+
+                                this.Hide();
+                            }
+                            else
+                            {
+                                lblEroare.ForeColor = Color.Red;
+                                lblEroare.Text = "Username sau parola incorecta!";
+                                PassTxt.Clear();
+                            }
+                        }
+                    }
+                }
             }
-            else if (username == "user" && password == "1234") { 
-                UserInterface ui = new UserInterface();
-                ui.Show();
-                this.Hide();
-            }
-            else
+            catch (Exception ex)
             {
-                lblEroare.ForeColor = Color.Red;
-                lblEroare.Text = "Username sau parolă incorecte!";
+                MessageBox.Show("Eroare la conectarea cu baza de date: " + ex.Message);
             }
         }
+
 
         private void label3_Click(object sender, EventArgs e)
         {

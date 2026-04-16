@@ -1,108 +1,110 @@
 ﻿using System;
+using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
-
 
 namespace indiv1
 {
     public partial class DashboardAdmin : UserControl
     {
-        private Random random = new Random();
+        string connectionString = @"Data Source=NICOLETA\SQLEXPRESS;Initial Catalog=DarwinDB;Integrated Security=True;TrustServerCertificate=True";
 
         public DashboardAdmin()
         {
             InitializeComponent();
-            LoadChart();
-            LoadSalesChart();
+            IncarcaStatistici();
         }
 
-        private void DashboardAdmin_Load(object sender, EventArgs e)
+        private void IncarcaStatistici()
         {
-        }
-
-        private void chart2_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void LoadChart()
-        {
-            chart2.Series.Clear();
-            chart2.ChartAreas.Clear();
-            chart2.Legends.Clear();
-
-            chart2.BackColor = Color.Black;
-
-            ChartArea area = new ChartArea("MainArea");
-            area.BackColor = Color.Black;
-            chart2.ChartAreas.Add(area);
-
-            Legend legend = new Legend("Default");
-            legend.ForeColor = Color.Black;
-            chart2.Legends.Add(legend);
-
-            Series pieSeries = new Series("Devices")
+            using (SqlConnection con = new SqlConnection(connectionString))
             {
-                ChartType = SeriesChartType.Pie,
-                Legend = "Default",
+                con.Open();
+
+                SqlCommand cmdUtilizatori = new SqlCommand("SELECT COUNT(*) FROM Utilizatori", con);
+                nrUtilizatorLbl.Text = cmdUtilizatori.ExecuteScalar().ToString();
+
+                SqlCommand cmdVenit = new SqlCommand("SELECT ISNULL(SUM(PretTotal), 0) FROM Comenzi", con);
+                decimal venit = Convert.ToDecimal(cmdVenit.ExecuteScalar());
+                venitTotalLbl.Text = (venit / 1000).ToString("0.#") + "k";
+
+                SqlCommand cmdVizitatori = new SqlCommand("SELECT COUNT(*) FROM Clienti", con);
+                TotVizitatoriLbl.Text = cmdVizitatori.ExecuteScalar().ToString();
+
+                IncarcaGraficComenzi(con);
+                IncarcaGraficCategorii(con);
+            }
+        }
+
+        private void IncarcaGraficComenzi(SqlConnection con)
+        {
+            chart1bar.Series.Clear();
+            chart1bar.ChartAreas[0].BackColor = Color.Transparent;
+            chart1bar.BackColor = Color.Transparent;
+
+            Series series = new Series("Comenzi")
+            {
+                ChartType = SeriesChartType.Column,
+                Color = Color.MediumPurple,
                 IsValueShownAsLabel = true,
                 LabelForeColor = Color.White
             };
 
-            DataPoint p1 = new DataPoint(0, random.Next(10, 100));
-            p1.LegendText = "Mac";
-            pieSeries.Points.Add(p1);
+            string query = @"SELECT FORMAT(DataComanda, 'MMM') as Luna, COUNT(*) as Total 
+                             FROM Comenzi 
+                             GROUP BY FORMAT(DataComanda, 'MMM'), MONTH(DataComanda)
+                             ORDER BY MONTH(DataComanda)";
 
-            DataPoint p2 = new DataPoint(0, random.Next(10, 100));
-            p2.LegendText = "Windows";
-            pieSeries.Points.Add(p2);
+            SqlCommand cmd = new SqlCommand(query, con);
+            SqlDataReader dr = cmd.ExecuteReader();
 
-            DataPoint p3 = new DataPoint(0, random.Next(10, 100));
-            p3.LegendText = "Linux";
-            pieSeries.Points.Add(p3);
+            while (dr.Read())
+            {
+                series.Points.AddXY(dr["Luna"].ToString(), dr["Total"]);
+            }
+            dr.Close();
 
-            chart2.Series.Add(pieSeries);
+            chart1bar.Series.Add(series);
+            chart1bar.ChartAreas[0].AxisX.LabelStyle.ForeColor = Color.White;
+            chart1bar.ChartAreas[0].AxisY.LabelStyle.ForeColor = Color.White;
         }
 
-        private void LoadSalesChart()
+        private void IncarcaGraficCategorii(SqlConnection con)
         {
-            chart1.Series.Clear();
-            chart1.ChartAreas.Clear();
-            chart1.Legends.Clear();
+            chart2pie.Series.Clear();
+            chart2pie.Legends.Clear();
+            chart2pie.BackColor = Color.Transparent;
 
-            chart1.BackColor = Color.Black;
+            Legend lgd = new Legend("CategoriiLegend");
+            lgd.BackColor = Color.Transparent;
+            lgd.ForeColor = Color.White; 
+            chart2pie.Legends.Add(lgd);
 
-            ChartArea area = new ChartArea("MainArea");
-            area.BackColor = Color.Black;
-            area.AxisX.LabelStyle.ForeColor = Color.White;
-            area.AxisY.LabelStyle.ForeColor = Color.White;
-            area.AxisX.MajorGrid.LineColor = Color.Gray; 
-            area.AxisY.MajorGrid.LineColor = Color.Gray;
-            chart1.ChartAreas.Add(area);
-
-            Legend legend = new Legend("Default");
-            legend.ForeColor = Color.White;
-            legend.BackColor = Color.Black;
-            legend.Docking = Docking.Top;
-            chart1.Legends.Add(legend);
-
-            Series barSeries = new Series("Sales")
+            Series series = new Series("Categorii")
             {
-                ChartType = SeriesChartType.Bar,
-                Color = Color.CornflowerBlue,
+                ChartType = SeriesChartType.Pie,
                 IsValueShownAsLabel = true,
                 LabelForeColor = Color.White,
-                Legend = "Default"
+                Legend = "CategoriiLegend"
             };
 
-            barSeries.Points.Add(new DataPoint(0, random.Next(50, 200)) { AxisLabel = "January", LegendText = "January" });
-            barSeries.Points.Add(new DataPoint(0, random.Next(50, 200)) { AxisLabel = "February", LegendText = "February" });
-            barSeries.Points.Add(new DataPoint(0, random.Next(50, 200)) { AxisLabel = "March", LegendText = "March" });
-            barSeries.Points.Add(new DataPoint(0, random.Next(50, 200)) { AxisLabel = "April", LegendText = "April" });
+            string query = "SELECT Categorie, COUNT(*) as Cantitate FROM Produse GROUP BY Categorie";
 
-            chart1.Series.Add(barSeries);
+            SqlCommand cmd = new SqlCommand(query, con);
+            SqlDataReader dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                int i = series.Points.AddY(Convert.ToDouble(dr["Cantitate"]));
+                series.Points[i].LegendText = dr["Categorie"].ToString();
+                series.Points[i].Label = "#PERCENT";
+            }
+            dr.Close();
+
+            chart2pie.Series.Add(series);
         }
-
 
 
     }

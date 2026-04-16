@@ -18,7 +18,15 @@ namespace indiv1
         int menuMaxHeight = 120;  
         int menuMinHeight = 0; 
         int menuSpeed = 10;
+        public KryptonPalette PalettePrincipala
+        {
+            get { return kryptonPalette1; }
+        }
 
+        public KryptonButton ButonPrincipal
+        {
+            get { return kryptonButton1; }
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
             flowLayoutPanel1.Height = menuMinHeight;
@@ -61,6 +69,8 @@ namespace indiv1
             dashboardAdmin1.Visible = true;
             dashboardAdmin1.BringToFront();
             containerPagina.Focus();
+            rapoarte1.Visible = false;
+
 
         }
 
@@ -70,6 +80,8 @@ namespace indiv1
             catalogUserForm1.BringToFront();
             dashboardAdmin1.Visible = false;
             containerPagina.Focus();
+            rapoarte1.Visible = false;
+
         }
 
         private void kryptonButton3_Click(object sender, EventArgs e)
@@ -80,6 +92,8 @@ namespace indiv1
             catalogUserForm1.Visible = false;
             dashboardAdmin1.Visible = false;
             containerPagina.Focus();
+            rapoarte1.Visible = false;
+
 
         }
 
@@ -105,35 +119,49 @@ namespace indiv1
             dashboardAdmin1.Visible = false;
             clientiManagement1.Visible = false;
             containerPagina.Focus();
+            rapoarte1.Visible = false;
+
         }
 
         private void kryptonButton7_Click(object sender, EventArgs e)
         {
-            comenzi1.Visible = true;
-            comenzi1.BringToFront();
+            comenzi2.Visible = true;
+            comenzi2.BringToFront();
 
             catalogUserForm1.Visible = false;
             dashboardAdmin1.Visible = false;
             clientiManagement1.Visible = false;
             setari1.Visible = false;
             containerPagina.Focus();
+            rapoarte1.Visible = false;
+
         }
 
         private void kryptonButton9_Click(object sender, EventArgs e)
         {
             angajati1.BringToFront();
             containerPagina.Focus();
+            rapoarte1.Visible = false;
         }
 
         private void kryptonButton10_Click(object sender, EventArgs e)
         {
             anunturi1.BringToFront();
             containerPagina.Focus();
+            rapoarte1.Visible = false;
         }
 
+        // rapoarte
         private void kryptonButton11_Click(object sender, EventArgs e)
         {
+            rapoarte1.Visible = true;
+            rapoarte1.BringToFront();
             containerPagina.Focus();
+        }
+
+        private void DashAdmin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }

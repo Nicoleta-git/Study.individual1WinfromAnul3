@@ -28,45 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.kryptonTextBox4 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.kryptonTextBox3 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.kryptonTextBox2 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.userTxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.clearBtn = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.deleteBtn = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.updateBtn = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.saveBtn = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.salariuTxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.numeTxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.idUserTxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.kryptonTextBox6 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.cautaTxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.kryptonButton5 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonButton4 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonButton3 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.angajareDateTimePicker1 = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
+            this.moderDataGridViewCustom1 = new ModerDataGridViewCustom();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.moderDataGridViewCustom1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.kryptonButton5);
-            this.panel2.Controls.Add(this.kryptonButton4);
-            this.panel2.Controls.Add(this.kryptonButton3);
-            this.panel2.Controls.Add(this.kryptonButton2);
-            this.panel2.Controls.Add(this.kryptonButton1);
-            this.panel2.Controls.Add(this.kryptonTextBox4);
-            this.panel2.Controls.Add(this.kryptonTextBox3);
-            this.panel2.Controls.Add(this.kryptonTextBox2);
-            this.panel2.Controls.Add(this.kryptonTextBox1);
-            this.panel2.Controls.Add(this.userTxt);
-            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.angajareDateTimePicker1);
+            this.panel2.Controls.Add(this.clearBtn);
+            this.panel2.Controls.Add(this.deleteBtn);
+            this.panel2.Controls.Add(this.updateBtn);
+            this.panel2.Controls.Add(this.saveBtn);
+            this.panel2.Controls.Add(this.salariuTxt);
+            this.panel2.Controls.Add(this.numeTxt);
+            this.panel2.Controls.Add(this.idUserTxt);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
@@ -76,125 +73,166 @@
             this.panel2.Size = new System.Drawing.Size(872, 260);
             this.panel2.TabIndex = 7;
             // 
-            // kryptonTextBox4
+            // clearBtn
             // 
-            this.kryptonTextBox4.Location = new System.Drawing.Point(503, 40);
-            this.kryptonTextBox4.Name = "kryptonTextBox4";
-            this.kryptonTextBox4.Size = new System.Drawing.Size(138, 32);
-            this.kryptonTextBox4.StateCommon.Back.Color1 = System.Drawing.Color.Black;
-            this.kryptonTextBox4.StateCommon.Border.Color1 = System.Drawing.Color.Purple;
-            this.kryptonTextBox4.StateCommon.Border.Color2 = System.Drawing.Color.Purple;
-            this.kryptonTextBox4.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.clearBtn.Location = new System.Drawing.Point(735, 168);
+            this.clearBtn.Name = "clearBtn";
+            this.clearBtn.Size = new System.Drawing.Size(109, 32);
+            this.clearBtn.StateCommon.Back.Color1 = System.Drawing.Color.Black;
+            this.clearBtn.StateCommon.Back.Color2 = System.Drawing.Color.Purple;
+            this.clearBtn.StateCommon.Back.ColorAngle = 45F;
+            this.clearBtn.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.clearBtn.StateCommon.Border.Color2 = System.Drawing.Color.White;
+            this.clearBtn.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox4.StateCommon.Border.Rounding = 4;
-            this.kryptonTextBox4.StateCommon.Content.Color1 = System.Drawing.Color.White;
-            this.kryptonTextBox4.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.kryptonTextBox4.TabIndex = 12;
+            this.clearBtn.StateCommon.Border.Rounding = 5;
+            this.clearBtn.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.clearBtn.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.clearBtn.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.clearBtn.TabIndex = 28;
+            this.clearBtn.Values.Text = "Clear";
+            this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
             // 
-            // kryptonTextBox3
+            // deleteBtn
             // 
-            this.kryptonTextBox3.Location = new System.Drawing.Point(157, 190);
-            this.kryptonTextBox3.Name = "kryptonTextBox3";
-            this.kryptonTextBox3.Size = new System.Drawing.Size(160, 32);
-            this.kryptonTextBox3.StateCommon.Back.Color1 = System.Drawing.Color.Black;
-            this.kryptonTextBox3.StateCommon.Border.Color1 = System.Drawing.Color.Purple;
-            this.kryptonTextBox3.StateCommon.Border.Color2 = System.Drawing.Color.Purple;
-            this.kryptonTextBox3.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.deleteBtn.Location = new System.Drawing.Point(735, 130);
+            this.deleteBtn.Name = "deleteBtn";
+            this.deleteBtn.Size = new System.Drawing.Size(109, 32);
+            this.deleteBtn.StateCommon.Back.Color1 = System.Drawing.Color.Black;
+            this.deleteBtn.StateCommon.Back.Color2 = System.Drawing.Color.Purple;
+            this.deleteBtn.StateCommon.Back.ColorAngle = 45F;
+            this.deleteBtn.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.deleteBtn.StateCommon.Border.Color2 = System.Drawing.Color.White;
+            this.deleteBtn.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox3.StateCommon.Border.Rounding = 4;
-            this.kryptonTextBox3.StateCommon.Content.Color1 = System.Drawing.Color.White;
-            this.kryptonTextBox3.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.kryptonTextBox3.TabIndex = 11;
+            this.deleteBtn.StateCommon.Border.Rounding = 5;
+            this.deleteBtn.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.deleteBtn.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.deleteBtn.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.deleteBtn.TabIndex = 27;
+            this.deleteBtn.Values.Text = "Delete";
+            this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
             // 
-            // kryptonTextBox2
+            // updateBtn
             // 
-            this.kryptonTextBox2.Location = new System.Drawing.Point(157, 140);
-            this.kryptonTextBox2.Name = "kryptonTextBox2";
-            this.kryptonTextBox2.Size = new System.Drawing.Size(160, 32);
-            this.kryptonTextBox2.StateCommon.Back.Color1 = System.Drawing.Color.Black;
-            this.kryptonTextBox2.StateCommon.Border.Color1 = System.Drawing.Color.Purple;
-            this.kryptonTextBox2.StateCommon.Border.Color2 = System.Drawing.Color.Purple;
-            this.kryptonTextBox2.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.updateBtn.Location = new System.Drawing.Point(735, 92);
+            this.updateBtn.Name = "updateBtn";
+            this.updateBtn.Size = new System.Drawing.Size(109, 32);
+            this.updateBtn.StateCommon.Back.Color1 = System.Drawing.Color.Black;
+            this.updateBtn.StateCommon.Back.Color2 = System.Drawing.Color.Purple;
+            this.updateBtn.StateCommon.Back.ColorAngle = 45F;
+            this.updateBtn.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.updateBtn.StateCommon.Border.Color2 = System.Drawing.Color.White;
+            this.updateBtn.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox2.StateCommon.Border.Rounding = 4;
-            this.kryptonTextBox2.StateCommon.Content.Color1 = System.Drawing.Color.White;
-            this.kryptonTextBox2.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.kryptonTextBox2.TabIndex = 10;
+            this.updateBtn.StateCommon.Border.Rounding = 5;
+            this.updateBtn.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.updateBtn.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.updateBtn.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.updateBtn.TabIndex = 26;
+            this.updateBtn.Values.Text = "Update";
+            this.updateBtn.Click += new System.EventHandler(this.updateBtn_Click);
             // 
-            // kryptonTextBox1
+            // saveBtn
             // 
-            this.kryptonTextBox1.Location = new System.Drawing.Point(157, 92);
-            this.kryptonTextBox1.Name = "kryptonTextBox1";
-            this.kryptonTextBox1.Size = new System.Drawing.Size(160, 32);
-            this.kryptonTextBox1.StateCommon.Back.Color1 = System.Drawing.Color.Black;
-            this.kryptonTextBox1.StateCommon.Border.Color1 = System.Drawing.Color.Purple;
-            this.kryptonTextBox1.StateCommon.Border.Color2 = System.Drawing.Color.Purple;
-            this.kryptonTextBox1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.saveBtn.Location = new System.Drawing.Point(735, 54);
+            this.saveBtn.Name = "saveBtn";
+            this.saveBtn.Size = new System.Drawing.Size(109, 32);
+            this.saveBtn.StateCommon.Back.Color1 = System.Drawing.Color.Black;
+            this.saveBtn.StateCommon.Back.Color2 = System.Drawing.Color.Purple;
+            this.saveBtn.StateCommon.Back.ColorAngle = 45F;
+            this.saveBtn.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.saveBtn.StateCommon.Border.Color2 = System.Drawing.Color.White;
+            this.saveBtn.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox1.StateCommon.Border.Rounding = 4;
-            this.kryptonTextBox1.StateCommon.Content.Color1 = System.Drawing.Color.White;
-            this.kryptonTextBox1.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.kryptonTextBox1.TabIndex = 9;
+            this.saveBtn.StateCommon.Border.Rounding = 5;
+            this.saveBtn.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.saveBtn.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.saveBtn.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.saveBtn.TabIndex = 25;
+            this.saveBtn.Values.Text = "Save";
+            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
-            // userTxt
+            // salariuTxt
             // 
-            this.userTxt.Location = new System.Drawing.Point(157, 40);
-            this.userTxt.Name = "userTxt";
-            this.userTxt.Size = new System.Drawing.Size(160, 32);
-            this.userTxt.StateCommon.Back.Color1 = System.Drawing.Color.Black;
-            this.userTxt.StateCommon.Border.Color1 = System.Drawing.Color.Purple;
-            this.userTxt.StateCommon.Border.Color2 = System.Drawing.Color.Purple;
-            this.userTxt.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.salariuTxt.Location = new System.Drawing.Point(169, 140);
+            this.salariuTxt.Name = "salariuTxt";
+            this.salariuTxt.Size = new System.Drawing.Size(323, 32);
+            this.salariuTxt.StateCommon.Back.Color1 = System.Drawing.Color.Black;
+            this.salariuTxt.StateCommon.Border.Color1 = System.Drawing.Color.Purple;
+            this.salariuTxt.StateCommon.Border.Color2 = System.Drawing.Color.Purple;
+            this.salariuTxt.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.userTxt.StateCommon.Border.Rounding = 4;
-            this.userTxt.StateCommon.Content.Color1 = System.Drawing.Color.White;
-            this.userTxt.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.userTxt.TabIndex = 8;
+            this.salariuTxt.StateCommon.Border.Rounding = 4;
+            this.salariuTxt.StateCommon.Content.Color1 = System.Drawing.Color.White;
+            this.salariuTxt.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.salariuTxt.TabIndex = 10;
             // 
-            // label6
+            // numeTxt
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(365, 40);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(122, 23);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Total Comenzi:";
+            this.numeTxt.Location = new System.Drawing.Point(169, 92);
+            this.numeTxt.Name = "numeTxt";
+            this.numeTxt.Size = new System.Drawing.Size(323, 32);
+            this.numeTxt.StateCommon.Back.Color1 = System.Drawing.Color.Black;
+            this.numeTxt.StateCommon.Border.Color1 = System.Drawing.Color.Purple;
+            this.numeTxt.StateCommon.Border.Color2 = System.Drawing.Color.Purple;
+            this.numeTxt.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.numeTxt.StateCommon.Border.Rounding = 4;
+            this.numeTxt.StateCommon.Content.Color1 = System.Drawing.Color.White;
+            this.numeTxt.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.numeTxt.TabIndex = 9;
+            // 
+            // idUserTxt
+            // 
+            this.idUserTxt.Location = new System.Drawing.Point(169, 40);
+            this.idUserTxt.Name = "idUserTxt";
+            this.idUserTxt.Size = new System.Drawing.Size(323, 32);
+            this.idUserTxt.StateCommon.Back.Color1 = System.Drawing.Color.Black;
+            this.idUserTxt.StateCommon.Border.Color1 = System.Drawing.Color.Purple;
+            this.idUserTxt.StateCommon.Border.Color2 = System.Drawing.Color.Purple;
+            this.idUserTxt.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.idUserTxt.StateCommon.Border.Rounding = 4;
+            this.idUserTxt.StateCommon.Content.Color1 = System.Drawing.Color.White;
+            this.idUserTxt.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.idUserTxt.TabIndex = 8;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(61, 190);
+            this.label5.Location = new System.Drawing.Point(26, 190);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(61, 23);
+            this.label5.Size = new System.Drawing.Size(123, 23);
             this.label5.TabIndex = 5;
-            this.label5.Text = "Salariu";
+            this.label5.Text = "Data Angajare:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(61, 140);
+            this.label4.Location = new System.Drawing.Point(74, 140);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 23);
+            this.label4.Size = new System.Drawing.Size(65, 23);
             this.label4.TabIndex = 4;
-            this.label4.Text = "Prenume:";
+            this.label4.Text = "Salariu:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(61, 92);
+            this.label3.Location = new System.Drawing.Point(78, 92);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 23);
             this.label3.TabIndex = 3;
@@ -207,36 +245,37 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(45, 40);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 23);
+            this.label2.Size = new System.Drawing.Size(104, 23);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Id angajat:";
+            this.label2.Text = "Id Utilizator:";
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.kryptonTextBox6);
+            this.panel1.Controls.Add(this.moderDataGridViewCustom1);
+            this.panel1.Controls.Add(this.cautaTxt);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.dataGridView2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(19, 28);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(872, 307);
             this.panel1.TabIndex = 6;
             // 
-            // kryptonTextBox6
+            // cautaTxt
             // 
-            this.kryptonTextBox6.Location = new System.Drawing.Point(82, 39);
-            this.kryptonTextBox6.Name = "kryptonTextBox6";
-            this.kryptonTextBox6.Size = new System.Drawing.Size(235, 32);
-            this.kryptonTextBox6.StateCommon.Back.Color1 = System.Drawing.Color.Black;
-            this.kryptonTextBox6.StateCommon.Border.Color1 = System.Drawing.Color.Purple;
-            this.kryptonTextBox6.StateCommon.Border.Color2 = System.Drawing.Color.Purple;
-            this.kryptonTextBox6.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.cautaTxt.Location = new System.Drawing.Point(82, 39);
+            this.cautaTxt.Name = "cautaTxt";
+            this.cautaTxt.Size = new System.Drawing.Size(235, 32);
+            this.cautaTxt.StateCommon.Back.Color1 = System.Drawing.Color.Black;
+            this.cautaTxt.StateCommon.Border.Color1 = System.Drawing.Color.Purple;
+            this.cautaTxt.StateCommon.Border.Color2 = System.Drawing.Color.Purple;
+            this.cautaTxt.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox6.StateCommon.Border.Rounding = 4;
-            this.kryptonTextBox6.StateCommon.Content.Color1 = System.Drawing.Color.White;
-            this.kryptonTextBox6.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.kryptonTextBox6.TabIndex = 14;
+            this.cautaTxt.StateCommon.Border.Rounding = 4;
+            this.cautaTxt.StateCommon.Content.Color1 = System.Drawing.Color.White;
+            this.cautaTxt.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.cautaTxt.TabIndex = 14;
+            this.cautaTxt.TextChanged += new System.EventHandler(this.cautaTxt_TextChanged);
             // 
             // label8
             // 
@@ -249,16 +288,6 @@
             this.label8.TabIndex = 1;
             this.label8.Text = "Cauta:";
             // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 89);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(869, 215);
-            this.dataGridView2.TabIndex = 0;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -270,105 +299,64 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Angajati";
             // 
-            // kryptonButton5
+            // angajareDateTimePicker1
             // 
-            this.kryptonButton5.Location = new System.Drawing.Point(745, 140);
-            this.kryptonButton5.Name = "kryptonButton5";
-            this.kryptonButton5.Size = new System.Drawing.Size(109, 32);
-            this.kryptonButton5.StateCommon.Back.Color1 = System.Drawing.Color.Black;
-            this.kryptonButton5.StateCommon.Back.Color2 = System.Drawing.Color.Purple;
-            this.kryptonButton5.StateCommon.Back.ColorAngle = 45F;
-            this.kryptonButton5.StateCommon.Border.Color1 = System.Drawing.Color.White;
-            this.kryptonButton5.StateCommon.Border.Color2 = System.Drawing.Color.White;
-            this.kryptonButton5.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.angajareDateTimePicker1.Location = new System.Drawing.Point(169, 191);
+            this.angajareDateTimePicker1.Name = "angajareDateTimePicker1";
+            this.angajareDateTimePicker1.Size = new System.Drawing.Size(374, 38);
+            this.angajareDateTimePicker1.StateCommon.Back.Color1 = System.Drawing.Color.Black;
+            this.angajareDateTimePicker1.StateCommon.Border.Color1 = System.Drawing.Color.Purple;
+            this.angajareDateTimePicker1.StateCommon.Border.Color2 = System.Drawing.Color.Purple;
+            this.angajareDateTimePicker1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton5.StateCommon.Border.Rounding = 5;
-            this.kryptonButton5.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.kryptonButton5.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.kryptonButton5.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.kryptonButton5.TabIndex = 28;
-            this.kryptonButton5.Values.Text = "Clear";
+            this.angajareDateTimePicker1.StateCommon.Border.Rounding = 15;
+            this.angajareDateTimePicker1.StateCommon.Content.Color1 = System.Drawing.Color.White;
+            this.angajareDateTimePicker1.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.angajareDateTimePicker1.TabIndex = 37;
             // 
-            // kryptonButton4
+            // moderDataGridViewCustom1
             // 
-            this.kryptonButton4.Location = new System.Drawing.Point(745, 102);
-            this.kryptonButton4.Name = "kryptonButton4";
-            this.kryptonButton4.Size = new System.Drawing.Size(109, 32);
-            this.kryptonButton4.StateCommon.Back.Color1 = System.Drawing.Color.Black;
-            this.kryptonButton4.StateCommon.Back.Color2 = System.Drawing.Color.Purple;
-            this.kryptonButton4.StateCommon.Back.ColorAngle = 45F;
-            this.kryptonButton4.StateCommon.Border.Color1 = System.Drawing.Color.White;
-            this.kryptonButton4.StateCommon.Border.Color2 = System.Drawing.Color.White;
-            this.kryptonButton4.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton4.StateCommon.Border.Rounding = 5;
-            this.kryptonButton4.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.kryptonButton4.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.kryptonButton4.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.kryptonButton4.TabIndex = 27;
-            this.kryptonButton4.Values.Text = "Delete";
-            // 
-            // kryptonButton3
-            // 
-            this.kryptonButton3.Location = new System.Drawing.Point(745, 64);
-            this.kryptonButton3.Name = "kryptonButton3";
-            this.kryptonButton3.Size = new System.Drawing.Size(109, 32);
-            this.kryptonButton3.StateCommon.Back.Color1 = System.Drawing.Color.Black;
-            this.kryptonButton3.StateCommon.Back.Color2 = System.Drawing.Color.Purple;
-            this.kryptonButton3.StateCommon.Back.ColorAngle = 45F;
-            this.kryptonButton3.StateCommon.Border.Color1 = System.Drawing.Color.White;
-            this.kryptonButton3.StateCommon.Border.Color2 = System.Drawing.Color.White;
-            this.kryptonButton3.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton3.StateCommon.Border.Rounding = 5;
-            this.kryptonButton3.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.kryptonButton3.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.kryptonButton3.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.kryptonButton3.TabIndex = 26;
-            this.kryptonButton3.Values.Text = "Update";
-            // 
-            // kryptonButton2
-            // 
-            this.kryptonButton2.Location = new System.Drawing.Point(745, 26);
-            this.kryptonButton2.Name = "kryptonButton2";
-            this.kryptonButton2.Size = new System.Drawing.Size(109, 32);
-            this.kryptonButton2.StateCommon.Back.Color1 = System.Drawing.Color.Black;
-            this.kryptonButton2.StateCommon.Back.Color2 = System.Drawing.Color.Purple;
-            this.kryptonButton2.StateCommon.Back.ColorAngle = 45F;
-            this.kryptonButton2.StateCommon.Border.Color1 = System.Drawing.Color.White;
-            this.kryptonButton2.StateCommon.Border.Color2 = System.Drawing.Color.White;
-            this.kryptonButton2.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton2.StateCommon.Border.Rounding = 5;
-            this.kryptonButton2.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.kryptonButton2.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.kryptonButton2.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.kryptonButton2.TabIndex = 25;
-            this.kryptonButton2.Values.Text = "Save";
-            // 
-            // kryptonButton1
-            // 
-            this.kryptonButton1.Location = new System.Drawing.Point(654, 205);
-            this.kryptonButton1.Name = "kryptonButton1";
-            this.kryptonButton1.Size = new System.Drawing.Size(200, 32);
-            this.kryptonButton1.StateCommon.Back.Color1 = System.Drawing.Color.Black;
-            this.kryptonButton1.StateCommon.Back.Color2 = System.Drawing.Color.Purple;
-            this.kryptonButton1.StateCommon.Back.ColorAngle = 45F;
-            this.kryptonButton1.StateCommon.Border.Color1 = System.Drawing.Color.White;
-            this.kryptonButton1.StateCommon.Border.Color2 = System.Drawing.Color.White;
-            this.kryptonButton1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton1.StateCommon.Border.Rounding = 5;
-            this.kryptonButton1.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.kryptonButton1.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.kryptonButton1.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.kryptonButton1.TabIndex = 24;
-            this.kryptonButton1.Values.Text = "Management Avansat";
+            this.moderDataGridViewCustom1.AllowUserToAddRows = false;
+            this.moderDataGridViewCustom1.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(0)))), ((int)(((byte)(30)))));
+            this.moderDataGridViewCustom1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.moderDataGridViewCustom1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.moderDataGridViewCustom1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.moderDataGridViewCustom1.BackgroundColor = System.Drawing.Color.Black;
+            this.moderDataGridViewCustom1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.moderDataGridViewCustom1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.moderDataGridViewCustom1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.moderDataGridViewCustom1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.moderDataGridViewCustom1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.moderDataGridViewCustom1.DefaultCellStyle = dataGridViewCellStyle3;
+            this.moderDataGridViewCustom1.EnableHeadersVisualStyles = false;
+            this.moderDataGridViewCustom1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(60)))));
+            this.moderDataGridViewCustom1.Location = new System.Drawing.Point(13, 90);
+            this.moderDataGridViewCustom1.MultiSelect = false;
+            this.moderDataGridViewCustom1.Name = "moderDataGridViewCustom1";
+            this.moderDataGridViewCustom1.RowHeadersVisible = false;
+            this.moderDataGridViewCustom1.RowHeadersWidth = 51;
+            this.moderDataGridViewCustom1.RowTemplate.Height = 35;
+            this.moderDataGridViewCustom1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.moderDataGridViewCustom1.Size = new System.Drawing.Size(841, 214);
+            this.moderDataGridViewCustom1.TabIndex = 15;
+            this.moderDataGridViewCustom1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.moderDataGridViewCustom1_CellClick);
             // 
             // Angajati
             // 
@@ -383,7 +371,7 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.moderDataGridViewCustom1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -391,25 +379,22 @@
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox4;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox3;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox2;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox userTxt;
-        private System.Windows.Forms.Label label6;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox salariuTxt;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox numeTxt;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox idUserTxt;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox6;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox cautaTxt;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label label1;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton5;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton4;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton3;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton2;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton clearBtn;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton deleteBtn;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton updateBtn;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton saveBtn;
+        private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker angajareDateTimePicker1;
+        private ModerDataGridViewCustom moderDataGridViewCustom1;
     }
 }

@@ -10,7 +10,7 @@ public class RoundedPanel : Panel
     public RoundedPanel()
     {
         this.BackColor = Color.LightBlue; // culoarea implicita
-        this.ResizeRedraw = true;          // redraw la resize
+        this.ResizeRedraw = true; // redraw la resize
         this.BorderStyle = BorderStyle.None; // elimina border-ul standard
 
     }

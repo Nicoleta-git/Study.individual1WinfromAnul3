@@ -63,6 +63,16 @@ namespace indiv1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_image_8113737 {
+            get {
+                object obj = ResourceManager.GetObject("add-image_8113737", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap angajati {
             get {
                 object obj = ResourceManager.GetObject("angajati", resourceCulture);

@@ -1,0 +1,1267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DarwinDBDataSet">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>a25dfaae-73c1-48d1-bd44-b493fb00d3d1</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="DataSet1">
+      <Query>
+        <DataSourceName>DarwinDBDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="ID_Produs">
+          <DataField>ID_Produs</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="NumeProdus">
+          <DataField>NumeProdus</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Categorie">
+          <DataField>Categorie</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Producator">
+          <DataField>Producator</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Pret">
+          <DataField>Pret</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Stoc">
+          <DataField>Stoc</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Specificatii_Software">
+          <DataField>Specificatii_Software</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Specificatii_Hardware">
+          <DataField>Specificatii_Hardware</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ImagineProdus">
+          <DataField>ImagineProdus</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+        <Field Name="DataAdaugare">
+          <DataField>DataAdaugare</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>DarwinDBDataSet</rd:DataSetName>
+        <rd:SchemaPath>D:\User\Desktop\indiv1V@-20260404T170543Z-3-001\indiv1V@\indiv1\DarwinDBDataSet1.xsd</rd:SchemaPath>
+        <rd:TableName>Produse</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>ProduseTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <ReportItems>
+          <Tablix Name="Tablix1">
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>1in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1in</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox1">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>ID Produs</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox1</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox3">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Nume Produs</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox3</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox5">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Categorie</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox5</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox2">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Producator</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox2</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox6">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Pret</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox6</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox8">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Stoc</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox8</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="ID_Produs">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!ID_Produs.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>ID_Produs</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="NumeProdus">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!NumeProdus.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>NumeProdus</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Categorie">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Categorie.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Categorie</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Producator">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Producator.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Producator</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Pret">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Pret.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Pret</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Stoc">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Stoc.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Stoc</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <KeepWithGroup>After</KeepWithGroup>
+                </TablixMember>
+                <TablixMember>
+                  <Group Name="Details" />
+                </TablixMember>
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <DataSetName>DataSet1</DataSetName>
+            <Top>0.21665in</Top>
+            <Left>0.36612in</Left>
+            <Height>0.5in</Height>
+            <Width>6in</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <Color>White</Color>
+            </Style>
+          </Tablix>
+          <Chart Name="Chart1">
+            <ChartCategoryHierarchy>
+              <ChartMembers>
+                <ChartMember>
+                  <Group Name="Chart1_CategoryGroup">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!Producator.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Group>
+                  <SortExpressions>
+                    <SortExpression>
+                      <Value>=Fields!Producator.Value</Value>
+                    </SortExpression>
+                  </SortExpressions>
+                  <Label>=Fields!Producator.Value</Label>
+                </ChartMember>
+              </ChartMembers>
+            </ChartCategoryHierarchy>
+            <ChartSeriesHierarchy>
+              <ChartMembers>
+                <ChartMember>
+                  <Label>Pret</Label>
+                </ChartMember>
+              </ChartMembers>
+            </ChartSeriesHierarchy>
+            <ChartData>
+              <ChartSeriesCollection>
+                <ChartSeries Name="Pret">
+                  <ChartDataPoints>
+                    <ChartDataPoint>
+                      <ChartDataPointValues>
+                        <Y>=Sum(Fields!Pret.Value)</Y>
+                      </ChartDataPointValues>
+                      <ChartDataLabel>
+                        <Style />
+                      </ChartDataLabel>
+                      <Style />
+                      <ChartMarker>
+                        <Style />
+                      </ChartMarker>
+                      <DataElementOutput>Output</DataElementOutput>
+                    </ChartDataPoint>
+                  </ChartDataPoints>
+                  <Style />
+                  <ChartEmptyPoints>
+                    <Style />
+                    <ChartMarker>
+                      <Style />
+                    </ChartMarker>
+                    <ChartDataLabel>
+                      <Style />
+                    </ChartDataLabel>
+                  </ChartEmptyPoints>
+                  <ValueAxisName>Primary</ValueAxisName>
+                  <CategoryAxisName>Primary</CategoryAxisName>
+                  <ChartSmartLabel>
+                    <CalloutLineColor>Black</CalloutLineColor>
+                    <MinMovingDistance>0pt</MinMovingDistance>
+                  </ChartSmartLabel>
+                </ChartSeries>
+              </ChartSeriesCollection>
+            </ChartData>
+            <ChartAreas>
+              <ChartArea Name="Default">
+                <ChartCategoryAxes>
+                  <ChartAxis Name="Primary">
+                    <Style>
+                      <Border>
+                        <Color>Gainsboro</Color>
+                        <Style>None</Style>
+                      </Border>
+                      <FontSize>8pt</FontSize>
+                      <Color>#5c5c5c</Color>
+                    </Style>
+                    <ChartAxisTitle>
+                      <Caption />
+                      <Style>
+                        <FontSize>9pt</FontSize>
+                        <Color>#5c5c5c</Color>
+                      </Style>
+                    </ChartAxisTitle>
+                    <ChartMajorGridLines>
+                      <Enabled>False</Enabled>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                        </Border>
+                      </Style>
+                    </ChartMajorGridLines>
+                    <ChartMinorGridLines>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                          <Style>Dotted</Style>
+                        </Border>
+                      </Style>
+                    </ChartMinorGridLines>
+                    <ChartMajorTickMarks>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </ChartMajorTickMarks>
+                    <ChartMinorTickMarks>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                        </Border>
+                      </Style>
+                      <Length>0.5</Length>
+                    </ChartMinorTickMarks>
+                    <CrossAt>NaN</CrossAt>
+                    <Minimum>NaN</Minimum>
+                    <Maximum>NaN</Maximum>
+                    <ChartAxisScaleBreak>
+                      <Style />
+                    </ChartAxisScaleBreak>
+                  </ChartAxis>
+                  <ChartAxis Name="Secondary">
+                    <Style>
+                      <Border>
+                        <Color>Gainsboro</Color>
+                        <Style>None</Style>
+                      </Border>
+                      <FontSize>8pt</FontSize>
+                      <Color>#5c5c5c</Color>
+                    </Style>
+                    <ChartAxisTitle>
+                      <Caption />
+                      <Style>
+                        <FontSize>9pt</FontSize>
+                        <Color>#5c5c5c</Color>
+                      </Style>
+                    </ChartAxisTitle>
+                    <ChartMajorGridLines>
+                      <Enabled>False</Enabled>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                        </Border>
+                      </Style>
+                    </ChartMajorGridLines>
+                    <ChartMinorGridLines>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                          <Style>Dotted</Style>
+                        </Border>
+                      </Style>
+                    </ChartMinorGridLines>
+                    <ChartMajorTickMarks>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </ChartMajorTickMarks>
+                    <ChartMinorTickMarks>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                        </Border>
+                      </Style>
+                      <Length>0.5</Length>
+                    </ChartMinorTickMarks>
+                    <CrossAt>NaN</CrossAt>
+                    <Location>Opposite</Location>
+                    <Minimum>NaN</Minimum>
+                    <Maximum>NaN</Maximum>
+                    <ChartAxisScaleBreak>
+                      <Style />
+                    </ChartAxisScaleBreak>
+                  </ChartAxis>
+                </ChartCategoryAxes>
+                <ChartValueAxes>
+                  <ChartAxis Name="Primary">
+                    <Style>
+                      <Border>
+                        <Color>Gainsboro</Color>
+                        <Style>None</Style>
+                      </Border>
+                      <FontSize>8pt</FontSize>
+                      <Color>#5c5c5c</Color>
+                    </Style>
+                    <ChartAxisTitle>
+                      <Caption />
+                      <Style>
+                        <FontSize>9pt</FontSize>
+                        <Color>#5c5c5c</Color>
+                      </Style>
+                    </ChartAxisTitle>
+                    <ChartMajorGridLines>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                        </Border>
+                      </Style>
+                    </ChartMajorGridLines>
+                    <ChartMinorGridLines>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                          <Style>Dotted</Style>
+                        </Border>
+                      </Style>
+                    </ChartMinorGridLines>
+                    <ChartMajorTickMarks>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </ChartMajorTickMarks>
+                    <ChartMinorTickMarks>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                        </Border>
+                      </Style>
+                      <Length>0.5</Length>
+                    </ChartMinorTickMarks>
+                    <CrossAt>NaN</CrossAt>
+                    <Minimum>NaN</Minimum>
+                    <Maximum>NaN</Maximum>
+                    <ChartAxisScaleBreak>
+                      <Style />
+                    </ChartAxisScaleBreak>
+                  </ChartAxis>
+                  <ChartAxis Name="Secondary">
+                    <Style>
+                      <Border>
+                        <Color>Gainsboro</Color>
+                        <Style>None</Style>
+                      </Border>
+                      <FontSize>8pt</FontSize>
+                      <Color>#5c5c5c</Color>
+                    </Style>
+                    <ChartAxisTitle>
+                      <Caption />
+                      <Style>
+                        <FontSize>9pt</FontSize>
+                        <Color>#5c5c5c</Color>
+                      </Style>
+                    </ChartAxisTitle>
+                    <ChartMajorGridLines>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                        </Border>
+                      </Style>
+                    </ChartMajorGridLines>
+                    <ChartMinorGridLines>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                          <Style>Dotted</Style>
+                        </Border>
+                      </Style>
+                    </ChartMinorGridLines>
+                    <ChartMajorTickMarks>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </ChartMajorTickMarks>
+                    <ChartMinorTickMarks>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                        </Border>
+                      </Style>
+                      <Length>0.5</Length>
+                    </ChartMinorTickMarks>
+                    <CrossAt>NaN</CrossAt>
+                    <Location>Opposite</Location>
+                    <Minimum>NaN</Minimum>
+                    <Maximum>NaN</Maximum>
+                    <ChartAxisScaleBreak>
+                      <Style />
+                    </ChartAxisScaleBreak>
+                  </ChartAxis>
+                </ChartValueAxes>
+                <Style>
+                  <BackgroundColor>#00ffffff</BackgroundColor>
+                  <BackgroundGradientType>None</BackgroundGradientType>
+                </Style>
+              </ChartArea>
+            </ChartAreas>
+            <ChartLegends>
+              <ChartLegend Name="Default">
+                <Style>
+                  <BackgroundGradientType>None</BackgroundGradientType>
+                  <FontSize>8pt</FontSize>
+                </Style>
+                <Position>TopLeft</Position>
+                <ChartLegendTitle>
+                  <Caption />
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </ChartLegendTitle>
+                <HeaderSeparatorColor>Black</HeaderSeparatorColor>
+                <ColumnSeparatorColor>Black</ColumnSeparatorColor>
+              </ChartLegend>
+            </ChartLegends>
+            <ChartTitles>
+              <ChartTitle Name="Default">
+                <Caption>Statistica: pretul pentru fiecare categorie</Caption>
+                <Style>
+                  <BackgroundGradientType>None</BackgroundGradientType>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextAlign>Left</TextAlign>
+                  <VerticalAlign>Top</VerticalAlign>
+                  <Color>#a6a6a6</Color>
+                </Style>
+                <Position>TopLeft</Position>
+              </ChartTitle>
+            </ChartTitles>
+            <Palette>Pacific</Palette>
+            <ChartBorderSkin>
+              <Style>
+                <BackgroundColor>Gray</BackgroundColor>
+                <BackgroundGradientType>None</BackgroundGradientType>
+                <Color>White</Color>
+              </Style>
+            </ChartBorderSkin>
+            <ChartNoDataMessage Name="NoDataMessage">
+              <Caption>No Data Available</Caption>
+              <Style>
+                <BackgroundGradientType>None</BackgroundGradientType>
+                <FontWeight>Bold</FontWeight>
+                <TextAlign>General</TextAlign>
+                <VerticalAlign>Top</VerticalAlign>
+              </Style>
+            </ChartNoDataMessage>
+            <DataSetName>DataSet1</DataSetName>
+            <Top>0.7861in</Top>
+            <Left>0.36612in</Left>
+            <Height>2.06667in</Height>
+            <Width>6in</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Color>LightGrey</Color>
+                <Style>None</Style>
+              </Border>
+              <BackgroundColor>White</BackgroundColor>
+              <BackgroundGradientType>None</BackgroundGradientType>
+            </Style>
+          </Chart>
+          <Textbox Name="Textbox18">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Sum(Fields!Pret.Value * Fields!Stoc.Value)</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontFamily>Google Sans Text</FontFamily>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                      <Color>DarkGreen</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox18</rd:DefaultName>
+            <Top>2.92221in</Top>
+            <Left>1.15501in</Left>
+            <Height>0.25in</Height>
+            <Width>1.59167in</Width>
+            <ZIndex>2</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox19">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Total pret:</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>Underline</TextDecoration>
+                      <Color>DarkGreen</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox19</rd:DefaultName>
+            <Top>2.92221in</Top>
+            <Left>0.36612in</Left>
+            <Height>0.25in</Height>
+            <Width>0.775in</Width>
+            <ZIndex>3</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox20">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Avg(Fields!Pret.Value)</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontFamily>Google Sans Text</FontFamily>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                      <Color>DarkGreen</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox18</rd:DefaultName>
+            <Top>3.24165in</Top>
+            <Left>1.43556in</Left>
+            <Height>0.25in</Height>
+            <Width>1.31111in</Width>
+            <ZIndex>4</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox21">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Medie pret:</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>Underline</TextDecoration>
+                      <Color>DarkGreen</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox19</rd:DefaultName>
+            <Top>3.24165in</Top>
+            <Left>0.36612in</Left>
+            <Height>0.25in</Height>
+            <Width>1in</Width>
+            <ZIndex>5</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox22">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Sum(IIF(Fields!Stoc.Value &lt; 5, 1, 0))</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontFamily>Google Sans Text</FontFamily>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                      <Color>DarkGreen</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox18</rd:DefaultName>
+            <Top>2.60277in</Top>
+            <Left>5.84666in</Left>
+            <Height>0.25in</Height>
+            <Width>0.51944in</Width>
+            <ZIndex>6</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox23">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Nr produse cu stoc scazut:</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>Underline</TextDecoration>
+                      <Color>DarkGreen</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox19</rd:DefaultName>
+            <Top>2.92221in</Top>
+            <Left>3.91056in</Left>
+            <Height>0.25in</Height>
+            <Width>1.86667in</Width>
+            <ZIndex>7</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+        </ReportItems>
+        <Height>3.63333in</Height>
+        <Style />
+      </Body>
+      <Width>6.83in</Width>
+      <Page>
+        <PageHeader>
+          <Height>1in</Height>
+          <PrintOnFirstPage>true</PrintOnFirstPage>
+          <PrintOnLastPage>true</PrintOnLastPage>
+          <ReportItems>
+            <Textbox Name="Textbox17">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>Raport Produse</Value>
+                      <Style>
+                        <FontSize>14pt</FontSize>
+                        <FontWeight>Bold</FontWeight>
+                        <Color>White</Color>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox17</rd:DefaultName>
+              <Top>0.36333in</Top>
+              <Left>0.17167in</Left>
+              <Height>0.33333in</Height>
+              <Width>1.96667in</Width>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Line Name="Line1">
+              <Top>0.87167in</Top>
+              <Height>0in</Height>
+              <Width>6.83in</Width>
+              <ZIndex>1</ZIndex>
+              <Style>
+                <Border>
+                  <Color>White</Color>
+                  <Style>Solid</Style>
+                  <Width>2pt</Width>
+                </Border>
+              </Style>
+            </Line>
+            <Line Name="Line2">
+              <Top>0.15833in</Top>
+              <Height>0in</Height>
+              <Width>6.83in</Width>
+              <ZIndex>2</ZIndex>
+              <Style>
+                <Border>
+                  <Color>White</Color>
+                  <Style>Solid</Style>
+                  <Width>2pt</Width>
+                </Border>
+              </Style>
+            </Line>
+            <Image Name="Image3">
+              <Source>Embedded</Source>
+              <Value>logoDarwin</Value>
+              <Sizing>FitProportional</Sizing>
+              <Top>0.24111in</Top>
+              <Left>4.82444in</Left>
+              <Height>0.575in</Height>
+              <Width>1.83889in</Width>
+              <ZIndex>3</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+              </Style>
+            </Image>
+          </ReportItems>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <BackgroundColor>Purple</BackgroundColor>
+          </Style>
+        </PageHeader>
+        <PageFooter>
+          <Height>1in</Height>
+          <PrintOnFirstPage>true</PrintOnFirstPage>
+          <PrintOnLastPage>true</PrintOnLastPage>
+          <ReportItems>
+            <Line Name="Line3">
+              <Top>0.17166in</Top>
+              <Height>0in</Height>
+              <Width>6.83in</Width>
+              <Style>
+                <Border>
+                  <Color>White</Color>
+                  <Style>Solid</Style>
+                  <Width>2pt</Width>
+                </Border>
+              </Style>
+            </Line>
+            <Line Name="Line4">
+              <Top>0.885in</Top>
+              <Height>0in</Height>
+              <Width>6.83in</Width>
+              <ZIndex>1</ZIndex>
+              <Style>
+                <Border>
+                  <Color>White</Color>
+                  <Style>Solid</Style>
+                  <Width>2pt</Width>
+                </Border>
+              </Style>
+            </Line>
+            <Textbox Name="Textbox24">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>="Generat la: " &amp; Now()</Value>
+                      <Style>
+                        <FontWeight>Bold</FontWeight>
+                        <TextDecoration>Underline</TextDecoration>
+                        <Color>Pink</Color>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox19</rd:DefaultName>
+              <Top>0.41667in</Top>
+              <Left>0.17167in</Left>
+              <Height>0.25in</Height>
+              <Width>4.53334in</Width>
+              <ZIndex>2</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+          </ReportItems>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <BackgroundColor>Purple</BackgroundColor>
+          </Style>
+        </PageFooter>
+        <LeftMargin>1in</LeftMargin>
+        <RightMargin>1in</RightMargin>
+        <TopMargin>1in</TopMargin>
+        <BottomMargin>1in</BottomMargin>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParametersLayout>
+    <GridLayoutDefinition>
+      <NumberOfColumns>4</NumberOfColumns>
+      <NumberOfRows>2</NumberOfRows>
+    </GridLayoutDefinition>
+  </ReportParametersLayout>
+  <EmbeddedImages>
+    <EmbeddedImage Name="logoDarwin">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>3eb6cf70-e37a-465a-a388-02ca71f9cc08</rd:ReportID>
+</Report>

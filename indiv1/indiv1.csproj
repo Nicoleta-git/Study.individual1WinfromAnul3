@@ -45,6 +45,24 @@
     <Reference Include="ComponentFactory.Krypton.Toolkit">
       <HintPath>..\..\..\Krypton-master (1)\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="Syncfusion.Core.XForms, Version=30.2.4.0, Culture=neutral, processorArchitecture=MSIL">
@@ -110,17 +128,14 @@
     <Compile Include="Anunturi.Designer.cs">
       <DependentUpon>Anunturi.cs</DependentUpon>
     </Compile>
-    <Compile Include="Casti.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Casti.Designer.cs">
-      <DependentUpon>Casti.cs</DependentUpon>
-    </Compile>
     <Compile Include="CatalogUserForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="CatalogUserForm.Designer.cs">
       <DependentUpon>CatalogUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CirclePanel.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="ClientiManagement.cs">
       <SubType>UserControl</SubType>
@@ -139,6 +154,14 @@
     </Compile>
     <Compile Include="CustomRoundedComboBox.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DarwinDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DarwinDBDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="DashboardAdmin.cs">
       <SubType>UserControl</SubType>
@@ -164,23 +187,11 @@
     <Compile Include="DashAdmin.Designer.cs">
       <DependentUpon>DashAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </Compile>
     <Compile Include="istoric.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="istoric.Designer.cs">
       <DependentUpon>istoric.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Laptopuri.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Laptopuri.Designer.cs">
-      <DependentUpon>Laptopuri.cs</DependentUpon>
     </Compile>
     <Compile Include="Loading.cs">
       <SubType>Form</SubType>
@@ -197,6 +208,12 @@
     <Compile Include="menuPanel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ModernDataGridViewCustom.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NeonMenuStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Produs.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -210,6 +227,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Rapoarte.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Rapoarte.Designer.cs">
+      <DependentUpon>Rapoarte.cs</DependentUpon>
+    </Compile>
     <Compile Include="Register.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,17 +242,19 @@
     <Compile Include="RoundedPanel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="SesiuneUtilizator.cs" />
     <Compile Include="Setari.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Setari.Designer.cs">
       <DependentUpon>Setari.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telefoane.cs">
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="UcCatalog.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Telefoane.Designer.cs">
-      <DependentUpon>Telefoane.cs</DependentUpon>
+    <Compile Include="UcCatalog.Designer.cs">
+      <DependentUpon>UcCatalog.cs</DependentUpon>
     </Compile>
     <Compile Include="UserInterface.cs">
       <SubType>Form</SubType>
@@ -242,9 +267,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Anunturi.resx">
       <DependentUpon>Anunturi.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Casti.resx">
-      <DependentUpon>Casti.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CatalogUserForm.resx">
       <DependentUpon>CatalogUserForm.cs</DependentUpon>
@@ -261,20 +283,15 @@
     <EmbeddedResource Include="DashUser.resx">
       <DependentUpon>DashUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DateClienti.rdlc" />
     <EmbeddedResource Include="Filtrare.resx">
       <DependentUpon>Filtrare.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DashAdmin.resx">
       <DependentUpon>DashAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="istoric.resx">
       <DependentUpon>istoric.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Laptopuri.resx">
-      <DependentUpon>Laptopuri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Loading.resx">
       <DependentUpon>Loading.cs</DependentUpon>
@@ -290,18 +307,34 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Rapoarte.resx">
+      <DependentUpon>Rapoarte.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Produse.rdlc" />
+    <EmbeddedResource Include="ReportTop5pord.rdlc" />
     <EmbeddedResource Include="Setari.resx">
       <DependentUpon>Setari.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Telefoane.resx">
-      <DependentUpon>Telefoane.cs</DependentUpon>
+    <EmbeddedResource Include="UcCatalog.resx">
+      <DependentUpon>UcCatalog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserInterface.resx">
       <DependentUpon>UserInterface.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DarwinDBDataSet1.xsc">
+      <DependentUpon>DarwinDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DarwinDBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DarwinDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DarwinDBDataSet1.xss">
+      <DependentUpon>DarwinDBDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -315,6 +348,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
