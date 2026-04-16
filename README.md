@@ -89,7 +89,7 @@
 
 9. [Concluzii](#concluzii)
 
-10. [Bibliografie](#bibliografie--resurse-utilizate)
+10. [Webografii](#webografii)
 ---
 
 ## Introducere
@@ -759,7 +759,7 @@ Dificultățile întâlnite în această parte au fost în principal legate de c
 Prin urmare, această lucrare a fost un test de rezistență și creativitate. Timpul investit reflectă dorința de a nu accepta soluții mediocre, ci de a crea un produs software complet, care să demonstreze atât competențe de gestionare a bazelor de date, cât și o stăpânire avansată a designului de interfață în C#. Deși parcursul a fost foarte greu și plin de obstacole, satisfacția de a vedea un sistem complex funcționând stabil justifică fiecare zi de efort.
 
 
-## Webografii / Resurse Utilizate
+## Webografii
 
 | Sursa / Canal               | Tip Resursă          | Link / Referință                                                                                                              |
 | :-------------------------- | :------------------- | :---------------------------------------------------------------------------------------------------------------------------- |
