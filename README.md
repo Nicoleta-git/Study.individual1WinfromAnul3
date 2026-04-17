@@ -1,3 +1,27 @@
+<div align="center">
+
+<h1 style="font-family: 'Orbitron', sans-serif; font-size: 46px; font-weight: 700; letter-spacing: 2px; background: linear-gradient(90deg,#ff00cc,#7a00ff); -webkit-background-clip: text; color: transparent;">
+Darwin
+</h1>
+
+<p style="color:#aaa; font-size:18px;">
+Aplicație Desktop E-Commerce & Dashboard
+</p>
+
+<br>
+
+<p>
+<img src="https://img.shields.io/badge/Project-School-purple?style=for-the-badge">
+<img src="https://img.shields.io/badge/Tech-C%23%20%7C%20WinForms-black?style=for-the-badge">
+</p>
+
+<br>
+
+<p style="color:#888;">
+Realizat de <b style="color:#c800ff;">Titei Nicoleta</b>
+</p>
+
+</div>
 <img width="1536" height="772" alt="ChatGPT Image Apr 17, 2026, 09_50_30 AM (1)" src="https://github.com/user-attachments/assets/b6955dcb-ed6d-4e0c-b988-71946aa73289" />
 
 # Raport
