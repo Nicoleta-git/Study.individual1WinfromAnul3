@@ -1,3 +1,5 @@
+<img width="1536" height="772" alt="ChatGPT Image Apr 17, 2026, 09_50_30 AM (1)" src="https://github.com/user-attachments/assets/b6955dcb-ed6d-4e0c-b988-71946aa73289" />
+
 # Raport
 
 <div align="center">
