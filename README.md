@@ -19,7 +19,7 @@ Aplicație Desktop E-Commerce & Dashboard
 <br>
 
 <p style="color:#888;">
-Realizat de <b style="color:#c800ff;">Titei Nicoleta</b>
+Realizat de <b style="color:#c800ff;">@Nicoleta-git</b>
 </p>
 
 </div>
@@ -45,8 +45,6 @@ Realizat de <b style="color:#c800ff;">Titei Nicoleta</b>
 
 <div align="right">
 
-**Realizat:** Titei Nicoleta, gr. P-2333
-<br>
 **Verificat:** Covali Eugenia
 <br>
 **Nota:** _______________
