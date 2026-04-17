@@ -13,6 +13,7 @@ Aplicație Desktop E-Commerce & Dashboard
 <p>
 <img src="https://img.shields.io/badge/Project-School-purple?style=for-the-badge">
 <img src="https://img.shields.io/badge/Tech-C%23%20%7C%20WinForms-black?style=for-the-badge">
+<img src="https://img.shields.io/badge/Database-SQL%20Server-darkblue?style=for-the-badge">
 </p>
 
 <br>
