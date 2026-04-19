@@ -289,6 +289,7 @@
             this.Controls.Add(this.pictureBox3);
             this.Name = "DashUser";
             this.Size = new System.Drawing.Size(910, 629);
+            this.Load += new System.EventHandler(this.DashUser_Load_1);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

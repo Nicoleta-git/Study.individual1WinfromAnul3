@@ -44,6 +44,9 @@ namespace indiv1
             chart1bar.ChartAreas[0].BackColor = Color.Transparent;
             chart1bar.BackColor = Color.Transparent;
 
+            chart1bar.ChartAreas[0].AxisX.MajorGrid.Enabled = false;
+            chart1bar.ChartAreas[0].AxisY.MajorGrid.LineColor = Color.FromArgb(50, Color.Gray);
+
             Series series = new Series("Comenzi")
             {
                 ChartType = SeriesChartType.Column,
@@ -58,28 +61,35 @@ namespace indiv1
                              ORDER BY MONTH(DataComanda)";
 
             SqlCommand cmd = new SqlCommand(query, con);
-            SqlDataReader dr = cmd.ExecuteReader();
-
-            while (dr.Read())
+            using (SqlDataReader dr = cmd.ExecuteReader())
             {
-                series.Points.AddXY(dr["Luna"].ToString(), dr["Total"]);
+                while (dr.Read())
+                {
+                    series.Points.AddXY(dr["Luna"].ToString(), dr["Total"]);
+                }
             }
-            dr.Close();
 
             chart1bar.Series.Add(series);
             chart1bar.ChartAreas[0].AxisX.LabelStyle.ForeColor = Color.White;
             chart1bar.ChartAreas[0].AxisY.LabelStyle.ForeColor = Color.White;
+            chart1bar.Legends[0].BackColor = Color.Transparent;
+            chart1bar.Legends[0].ForeColor = Color.White;
         }
 
         private void IncarcaGraficCategorii(SqlConnection con)
         {
             chart2pie.Series.Clear();
             chart2pie.Legends.Clear();
+            chart2pie.ChartAreas.Clear();
+
             chart2pie.BackColor = Color.Transparent;
+            ChartArea area = new ChartArea("MainArea");
+            area.BackColor = Color.Transparent;
+            chart2pie.ChartAreas.Add(area);
 
             Legend lgd = new Legend("CategoriiLegend");
             lgd.BackColor = Color.Transparent;
-            lgd.ForeColor = Color.White; 
+            lgd.ForeColor = Color.White;
             chart2pie.Legends.Add(lgd);
 
             Series series = new Series("Categorii")
@@ -90,22 +100,22 @@ namespace indiv1
                 Legend = "CategoriiLegend"
             };
 
+            series["PieLineColor"] = "Transparent";
+
             string query = "SELECT Categorie, COUNT(*) as Cantitate FROM Produse GROUP BY Categorie";
 
             SqlCommand cmd = new SqlCommand(query, con);
-            SqlDataReader dr = cmd.ExecuteReader();
-
-            while (dr.Read())
+            using (SqlDataReader dr = cmd.ExecuteReader())
             {
-                int i = series.Points.AddY(Convert.ToDouble(dr["Cantitate"]));
-                series.Points[i].LegendText = dr["Categorie"].ToString();
-                series.Points[i].Label = "#PERCENT";
+                while (dr.Read())
+                {
+                    int i = series.Points.AddY(Convert.ToDouble(dr["Cantitate"]));
+                    series.Points[i].LegendText = dr["Categorie"].ToString();
+                    series.Points[i].Label = "#PERCENT";
+                }
             }
-            dr.Close();
 
             chart2pie.Series.Add(series);
         }
-
-
     }
 }

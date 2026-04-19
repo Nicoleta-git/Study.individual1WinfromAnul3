@@ -31,8 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.containerPagina = new System.Windows.Forms.Panel();
-            this.menuTransition = new System.Windows.Forms.Timer(this.components);
             this.roundedPanel5 = new RoundedPanel();
             this.kryptonButton11 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton5 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -51,12 +49,13 @@
             this.kryptonButton7 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.logo_darwin = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.containerPagina = new System.Windows.Forms.Panel();
             this.ucCatalog1 = new indiv1.UcCatalog();
             this.istoric1 = new indiv1.istoric();
             this.setari1 = new indiv1.Setari();
             this.dashUser1 = new indiv1.DashUser();
+            this.menuTransition = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
-            this.containerPagina.SuspendLayout();
             this.roundedPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -67,6 +66,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo_darwin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.containerPagina.SuspendLayout();
             this.SuspendLayout();
             // 
             // kryptonPalette1
@@ -89,24 +89,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(256, 703);
             this.panel1.TabIndex = 12;
-            // 
-            // containerPagina
-            // 
-            this.containerPagina.Controls.Add(this.ucCatalog1);
-            this.containerPagina.Controls.Add(this.istoric1);
-            this.containerPagina.Controls.Add(this.setari1);
-            this.containerPagina.Controls.Add(this.dashUser1);
-            this.containerPagina.Dock = System.Windows.Forms.DockStyle.Right;
-            this.containerPagina.Location = new System.Drawing.Point(161, 0);
-            this.containerPagina.Margin = new System.Windows.Forms.Padding(10);
-            this.containerPagina.Name = "containerPagina";
-            this.containerPagina.Size = new System.Drawing.Size(1032, 703);
-            this.containerPagina.TabIndex = 11;
-            // 
-            // menuTransition
-            // 
-            this.menuTransition.Interval = 15;
-            this.menuTransition.Tick += new System.EventHandler(this.menuTransition_Tick);
             // 
             // roundedPanel5
             // 
@@ -402,6 +384,19 @@
             this.pictureBox2.TabIndex = 20;
             this.pictureBox2.TabStop = false;
             // 
+            // containerPagina
+            // 
+            this.containerPagina.Controls.Add(this.ucCatalog1);
+            this.containerPagina.Controls.Add(this.istoric1);
+            this.containerPagina.Controls.Add(this.setari1);
+            this.containerPagina.Controls.Add(this.dashUser1);
+            this.containerPagina.Dock = System.Windows.Forms.DockStyle.Right;
+            this.containerPagina.Location = new System.Drawing.Point(161, 0);
+            this.containerPagina.Margin = new System.Windows.Forms.Padding(10);
+            this.containerPagina.Name = "containerPagina";
+            this.containerPagina.Size = new System.Drawing.Size(1032, 703);
+            this.containerPagina.TabIndex = 11;
+            // 
             // ucCatalog1
             // 
             this.ucCatalog1.BackColor = System.Drawing.Color.Black;
@@ -434,6 +429,11 @@
             this.dashUser1.Size = new System.Drawing.Size(898, 594);
             this.dashUser1.TabIndex = 0;
             // 
+            // menuTransition
+            // 
+            this.menuTransition.Interval = 15;
+            this.menuTransition.Tick += new System.EventHandler(this.menuTransition_Tick);
+            // 
             // UserInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -442,6 +442,7 @@
             this.ClientSize = new System.Drawing.Size(1193, 703);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.containerPagina);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MinimizeBox = false;
             this.Name = "UserInterface";
             this.Palette = this.kryptonPalette1;
@@ -451,7 +452,6 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.UserInterface_FormClosing);
             this.Load += new System.EventHandler(this.UserInterface_Load);
             this.panel1.ResumeLayout(false);
-            this.containerPagina.ResumeLayout(false);
             this.roundedPanel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -462,6 +462,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo_darwin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.containerPagina.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

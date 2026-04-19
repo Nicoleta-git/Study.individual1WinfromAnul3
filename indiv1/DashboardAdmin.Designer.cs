@@ -43,9 +43,9 @@
             this.TotVizitatoriLbl = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.nrUtilizatorLbl = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.chart1bar = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart2pie = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -169,6 +169,18 @@
             this.panel2.Size = new System.Drawing.Size(283, 144);
             this.panel2.TabIndex = 7;
             // 
+            // label10
+            // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(9, 16);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(139, 23);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Numar utilizatori";
+            // 
             // pictureBox4
             // 
             this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -191,18 +203,6 @@
             this.nrUtilizatorLbl.Size = new System.Drawing.Size(105, 46);
             this.nrUtilizatorLbl.TabIndex = 1;
             this.nrUtilizatorLbl.Text = "11090";
-            // 
-            // label10
-            // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(9, 16);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(139, 23);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Numar utilizatori";
             // 
             // flowLayoutPanel1
             // 

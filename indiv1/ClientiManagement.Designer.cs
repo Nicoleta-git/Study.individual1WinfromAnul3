@@ -212,7 +212,7 @@
             // 
             this.cautaTxt.Location = new System.Drawing.Point(83, 49);
             this.cautaTxt.Name = "cautaTxt";
-            this.cautaTxt.Size = new System.Drawing.Size(235, 32);
+            this.cautaTxt.Size = new System.Drawing.Size(264, 32);
             this.cautaTxt.StateCommon.Back.Color1 = System.Drawing.Color.Black;
             this.cautaTxt.StateCommon.Border.Color1 = System.Drawing.Color.Purple;
             this.cautaTxt.StateCommon.Border.Color2 = System.Drawing.Color.Purple;

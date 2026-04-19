@@ -53,6 +53,7 @@
             this.kryptonButton9 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.logo_darwin = new System.Windows.Forms.PictureBox();
             this.containerPagina = new System.Windows.Forms.Panel();
+            this.rapoarte1 = new indiv1.Rapoarte();
             this.comenzi2 = new indiv1.Comenzi();
             this.anunturi1 = new indiv1.Anunturi();
             this.angajati1 = new indiv1.Angajati();
@@ -63,7 +64,6 @@
             this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.menuTransition = new System.Windows.Forms.Timer(this.components);
             this.comenzi1 = new indiv1.Comenzi();
-            this.rapoarte1 = new indiv1.Rapoarte();
             this.panel1.SuspendLayout();
             this.roundedPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -467,6 +467,14 @@
             this.containerPagina.Size = new System.Drawing.Size(1032, 703);
             this.containerPagina.TabIndex = 9;
             // 
+            // rapoarte1
+            // 
+            this.rapoarte1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.rapoarte1.Location = new System.Drawing.Point(97, 12);
+            this.rapoarte1.Name = "rapoarte1";
+            this.rapoarte1.Size = new System.Drawing.Size(932, 683);
+            this.rapoarte1.TabIndex = 8;
+            // 
             // comenzi2
             // 
             this.comenzi2.BackColor = System.Drawing.Color.Black;
@@ -558,14 +566,6 @@
             this.comenzi1.Size = new System.Drawing.Size(919, 662);
             this.comenzi1.TabIndex = 4;
             // 
-            // rapoarte1
-            // 
-            this.rapoarte1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.rapoarte1.Location = new System.Drawing.Point(97, 12);
-            this.rapoarte1.Name = "rapoarte1";
-            this.rapoarte1.Size = new System.Drawing.Size(932, 683);
-            this.rapoarte1.TabIndex = 8;
-            // 
             // DashAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -574,6 +574,7 @@
             this.ClientSize = new System.Drawing.Size(1193, 703);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.containerPagina);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "DashAdmin";
             this.Palette = this.kryptonPalette1;

@@ -49,12 +49,12 @@ public class ModerDataGridViewCustom : DataGridView
 
         this.RowTemplate.Height = 35;
 
-        this.DoubleBuffered(true);
+        this.SetDoubleBuffered(true);
 
         this.DefaultCellStyle.SelectionBackColor = Color.FromArgb(120, 0, 120);
     }
 
-    private void DoubleBuffered(bool setting)
+    private void SetDoubleBuffered(bool setting)
     {
         typeof(DataGridView)
             .GetProperty("DoubleBuffered", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic)

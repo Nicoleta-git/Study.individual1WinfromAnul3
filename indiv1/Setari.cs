@@ -130,12 +130,32 @@ namespace indiv1
             label1.Focus(); 
         }
 
-        private void kryptonButton2_Click(object sender, EventArgs e) => AplicaTema(Color.Blue, Color.Black);
-        private void kryptonButton3_Click(object sender, EventArgs e) => AplicaTema(Color.FromArgb(66, 66, 66), Color.Black);
-        private void kryptonButton4_Click(object sender, EventArgs e) => AplicaTema(Color.FromArgb(143, 57, 3), Color.Black);
-        private void kryptonButton5_Click(object sender, EventArgs e) => AplicaTema(Color.Purple, Color.Black);
+        private void kryptonButton2_Click(object sender, EventArgs e)
+        {
+            AplicaTema(Color.Blue, Color.Black);
+        }
 
-        private void roundedPanel1_Paint(object sender, PaintEventArgs e) { }
-        private void roundedPanel2_Paint(object sender, PaintEventArgs e) { }
+        private void kryptonButton3_Click(object sender, EventArgs e)
+        {
+            AplicaTema(Color.FromArgb(66, 66, 66), Color.Black);
+        }
+
+        private void kryptonButton4_Click(object sender, EventArgs e)
+        {
+            AplicaTema(Color.FromArgb(143, 57, 3), Color.Black);
+        }
+
+        private void kryptonButton5_Click(object sender, EventArgs e)
+        {
+            AplicaTema(Color.Purple, Color.Black);
+        }
+
+        private void roundedPanel1_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
+        private void roundedPanel2_Paint(object sender, PaintEventArgs e)
+        {
+        }
     }
 }

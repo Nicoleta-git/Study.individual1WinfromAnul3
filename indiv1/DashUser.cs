@@ -7,22 +7,20 @@ namespace indiv1
 {
     public partial class DashUser : UserControl
     {
-        // Șirul de conexiune
         string connection = @"Data Source=NICOLETA\SQLEXPRESS;Initial Catalog=DarwinDB;Integrated Security=True;TrustServerCertificate=True";
 
         public DashUser()
         {
             InitializeComponent();
-            // Înregistrăm manual evenimentul Load pentru a fi siguri că se execută la afișare
-            this.Load += new EventHandler(DashUser_Load);
         }
 
-        private void DashUser_Load(object sender, EventArgs e)
+        private void DashUser_Load_1(object sender, EventArgs e)
         {
             IncarcaDateDashboard();
+
         }
 
-        // Metoda publică pentru a putea fi apelată și din exterior (de exemplu la Refresh)
+
         public void IncarcaDateDashboard()
         {
             try
@@ -31,7 +29,6 @@ namespace indiv1
                 {
                     connect.Open();
 
-                    // 1. Total Produse Existente în Magazin
                     string queryProduse = "SELECT COUNT(*) FROM Produse";
                     using (SqlCommand cmd1 = new SqlCommand(queryProduse, connect))
                     {
@@ -39,22 +36,26 @@ namespace indiv1
                         TotalProduse.Text = result != null ? result.ToString() : "0";
                     }
 
-                    // 2. Suma Totală Cheltuită de utilizatorul logat
-                    // Verificăm direct ID_Client în Comenzi (unde salvăm ID_Utilizator din sesiune)
                     string querySuma = @"SELECT ISNULL(SUM(PretTotal), 0) 
                                         FROM Comenzi 
                                         WHERE ID_Client = @userID";
 
                     using (SqlCommand cmd2 = new SqlCommand(querySuma, connect))
                     {
-                        // Luăm ID-ul din clasa globală de sesiune
                         cmd2.Parameters.AddWithValue("@userID", SesiuneUtilizator.ID_Utilizator);
 
                         decimal suma = Convert.ToDecimal(cmd2.ExecuteScalar());
-                        TotalSum.Text = suma.ToString("N2") + " MDL";
+
+                        if (suma >= 1000)
+                        {
+                            TotalSum.Text = (suma / 1000).ToString("0.#") + "k MDL";
+                        }
+                        else
+                        {
+                            TotalSum.Text = suma.ToString("0.#") + " MDL";
+                        }
                     }
 
-                    // 3. Numărul total de comenzi efectuate de utilizator
                     string queryComenzi = @"SELECT COUNT(*) 
                                            FROM Comenzi 
                                            WHERE ID_Client = @userID";
@@ -70,15 +71,10 @@ namespace indiv1
             }
             catch (Exception ex)
             {
-                // Afișăm eroarea exactă pentru a vedea dacă e problemă de conexiune sau nume de coloane
                 MessageBox.Show("Eroare la încărcarea datelor în Dashboard: " + ex.Message, "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        // Opțional: Dacă ai un buton de Refresh pe Dashboard
-        private void btnRefresh_Click(object sender, EventArgs e)
-        {
-            IncarcaDateDashboard();
-        }
+       
     }
 }

@@ -9,15 +9,14 @@ namespace indiv1
         public DashAdmin()
         {
             InitializeComponent();
-            dashboardAdmin1.Visible = true;
-            dashboardAdmin1.BringToFront();
+            AfiseazaPagina(dashboardAdmin1);
         }
 
         bool menuExpand = false;
-
-        int menuMaxHeight = 120;  
-        int menuMinHeight = 0; 
+        int menuMaxHeight = 120;
+        int menuMinHeight = 0;
         int menuSpeed = 10;
+
         public KryptonPalette PalettePrincipala
         {
             get { return kryptonPalette1; }
@@ -27,6 +26,27 @@ namespace indiv1
         {
             get { return kryptonButton1; }
         }
+
+        private void AscundeToatePagini()
+        {
+            dashboardAdmin1.Visible = false;
+            catalogUserForm1.Visible = false;
+            clientiManagement1.Visible = false;
+            setari1.Visible = false;
+            comenzi2.Visible = false;
+            angajati1.Visible = false;
+            anunturi1.Visible = false;
+            rapoarte1.Visible = false;
+        }
+
+        private void AfiseazaPagina(UserControl pagina)
+        {
+            AscundeToatePagini();
+            pagina.Visible = true;
+            pagina.BringToFront();
+            containerPagina.Focus();
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             flowLayoutPanel1.Height = menuMinHeight;
@@ -42,9 +62,7 @@ namespace indiv1
         {
             if (menuExpand == false)
             {
-
                 flowLayoutPanel1.Height += menuSpeed;
-
                 if (flowLayoutPanel1.Height >= menuMaxHeight)
                 {
                     menuTransition.Stop();
@@ -54,7 +72,6 @@ namespace indiv1
             else
             {
                 flowLayoutPanel1.Height -= menuSpeed;
-
                 if (flowLayoutPanel1.Height <= menuMinHeight)
                 {
                     menuTransition.Stop();
@@ -65,36 +82,42 @@ namespace indiv1
 
         private void kryptonButton4_Click(object sender, EventArgs e)
         {
-            catalogUserForm1.Visible = false;
-            dashboardAdmin1.Visible = true;
-            dashboardAdmin1.BringToFront();
-            containerPagina.Focus();
-            rapoarte1.Visible = false;
-
-
+            AfiseazaPagina(dashboardAdmin1);
         }
 
         private void kryptonButton2_Click(object sender, EventArgs e)
         {
-            catalogUserForm1.Visible = true;
-            catalogUserForm1.BringToFront();
-            dashboardAdmin1.Visible = false;
-            containerPagina.Focus();
-            rapoarte1.Visible = false;
-
+            AfiseazaPagina(catalogUserForm1);
         }
 
         private void kryptonButton3_Click(object sender, EventArgs e)
         {
-            clientiManagement1.Visible = true;
-            clientiManagement1.BringToFront();
+            AfiseazaPagina(clientiManagement1);
+        }
 
-            catalogUserForm1.Visible = false;
-            dashboardAdmin1.Visible = false;
-            containerPagina.Focus();
-            rapoarte1.Visible = false;
+        private void kryptonButton8_Click(object sender, EventArgs e)
+        {
+            AfiseazaPagina(setari1);
+        }
 
+        private void kryptonButton7_Click(object sender, EventArgs e)
+        {
+            AfiseazaPagina(comenzi2);
+        }
 
+        private void kryptonButton9_Click(object sender, EventArgs e)
+        {
+            AfiseazaPagina(angajati1);
+        }
+
+        private void kryptonButton10_Click(object sender, EventArgs e)
+        {
+            AfiseazaPagina(anunturi1);
+        }
+
+        private void kryptonButton11_Click(object sender, EventArgs e)
+        {
+            AfiseazaPagina(rapoarte1);
         }
 
         private void kryptonButton1_Click(object sender, EventArgs e)
@@ -107,56 +130,6 @@ namespace indiv1
                 LogIn li = new LogIn();
                 li.Show();
             }
-
-        }
-
-        private void kryptonButton8_Click(object sender, EventArgs e)
-        {
-            setari1.Visible = true;
-            setari1.BringToFront();
-
-            catalogUserForm1.Visible = false;
-            dashboardAdmin1.Visible = false;
-            clientiManagement1.Visible = false;
-            containerPagina.Focus();
-            rapoarte1.Visible = false;
-
-        }
-
-        private void kryptonButton7_Click(object sender, EventArgs e)
-        {
-            comenzi2.Visible = true;
-            comenzi2.BringToFront();
-
-            catalogUserForm1.Visible = false;
-            dashboardAdmin1.Visible = false;
-            clientiManagement1.Visible = false;
-            setari1.Visible = false;
-            containerPagina.Focus();
-            rapoarte1.Visible = false;
-
-        }
-
-        private void kryptonButton9_Click(object sender, EventArgs e)
-        {
-            angajati1.BringToFront();
-            containerPagina.Focus();
-            rapoarte1.Visible = false;
-        }
-
-        private void kryptonButton10_Click(object sender, EventArgs e)
-        {
-            anunturi1.BringToFront();
-            containerPagina.Focus();
-            rapoarte1.Visible = false;
-        }
-
-        // rapoarte
-        private void kryptonButton11_Click(object sender, EventArgs e)
-        {
-            rapoarte1.Visible = true;
-            rapoarte1.BringToFront();
-            containerPagina.Focus();
         }
 
         private void DashAdmin_FormClosing(object sender, FormClosingEventArgs e)
