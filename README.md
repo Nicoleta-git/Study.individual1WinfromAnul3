@@ -1,3 +1,30 @@
+<div align="center">
+
+<h1 style="font-family: 'Orbitron', sans-serif; font-size: 46px; font-weight: 700; letter-spacing: 2px; background: linear-gradient(90deg,#ff00cc,#7a00ff); -webkit-background-clip: text; color: transparent;">
+Darwin
+</h1>
+
+<p style="color:#aaa; font-size:18px;">
+Aplicație Desktop E-Commerce & Dashboard
+</p>
+
+<br>
+
+<p>
+<img src="https://img.shields.io/badge/Project-School-purple?style=for-the-badge">
+<img src="https://img.shields.io/badge/Tech-C%23%20%7C%20WinForms-black?style=for-the-badge">
+<img src="https://img.shields.io/badge/Database-SQL%20Server-darkblue?style=for-the-badge">
+</p>
+
+<br>
+
+<p style="color:#888;">
+Realizat de <b style="color:#c800ff;">@Nicoleta-git</b>
+</p>
+
+</div>
+<img width="1536" height="772" alt="ChatGPT Image Apr 17, 2026, 09_50_30 AM (1)" src="https://github.com/user-attachments/assets/b6955dcb-ed6d-4e0c-b988-71946aa73289" />
+
 # Raport
 
 <div align="center">
@@ -18,8 +45,6 @@
 
 <div align="right">
 
-**Realizat:** Titei Nicoleta, gr. P-2333
-<br>
 **Verificat:** Covali Eugenia
 <br>
 **Nota:** _______________
@@ -319,9 +344,9 @@ Butonul de **Log Out** include un `MessageBox` de confirmare pentru a preveni î
 ![Logare Admin](https://github.com/user-attachments/assets/456416b5-c1ea-47d3-b209-86d84b2b33f7)
 
 ## Dashboard (conectat la baza de date)
-![Dashboard](https://github.com/user-attachments/assets/66d400a0-d2bd-4694-9910-7054aab8f21c)
+<img width="1171" height="790" alt="{98D9978C-4AF5-4B6A-8FDC-CFFEB8BFCF24}" src="https://github.com/user-attachments/assets/9baa8c8e-cab4-4e21-aac6-e393ffba2ae9" />
 
-## Anunțuri
+## Anunturi
 ![Anunturi](https://github.com/user-attachments/assets/f8178c9c-06d8-45dd-be90-4d6473cf5cf9)
 
 ---
@@ -369,7 +394,7 @@ Butonul de **Log Out** include un `MessageBox` de confirmare pentru a preveni î
 ![Logare utilizator](https://github.com/user-attachments/assets/7c340b70-5aa7-4cd2-998f-198cf090f02b)
 
 ## Dashboard utilizator (independent de sesiune)
-![Dashboard utilizator](https://github.com/user-attachments/assets/54098874-db27-42bb-99f3-ede267f4bc57)
+<img width="1171" height="778" alt="{0559E7E5-8296-45CC-AFC8-56174FE95BE6}" src="https://github.com/user-attachments/assets/f1f44999-d247-4be0-913f-9f81a006b2ff" />
 
 ## Istoric
 ![Istoric](https://github.com/user-attachments/assets/2e85eaf2-c76a-44f6-abe0-2e420e50a179)
