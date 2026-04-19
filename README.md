@@ -346,7 +346,7 @@ Butonul de **Log Out** include un `MessageBox` de confirmare pentru a preveni î
 ## Dashboard (conectat la baza de date)
 <img width="1171" height="790" alt="{98D9978C-4AF5-4B6A-8FDC-CFFEB8BFCF24}" src="https://github.com/user-attachments/assets/9baa8c8e-cab4-4e21-aac6-e393ffba2ae9" />
 
-## Anunțuri
+## Anunturi
 ![Anunturi](https://github.com/user-attachments/assets/f8178c9c-06d8-45dd-be90-4d6473cf5cf9)
 
 ---
@@ -394,7 +394,7 @@ Butonul de **Log Out** include un `MessageBox` de confirmare pentru a preveni î
 ![Logare utilizator](https://github.com/user-attachments/assets/7c340b70-5aa7-4cd2-998f-198cf090f02b)
 
 ## Dashboard utilizator (independent de sesiune)
-![Dashboard utilizator](https://github.com/user-attachments/assets/54098874-db27-42bb-99f3-ede267f4bc57)
+<img width="1171" height="778" alt="{0559E7E5-8296-45CC-AFC8-56174FE95BE6}" src="https://github.com/user-attachments/assets/f1f44999-d247-4be0-913f-9f81a006b2ff" />
 
 ## Istoric
 ![Istoric](https://github.com/user-attachments/assets/2e85eaf2-c76a-44f6-abe0-2e420e50a179)
