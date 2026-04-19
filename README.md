@@ -344,7 +344,7 @@ Butonul de **Log Out** include un `MessageBox` de confirmare pentru a preveni î
 ![Logare Admin](https://github.com/user-attachments/assets/456416b5-c1ea-47d3-b209-86d84b2b33f7)
 
 ## Dashboard (conectat la baza de date)
-![Dashboard](https://github.com/user-attachments/assets/66d400a0-d2bd-4694-9910-7054aab8f21c)
+<img width="1171" height="790" alt="{98D9978C-4AF5-4B6A-8FDC-CFFEB8BFCF24}" src="https://github.com/user-attachments/assets/9baa8c8e-cab4-4e21-aac6-e393ffba2ae9" />
 
 ## Anunțuri
 ![Anunturi](https://github.com/user-attachments/assets/f8178c9c-06d8-45dd-be90-4d6473cf5cf9)
