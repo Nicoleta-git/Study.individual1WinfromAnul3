@@ -16,6 +16,14 @@ Aplicație Desktop E-Commerce & Dashboard
 <img src="https://img.shields.io/badge/Database-SQL%20Server-darkblue?style=for-the-badge">
 </p>
 
+<p align="center">
+  <img src="https://img.shields.io/badge/UI_Design-Krypton_Toolkit-9370DB?style=flat-square">
+  <img src="https://img.shields.io/badge/Theme-Dark_Purple-6a0dad?style=flat-square">
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" width="100%">
+</p>
 <br>
 
 <p style="color:#888;">
